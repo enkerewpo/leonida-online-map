@@ -259,6 +259,14 @@ function resultsHTML(): string {
 /** A find or a landmark by id (they share the `poi=` hash key and the detail card). */
 const byId = (id: string | null) => (id ? state.pois.find((x) => x.properties?.id === id) ?? state.landmarks.find((x) => x.properties?.id === id) ?? null : null);
 
+/** A prefilled "Map correction" issue for one find or landmark. */
+function fixUrl(id: string, f: Feature): string {
+  const p = f.properties ?? {};
+  const link = `${location.origin}${location.pathname}#poi=${encodeURIComponent(id)}`;
+  const q = new URLSearchParams({ template: 'map-correction.yml', title: `Fix: ${p.name ?? id}`, link, what: `Item: ${p.name ?? ''} (${id})\n\n` });
+  return `${REPO}/issues/new?${q}`;
+}
+
 function detailHTML(id: string): string {
   const f = byId(id);
   if (!f) return '';
@@ -291,6 +299,7 @@ function detailHTML(id: string): string {
       <div class="actions">
         ${f.geometry ? `<button type="button" class="btn btn-primary" id="show-on-map">${ICONS.target}<span>${esc(t('showOnMap'))}</span></button>` : ''}
         <button type="button" class="btn" id="copy-link">${ICONS.link}<span>${esc(t('copyLink'))}</span></button>
+        <a class="btn" id="fix-item" href="${esc(fixUrl(id, f))}" target="_blank" rel="noopener noreferrer">${ICONS.github}<span>${esc(t('fixThis'))}</span></a>
       </div>
       ${source ? `<p class="source">${esc(t('source'))}: <a href="${esc(source)}" target="_blank" rel="noopener noreferrer">${esc(host)}</a></p>` : ''}
     </div>`;
@@ -311,7 +320,12 @@ function renderAbout(): void {
       </div>
       <hr class="rule" />
       <p>${esc(t('aboutIntro'))}</p>
-      <p class="disclaimer">${esc(t('disclaimer'))}</p>
+      <h3>${esc(t('helpTitle'))}</h3>
+      <ol class="about-steps">
+        <li>${esc(t('help1'))}</li>
+        <li>${esc(t('help2'))}</li>
+        <li>${esc(t('help3'))} <a href="${esc(t('handbookUrl'))}" target="_blank" rel="noopener noreferrer">${esc(t('handbook'))}</a></li>
+      </ol>
       <h3>${esc(t('linksTitle'))}</h3>
       <ul class="about-links">
         ${ext(REPO, ICONS.github, t('sourceCode'), 'enkerewpo/leonida-online-map')}
@@ -328,6 +342,7 @@ function renderAbout(): void {
         <li>${esc(t('licenceFonts'))}</li>
         <li>${esc(t('licenceMapLibre'))}</li>
       </ul>
+      <p class="disclaimer">${esc(t('disclaimer'))}</p>
       <a class="btn btn-primary btn-wide" href="${REPO}" target="_blank" rel="noopener noreferrer">${ICONS.github}<span>${esc(t('contribute'))}</span></a>
     </form>`;
 }

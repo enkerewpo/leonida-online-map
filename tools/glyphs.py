@@ -38,21 +38,31 @@ def zigzag(n):
     return (n << 1) ^ (n >> 31)
 
 
-def sdf(bitmap):
-    h, w = bitmap.shape
-    pad = np.zeros((h + 2 * BUFFER, w + 2 * BUFFER), np.uint8)
-    pad[BUFFER:BUFFER + h, BUFFER:BUFFER + w] = bitmap
-    inside = (pad >= 128).astype(np.uint8)
-    d_out = cv2.distanceTransform(1 - inside, cv2.DIST_L2, 5)
-    d_in = cv2.distanceTransform(inside, cv2.DIST_L2, 5)
-    d = d_out - d_in
+def sdf(hi, hi_left, hi_top, left, top, w, h, scale=4):
+    """Signed distance field for a w x h glyph (plus BUFFER) at 1x, computed from a `scale`x render so the edge is
+    exact to a fraction of a pixel (a 1x binarised bitmap gives visibly jagged edges)."""
+    W, H = (w + 2 * BUFFER) * scale, (h + 2 * BUFFER) * scale
+    canvas = np.zeros((H, W), np.uint8)
+    ox = hi_left - (left - BUFFER) * scale
+    oy = (top + BUFFER) * scale - hi_top
+    hh, hw = hi.shape
+    x0, y0 = max(0, ox), max(0, oy)
+    x1, y1 = min(W, ox + hw), min(H, oy + hh)
+    if x1 > x0 and y1 > y0:
+        canvas[y0:y1, x0:x1] = hi[y0 - oy:y1 - oy, x0 - ox:x1 - ox]
+    inside = (canvas >= 128).astype(np.uint8)
+    d = (cv2.distanceTransform(1 - inside, cv2.DIST_L2, 5) - cv2.distanceTransform(inside, cv2.DIST_L2, 5)) / scale
+    d = cv2.resize(d, (w + 2 * BUFFER, h + 2 * BUFFER), interpolation=cv2.INTER_AREA)
     return np.clip(np.round(255 - 255 * (d / RADIUS + CUTOFF)), 0, 255).astype(np.uint8)
 
 
 def build(name, weight):
     face = freetype.Face(str(ROOT / 'fonts/Jost.ttf'))
     face.set_var_design_coords((weight,))
+    big = freetype.Face(str(ROOT / 'fonts/Jost.ttf'))
+    big.set_var_design_coords((weight,))
     face.set_pixel_sizes(0, SIZE)
+    big.set_pixel_sizes(0, SIZE * 4)
     for start in RANGES:
         end = start + 255
         glyphs = b''
@@ -61,12 +71,13 @@ def build(name, weight):
                 continue
             face.load_char(cp, freetype.FT_LOAD_RENDER)
             g = face.glyph
-            bm = g.bitmap
-            w, h = bm.width, bm.rows
+            w, h = g.bitmap.width, g.bitmap.rows
             msg = field(1, 0, cp)
             if w and h:
-                arr = np.array(bm.buffer, np.uint8).reshape(h, bm.pitch)[:, :w]
-                msg += field(2, 2, sdf(arr).tobytes())
+                big.load_char(cp, freetype.FT_LOAD_RENDER)
+                b = big.glyph.bitmap
+                hi = np.array(b.buffer, np.uint8).reshape(b.rows, b.pitch)[:, :b.width] if b.rows else np.zeros((1, 1), np.uint8)
+                msg += field(2, 2, sdf(hi, big.glyph.bitmap_left, big.glyph.bitmap_top, g.bitmap_left, g.bitmap_top, w, h).tobytes())
             msg += field(3, 0, w) + field(4, 0, h)
             msg += field(5, 0, zigzag(g.bitmap_left)) + field(6, 0, zigzag(g.bitmap_top - SIZE))
             msg += field(7, 0, g.advance.x >> 6)
