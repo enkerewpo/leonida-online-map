@@ -825,13 +825,13 @@ async function boot(): Promise<void> {
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
       maxBounds: maxBounds as LngLatBoundsLike,
-      minZoom: 12,
+      minZoom: 10,
       maxZoom: 20,
       maxPitch: 70,
       attributionControl: false,
       localIdeographFontFamily: CJK_FONTS,
       fadeDuration: reducedMotion.matches ? 0 : 150,
-      pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+      pixelRatio: window.devicePixelRatio || 1,
       cancelPendingTileRequestsWhileZooming: false,
     });
   } catch (e) {
