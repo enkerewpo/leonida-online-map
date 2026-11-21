@@ -1,0 +1,4 @@
+/* Noto Sans TC, split into Google's unicode-range slices: a browser fetches only the slices a page uses. */
+@import '@fontsource/noto-sans-tc/400.css';
+@import '@fontsource/noto-sans-tc/500.css';
+@import '@fontsource/noto-sans-tc/700.css';

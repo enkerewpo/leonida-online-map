@@ -1,0 +1,11 @@
+{
+  "name": "Leonida Online Map",
+  "short_name": "Leonida Map",
+  "description": "Unofficial, community-maintained vector map of Leonida.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14112a",
+  "theme_color": "#14112a",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

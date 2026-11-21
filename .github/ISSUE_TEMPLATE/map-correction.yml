@@ -1,0 +1,27 @@
+name: Map correction
+description: Something on the map is in the wrong place, the wrong shape, or wrongly named.
+labels: [data, correction]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Map link
+      description: Pan the map to the problem and copy the address bar (the link keeps the view).
+      placeholder: https://enkerewpo.github.io/leonida-online-map/#map=15.20/0.00350/0.03820
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong, and what should it be?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: >
+        How do you know? A screenshot you took in the game, or official Rockstar material.
+        No leaked or extracted game files, and no story spoilers.
+    validations:
+      required: true

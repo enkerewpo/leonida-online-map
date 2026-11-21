@@ -1,0 +1,9 @@
+/* Self-hosted OFL fonts (licences in fonts/). Latin faces load with the page; the Chinese faces are in
+   fonts-sc.css / fonts-tc.css and load only when a Chinese UI language is picked. */
+@import '@fontsource/jost/latin-400.css';
+@import '@fontsource/jost/latin-500.css';
+@import '@fontsource/jost/latin-600.css';
+@import '@fontsource/jost/latin-700.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';

@@ -1,0 +1,46 @@
+name: New place or find
+description: Add a place name, or a find (vehicle, weapon, easter egg, shop…) to the map.
+labels: [data, addition]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: English name. Add Simplified and Traditional Chinese names below if you know them.
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: For a place, its kind (town, district, island, water, landmark…). For a find, its category (vehicle, weapon, easter-egg, shop, gas…).
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Map link
+      description: Centre the map on the spot and copy the address bar. Leave empty if you only know roughly where it is.
+  - type: textarea
+    id: where
+    attributes:
+      label: Where and when
+      description: How to find it, and anything that matters (daytime only, random spawn…).
+    validations:
+      required: true
+  - type: textarea
+    id: names
+    attributes:
+      label: Chinese names (optional)
+      placeholder: |
+        zh-Hans:
+        zh-Hant:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: >
+        A screenshot you took in the game, official Rockstar material, or a public guide that shows it.
+        No leaked or extracted game files, and no story spoilers.
+    validations:
+      required: true

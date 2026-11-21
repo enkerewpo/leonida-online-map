@@ -1,0 +1,25 @@
+name: Bug in the app
+description: The site itself misbehaves (layout, search, controls, language…).
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Map link
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: iPhone 15, Safari 26 / Windows 11, Chrome 140
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (optional)
