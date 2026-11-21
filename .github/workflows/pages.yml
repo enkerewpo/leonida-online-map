@@ -40,7 +40,7 @@ jobs:
       - name: Vectorise the in-game map's most detailed level
         run: |
           pip install -q opencv-python-headless shapely numpy
-          python tools/vectorize.py gtadb/maps/tiles/6/day 6
+          python tools/vectorize.py gtadb/maps/tiles/6/day
       - name: Cache tippecanoe
         id: tippecanoe
         uses: actions/cache@v4

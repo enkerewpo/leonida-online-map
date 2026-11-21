@@ -28,7 +28,7 @@ OUT = ROOT / 'build/vector'
 BLOCK = 16  # tiles per block side (4096 px)
 
 # Which map zooms (tile zooms of the vector tileset) each source level serves.
-ZOOMS = {2: (8, 11), 3: (12, 12), 4: (13, 13), 5: (14, 14), 6: (16, 16)}
+ZOOMS = {2: (8, 12), 3: (13, 13), 4: (14, 14), 5: (15, 15), 6: (16, 16)}
 
 PALETTE = {
     'land': ['6c9784', '608c70', '67907e', '598469', '608d6f', '598c7a', '80a19b', '7a9a78', '8aa17c', '4e7a5c'],

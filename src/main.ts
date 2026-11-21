@@ -1,5 +1,5 @@
 import * as maplibregl from 'maplibre-gl';
-import { Protocol } from 'pmtiles';
+import { registerPmtiles, startPrefetch } from './prefetch';
 import type { Map as MLMap, LngLatBoundsLike } from 'maplibre-gl';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -886,13 +886,12 @@ async function boot(): Promise<void> {
   const half = Math.max(e0 - w0, n0 - s0) * 1.2;
   const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2;
   const maxBounds: BBox = [cx - half, cy - half, cx + half, cy + half];
-  maplibregl.addProtocol('pmtiles', new Protocol().tile);
+  registerPmtiles(`${location.origin}${import.meta.env.BASE_URL}tiles/vector.pmtiles`);
   let m: MLMap;
   try {
     m = new maplibregl.Map({
       container: 'map',
       style: buildStyle(`${location.origin}${import.meta.env.BASE_URL}glyphs/{fontstack}/{range}.pbf`, lang(),
-        `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`,
         `pmtiles://${location.origin}${import.meta.env.BASE_URL}tiles/vector.pmtiles`),
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
@@ -916,6 +915,7 @@ async function boot(): Promise<void> {
   if (hash.view) m.jumpTo({ center: [hash.view.lng, hash.view.lat], zoom: hash.view.zoom, bearing: hash.view.bearing, pitch: hash.view.pitch });
 
   m.addControl(new GameScale(), 'bottom-left');
+  startPrefetch(m);
   m.keyboard.enable();
 
   m.on('load', async () => {

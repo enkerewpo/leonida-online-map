@@ -56,7 +56,7 @@ export const LABEL_LAYERS: Record<string, number> = {
 };
 
 /** Label halo: the game's night blue, so white names read on sea, grass and streets alike. */
-const HALO = 'rgba(12, 13, 27, 0.62)';
+const HALO = 'rgba(16, 20, 34, 0.9)';
 
 const categoryColor: ExpressionSpecification = [
   'match', ['get', 'category'],
@@ -64,10 +64,7 @@ const categoryColor: ExpressionSpecification = [
   category('').color,
 ] as unknown as ExpressionSpecification;
 
-/** Map zoom from which the vector copy of the in-game map takes over from the raster tiles. */
-export const VECTOR_FROM = 17.2;
-
-export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorUrl: string): StyleSpecification {
+export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): StyleSpecification {
   const name = nameField(lang);
   const sp = (n: number) => spacing(lang, n);
   const src = (id: string, promoteId?: string) => ({ [id]: { type: 'geojson' as const, data: EMPTY, ...(promoteId ? { promoteId } : {}) } });
@@ -78,12 +75,8 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
       paint: { 'background-color': '#2f8eae' },
     },
     // The in-game map itself (GTADB tiles, levels 0-6 as zooms 12-18), over the same deep sea.
-    {
-      id: 'ingame', type: 'raster', source: 'ingame',
-      paint: { 'raster-fade-duration': 120, 'raster-resampling': 'linear' },
-    },
-    // Past the raster's own detail, the same map as flat vector polygons (traced from the level-6 tiles), so the
-    // closest zooms stay sharp.
+    // The in-game map as flat vector polygons, traced level by level from GTADB's tiles (tools/vectorize.py), so
+    // it is sharp at every zoom.
     ...([
       ['water_mid', '#4c9db8'], ['water_shallow', '#6aaec4'],
       ['land', '#638f79'], ['land_dark', '#578167'], ['land_light', '#73a08c'],
@@ -91,9 +84,9 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
       ['road', '#d0d1da'], ['highway', '#ddd8bf'], ['rail', '#8299ab'],
       ['building', '#adb9ca'], ['building_enterable', '#96a7be'],
     ] as const).map(([c, color]): LayerSpecification => ({
-      id: `vec-${c}`, type: 'fill', source: 'vector', 'source-layer': 'base', minzoom: VECTOR_FROM,
+      id: `vec-${c}`, type: 'fill', source: 'vector', 'source-layer': 'base',
       filter: ['==', ['get', 'class'], c],
-      paint: { 'fill-color': color, 'fill-antialias': true, 'fill-opacity': ['interpolate', ['linear'], ['zoom'], VECTOR_FROM, 0, VECTOR_FROM + 0.4, 1] },
+      paint: { 'fill-color': color, 'fill-antialias': true },
     })),
     // Road names along the road (data/roads-named.geojson; empty until that file exists).
     {
@@ -175,7 +168,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-color': '#fdfbff',
         'text-halo-color': HALO,
         'text-halo-width': 1.4,
-        'text-halo-blur': 0.4,
+        'text-halo-blur': 0,
       },
     },
     // Search areas for finds that are only known roughly.
@@ -250,7 +243,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-max-width': 9,
         'text-optional': true,
       },
-      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0.4 },
+      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0 },
     },
     // Place labels, lowest priority first (later layers win collisions). Big regions show zoomed out and
     // give way as you zoom in; smaller places take over, as in the game's map.
@@ -292,7 +285,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-max-width': 8,
         'symbol-sort-key': ['coalesce', ['get', 'rank'], 4],
       },
-      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.3, 'text-halo-blur': 0.5, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 14, 0, 14.4, 1, 17.2, 1, 17.8, 0] },
+      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.3, 'text-halo-blur': 0, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 14, 0, 14.2, 1, 17.6, 1, 17.8, 0] },
     },
     {
       id: 'label-town', type: 'symbol', source: 'places', minzoom: 13.2,
@@ -304,7 +297,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-letter-spacing': sp(0.02),
         'text-max-width': 8,
       },
-      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0.5, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 13.2, 0, 13.6, 1, 16.6, 1, 17.2, 0] },
+      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 13.2, 0, 13.4, 1, 17, 1, 17.2, 0] },
     },
     {
       id: 'label-city', type: 'symbol', source: 'places', minzoom: 12.3, maxzoom: 16.2,
@@ -317,7 +310,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-letter-spacing': sp(0.1),
         'text-max-width': 7,
       },
-      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0.6, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 12.3, 0, 12.7, 1, 15.4, 1, 16.1, 0] },
+      paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0, 'text-opacity': ['interpolate', ['linear'], ['zoom'], 12.3, 0, 12.5, 1, 15.9, 1, 16.1, 0] },
     },
     {
       id: 'label-county', type: 'symbol', source: 'places', maxzoom: 14.4,
@@ -331,7 +324,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-max-width': 12,
         'text-allow-overlap': true,
       },
-      paint: { 'text-color': '#f3f0fd', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0.8, 'text-opacity': fadeOut(13.7, 14.4) },
+      paint: { 'text-color': '#f3f0fd', 'text-halo-color': HALO, 'text-halo-width': 1.5, 'text-halo-blur': 0, 'text-opacity': fadeOut(13.7, 14.4) },
     },
     {
       id: 'label-state', type: 'symbol', source: 'places', maxzoom: 13,
@@ -344,7 +337,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
         'text-letter-spacing': sp(0.75),
         'text-allow-overlap': true,
       },
-      paint: { 'text-color': 'rgba(253, 251, 255, 0.9)', 'text-halo-color': 'rgba(12, 13, 27, 0.25)', 'text-halo-width': 1.2, 'text-halo-blur': 1.5, 'text-opacity': fadeOut(12.4, 13) },
+      paint: { 'text-color': '#fdfbff', 'text-halo-color': 'rgba(16, 20, 34, 0.55)', 'text-halo-width': 1.4, 'text-halo-blur': 0, 'text-opacity': fadeOut(12.4, 13) },
     },
   ];
 
@@ -352,8 +345,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string, vectorU
     version: 8,
     name: 'Leonida',
     glyphs,
-    sources: { vector: { type: 'vector', url: vectorUrl, attribution: '' },
-      ingame: { type: 'raster', tiles: [tilesUrl], tileSize: (globalThis.devicePixelRatio || 1) >= 1.5 ? 128 : 256, minzoom: 9, maxzoom: 18, bounds: [-0.1758, -0.1758, 0.1758, 0.1758], attribution: 'Map: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org · Map art © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('landmarks', 'id'), ...src('roads-named'), ...src('poi-area', 'id'), ...src('selection') },
+    sources: { vector: { type: 'vector', url: vectorUrl, attribution: 'Map: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org, vectorised · Map art © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('landmarks', 'id'), ...src('roads-named'), ...src('poi-area', 'id'), ...src('selection') },
     layers,
     light: { anchor: 'viewport', color: '#ffffff', intensity: 0.32, position: [1.3, 210, 35] },
   };
