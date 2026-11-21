@@ -8,8 +8,11 @@ const images = new Map<string, Img>();
 const ratio = () => Math.min(Math.max(Math.round(window.devicePixelRatio || 1), 1), 3);
 
 async function svgToImageData(svg: string, w: number, h: number, pr: number): Promise<ImageData> {
+  // Safari rasterises an SVG image at its own width/height and then scales the bitmap, so the root element is
+  // given the target pixel size (the viewBox keeps the drawing the same).
+  const sized = svg.replace(/^<svg([^>]*?)\swidth="[^"]*"\sheight="[^"]*"/, `<svg$1 width="${w * pr}" height="${h * pr}"`);
   const img = new Image(w * pr, h * pr);
-  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(sized);
   await img.decode();
   const cv = document.createElement('canvas');
   cv.width = w * pr; cv.height = h * pr;

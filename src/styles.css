@@ -42,7 +42,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 /* The map's sea colour, so Safari's safe areas and translucent toolbars tint like the map. */
-html, body { margin: 0; height: 100%; overflow: hidden; background: #2f8eae; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #2f8eae; touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   font: 400 14px/1.5 var(--body);
   color: var(--white);

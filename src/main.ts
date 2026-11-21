@@ -1,4 +1,5 @@
 import * as maplibregl from 'maplibre-gl';
+import { Protocol } from 'pmtiles';
 import type { Map as MLMap, LngLatBoundsLike } from 'maplibre-gl';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -528,10 +529,13 @@ function applyLayerVisibility(): void {
   set('road-shield', state.showLabels);
   const hidden = [...state.hiddenCats];
   const catFilter: maplibregl.FilterSpecification = ['!', ['in', ['get', 'category'], ['literal', hidden]]];
-  for (const id of ['poi', 'poi-label', 'poi-area', 'poi-area-line']) if (m.getLayer(id)) m.setFilter(id, catFilter);
+  for (const id of ['poi', 'poi-label', 'poi-area', 'poi-area-line', 'poi-dot']) if (m.getLayer(id)) m.setFilter(id, catFilter);
   const hiddenLm = LANDMARK_GROUPS.filter((g) => state.hiddenGroups.has(g.id)).flatMap((g) => g.cats);
   if (m.getLayer('landmark')) {
     m.setFilter('landmark', ['all', ['>=', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
+  }
+  if (m.getLayer('landmark-dot')) {
+    m.setFilter('landmark-dot', ['all', ['<', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
   }
 }
 
@@ -882,17 +886,19 @@ async function boot(): Promise<void> {
   const half = Math.max(e0 - w0, n0 - s0) * 1.2;
   const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2;
   const maxBounds: BBox = [cx - half, cy - half, cx + half, cy + half];
+  maplibregl.addProtocol('pmtiles', new Protocol().tile);
   let m: MLMap;
   try {
     m = new maplibregl.Map({
       container: 'map',
       style: buildStyle(`${location.origin}${import.meta.env.BASE_URL}glyphs/{fontstack}/{range}.pbf`, lang(),
-        `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`),
+        `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`,
+        `pmtiles://${location.origin}${import.meta.env.BASE_URL}tiles/vector.pmtiles`),
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
       maxBounds: maxBounds as LngLatBoundsLike,
       minZoom: 10,
-      maxZoom: 18.5,
+      maxZoom: 20,
       maxPitch: 70,
       attributionControl: false,
       localIdeographFontFamily: CJK_FONTS,
@@ -931,7 +937,7 @@ async function boot(): Promise<void> {
   m.on('move', updateCompass);
   m.on('moveend', updateHash);
   m.on('pitchend', applyLayerVisibility);
-  for (const layer of ['poi', 'landmark']) {
+  for (const layer of ['poi', 'landmark', 'poi-dot', 'landmark-dot']) {
     m.on('click', layer, (e) => {
       const id = e.features?.[0]?.properties?.id;
       if (id) selectPoi(String(id), { fly: false });
@@ -942,12 +948,35 @@ async function boot(): Promise<void> {
   m.on('click', (e) => {
     closeContextMenu();
     if (!state.selected) return;
-    const hit = m.queryRenderedFeatures(e.point, { layers: ['poi', 'landmark'] });
+    const hit = m.queryRenderedFeatures(e.point, { layers: ['poi', 'landmark', 'poi-dot', 'landmark-dot'].filter((l) => m.getLayer(l)) });
     if (!hit.length) selectPoi(null);
   });
   initContextMenu(m);
 }
 
+/** The page never zooms (the map zooms itself): Safari ignores user-scalable=no, so block its gestures too. */
+function lockPageZoom(): void {
+  const stop = (e: Event) => e.preventDefault();
+  for (const ev of ['gesturestart', 'gesturechange', 'gestureend']) document.addEventListener(ev, stop, { passive: false });
+  // Double-tap zoom outside the map.
+  let lastTap = 0;
+  document.addEventListener('touchend', (e) => {
+    const now = Date.now();
+    if (now - lastTap < 320 && !(e.target as Element).closest?.('.maplibregl-canvas')) e.preventDefault();
+    lastTap = now;
+  }, { passive: false });
+  // Pinch on the page (two fingers outside the map).
+  document.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 1 && !(e.target as Element).closest?.('.maplibregl-canvas')) e.preventDefault();
+  }, { passive: false });
+  // Desktop: Ctrl/⌘ + wheel or trackpad pinch, and Ctrl/⌘ + plus/minus/0.
+  document.addEventListener('wheel', (e) => { if (e.ctrlKey && !(e.target as Element).closest?.('.maplibregl-canvas')) e.preventDefault(); }, { passive: false });
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && ['+', '=', '-', '_', '0'].includes(e.key)) e.preventDefault();
+  });
+}
+
+lockPageZoom();
 void boot();
 
 // Handle for poking at the map from the console during development.

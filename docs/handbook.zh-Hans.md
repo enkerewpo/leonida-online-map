@@ -113,6 +113,7 @@ npm ci
 git clone --depth 1 --filter=blob:none --sparse https://github.com/rolux/gtadb.org /tmp/gtadb
 git -C /tmp/gtadb sparse-checkout set maps/tiles/6/day
 npm run tiles -- /tmp/gtadb/maps/tiles/6/day     # 把游戏内瓦片整理到 public/tiles/day
+python3 tools/vectorize.py /tmp/gtadb/maps/tiles/6/day 6 && npm run vector   # 可选：近距离矢量图（需要 tippecanoe）
 npm run validate
 npm run dev
 ```

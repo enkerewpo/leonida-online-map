@@ -34,6 +34,28 @@ jobs:
           sparse-checkout-cone-mode: true
       - name: Lay out the in-game map tiles
         run: npm run tiles -- gtadb/maps/tiles/6/day
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vectorise the in-game map's most detailed level
+        run: |
+          pip install -q opencv-python-headless shapely numpy
+          python tools/vectorize.py gtadb/maps/tiles/6/day 6
+      - name: Cache tippecanoe
+        id: tippecanoe
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/tippecanoe
+          key: tippecanoe-2.79.0-${{ runner.os }}
+      - name: Build tippecanoe
+        if: steps.tippecanoe.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update && sudo apt-get install -y libsqlite3-dev zlib1g-dev
+          git clone --depth 1 --branch 2.79.0 https://github.com/felt/tippecanoe.git /tmp/tippecanoe
+          make -C /tmp/tippecanoe -j"$(nproc)" tippecanoe
+          mkdir -p ~/.local/bin && cp /tmp/tippecanoe/tippecanoe ~/.local/bin/
+      - name: Vector tiles
+        run: PATH="$HOME/.local/bin:$PATH" npm run vector
       - name: Build
         run: npm run build
       - if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

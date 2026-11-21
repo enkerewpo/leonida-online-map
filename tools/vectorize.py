@@ -28,7 +28,7 @@ OUT = ROOT / 'build/vector'
 BLOCK = 16  # tiles per block side (4096 px)
 
 # Which map zooms (tile zooms of the vector tileset) each source level serves.
-ZOOMS = {2: (8, 11), 3: (12, 12), 4: (13, 13), 5: (14, 14), 6: (15, 16)}
+ZOOMS = {2: (8, 11), 3: (12, 12), 4: (13, 13), 5: (14, 14), 6: (16, 16)}
 
 PALETTE = {
     'land': ['6c9784', '608c70', '67907e', '598469', '608d6f', '598c7a', '80a19b', '7a9a78', '8aa17c', '4e7a5c'],
@@ -91,6 +91,29 @@ def load_block(d, level, tx0, ty0, n):
     return img if found else None
 
 
+def smooth_ring(pts, corner_deg=55, rounds=2):
+    """Chaikin smoothing for a closed ring: turns pixel staircases into clean curves, keeps real corners."""
+    import math
+    p = pts.astype(float)
+    for _ in range(rounds):
+        n = len(p)
+        if n < 4:
+            return p
+        out = []
+        for i in range(n):
+            a, b, c = p[i - 1], p[i], p[(i + 1) % n]
+            v1, v2 = b - a, c - b
+            n1, n2 = math.hypot(*v1), math.hypot(*v2)
+            ang = math.degrees(math.acos(max(-1, min(1, (v1 @ v2) / max(n1 * n2, 1e-9)))))
+            if ang > corner_deg:
+                out.append(b)
+            else:
+                out.append(b - v1 * 0.25)
+                out.append(b + v2 * 0.25)
+        p = np.array(out)
+    return p
+
+
 def polygons(mask, min_area, eps):
     cs, hier = cv2.findContours(mask, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
     out = []
@@ -100,13 +123,13 @@ def polygons(mask, min_area, eps):
     for i, c in enumerate(cs):
         if hier[i][3] != -1 or cv2.contourArea(c) < min_area:
             continue
-        shell = cv2.approxPolyDP(c, eps, True)[:, 0, :]
+        shell = smooth_ring(cv2.approxPolyDP(c, eps, True)[:, 0, :])
         if len(shell) < 3:
             continue
         holes, j = [], hier[i][2]
         while j != -1:
             if cv2.contourArea(cs[j]) >= min_area:
-                h = cv2.approxPolyDP(cs[j], eps, True)[:, 0, :]
+                h = smooth_ring(cv2.approxPolyDP(cs[j], eps, True)[:, 0, :])
                 if len(h) >= 3:
                     holes.append(h)
             j = hier[j][0]
@@ -135,7 +158,7 @@ def main():
         M = np.array([[k, 0, -16384], [0, -k, 16384], [0, 0, 1]])
         zmin, zmax = ZOOMS[level]
         # Source px per screen px at the most detailed zoom this level serves decides how much detail to keep.
-        eps = 0.6 if level >= 5 else 0.8
+        eps = 1.0
         min_area = 3 if level >= 5 else 2
         n_out = 0
         with open(OUT / f'L{level}.geojsonl', 'w') as fo:

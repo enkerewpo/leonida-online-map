@@ -10,14 +10,16 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "validate": "node scripts/validate.mjs",
-    "tiles": "node scripts/prepare-tiles.mjs"
+    "tiles": "node scripts/prepare-tiles.mjs",
+    "vector": "node scripts/build-vector.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
     "@fontsource/jost": "^5.3.0",
     "@fontsource/noto-sans-sc": "^5.3.1",
     "@fontsource/noto-sans-tc": "^5.3.1",
-    "maplibre-gl": "^6.19.0"
+    "maplibre-gl": "^6.19.0",
+    "pmtiles": "^4.5.0"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.16",
