@@ -6,9 +6,10 @@ import './fonts.css';
 import './styles.css';
 
 import { detectLang, saveLang, setLang, lang, t, prop, LANGS, LANG_LABEL, LANG_NAME, type Lang, type StringKey } from './i18n';
+import { Protocol } from 'pmtiles';
 import { buildStyle, nameField, spacing, LABEL_LAYERS } from './style';
 import { prepareImages, addImages } from './images';
-import { fetchLayer, withHeights, pinned, searchAreas, type FC, type Feature } from './data';
+import { fetchLayer, pinned, searchAreas, type FC, type Feature } from './data';
 import { bboxOf, ROUGH_BOUNDS, type BBox } from './geo';
 import { CATEGORIES, category, badgeSVG } from './categories';
 import { buildIndex, search, type Entry } from './search';
@@ -553,8 +554,7 @@ async function boot(): Promise<void> {
   bindUI();
 
   const loads = {
-    land: fetchLayer('land'), landuse: fetchLayer('landuse'), buildings: fetchLayer('buildings'),
-    roads: fetchLayer('roads'), places: fetchLayer('places'), poi: fetchLayer('poi'),
+    land: fetchLayer('land'), places: fetchLayer('places'), poi: fetchLayer('poi'),
   };
   let failed = false;
   const fail = (e: unknown) => { console.error(e); if (!failed) { failed = true; showToast(t('loadError')); } return null; };
@@ -575,11 +575,13 @@ async function boot(): Promise<void> {
   const half = Math.max(e0 - w0, n0 - s0) * 1.2;
   const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2;
   const maxBounds: BBox = [cx - half, cy - half, cx + half, cy + half];
+  maplibregl.addProtocol('pmtiles', new Protocol().tile);
   let m: MLMap;
   try {
     m = new maplibregl.Map({
       container: 'map',
-      style: buildStyle(`${location.origin}${import.meta.env.BASE_URL}glyphs/{fontstack}/{range}.pbf`, lang()),
+      style: buildStyle(`${location.origin}${import.meta.env.BASE_URL}glyphs/{fontstack}/{range}.pbf`, lang(),
+        `pmtiles://${location.origin}${import.meta.env.BASE_URL}tiles/leonida.pmtiles`),
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
       maxBounds: maxBounds as LngLatBoundsLike,
@@ -597,6 +599,7 @@ async function boot(): Promise<void> {
     return;
   }
   map = m;
+  if (import.meta.env.DEV) (window as unknown as { __map: MLMap }).__map = m;
   if (hash.view) m.jumpTo({ center: [hash.view.lng, hash.view.lat], zoom: hash.view.zoom, bearing: hash.view.bearing, pitch: hash.view.pitch });
 
   m.addControl(new maplibregl.ScaleControl({ unit: 'metric', maxWidth: 110 }), 'bottom-left');
@@ -606,12 +609,8 @@ async function boot(): Promise<void> {
   m.on('load', () => {
     mapReady = true;
     const setData = (id: string, fc: FC | null) => fc && (m.getSource(id) as maplibregl.GeoJSONSource).setData(fc as GeoJSON.FeatureCollection);
-    setData('land', land as FC);
     setData('places', places as FC);
     if (pois) { setData('poi', pinned(pois)); setData('poi-area', searchAreas(pois)); }
-    loads.landuse.then((fc) => setData('landuse', fc), fail);
-    loads.roads.then((fc) => setData('roads', fc), fail);
-    loads.buildings.then((fc) => setData('buildings', withHeights(fc)), fail);
     applyLayerVisibility();
     if (hash.poi) selectPoi(hash.poi, { fly: !hash.view });
     updateCompass();

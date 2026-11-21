@@ -23,6 +23,20 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Cache tippecanoe
+        id: tippecanoe
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/tippecanoe
+          key: tippecanoe-2.79.0-${{ runner.os }}
+      - name: Build tippecanoe
+        if: steps.tippecanoe.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update && sudo apt-get install -y libsqlite3-dev zlib1g-dev
+          git clone --depth 1 --branch 2.79.0 https://github.com/felt/tippecanoe.git /tmp/tippecanoe
+          make -C /tmp/tippecanoe -j"$(nproc)" tippecanoe
+          mkdir -p ~/.local/bin && cp /tmp/tippecanoe/tippecanoe ~/.local/bin/
+      - run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Validate map data
         run: npm run validate
       - name: Build

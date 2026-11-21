@@ -1,0 +1,724 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "turbo-ruiner",
+    "category": "vehicle",
+    "name": "Imponte Turbo Ruiner",
+    "area:en": "Near the starting house",
+    "area:zh-Hans": "开局住处附近",
+    "area:zh-Hant": "開局住處附近",
+    "where:en": "About 300 m east of the starting house. Cross the highway; it is in the yard of a house on the street with the docks, below the bend.",
+    "where:zh-Hans": "开局住处往东约 300 米。穿过高速，弯道下方那条带码头的街，一户人家的院子里。",
+    "where:zh-Hant": "開局住處往東約 300 米。穿過高速，彎道下方那條帶碼頭的街，一戶人家的院子裡。",
+    "note:en": "Daytime only. Nitrous is on the left stick.",
+    "note:zh-Hans": "只在白天出现。氮气在左摇杆。",
+    "note:zh-Hant": "只在白天出現。氮氣在左搖桿。",
+    "flags": [
+     "day"
+    ],
+    "source": "https://x.com/vibeeval/status/2124129413197697477"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "driveshaft-hustler",
+    "category": "vehicle",
+    "name": "Vapid Driveshaft Hustler",
+    "area:en": "Key Lento",
+    "area:zh-Hans": "Key Lento",
+    "area:zh-Hant": "Key Lento",
+    "where:en": "Southeast Key Lento, Dolphin Dr: the front yard of the house east of Jeb's Snack Bar.",
+    "where:zh-Hans": "Key Lento 东南，Dolphin Dr，Jeb's Snack Bar 东边那户人家的前院。",
+    "where:zh-Hant": "Key Lento 東南，Dolphin Dr，Jeb's Snack Bar 東邊那戶人家的前院。",
+    "source": "https://x.com/vibeeval/status/2124129417186165033"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.010361,
+     -0.065418
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "drifter-elegy",
+    "category": "vehicle",
+    "name": "Annis Drifter Elegy",
+    "area:en": "Gellhorn Raceway",
+    "area:zh-Hans": "Gellhorn 赛道",
+    "area:zh-Hant": "Gellhorn 賽道",
+    "where:en": "Gellhorn International Raceway: the shed by the small twisty track. Open the left shutter.",
+    "where:zh-Hans": "Gellhorn International Raceway，小弯道赛道旁的棚子，打开左边的卷帘门。",
+    "where:zh-Hant": "Gellhorn International Raceway，小彎道賽道旁的棚子，開啟左邊的捲簾門。",
+    "note:en": "Nitrous on L3.",
+    "note:zh-Hans": "氮气在 L3。",
+    "note:zh-Hant": "氮氣在 L3。",
+    "source": "https://x.com/vibeeval/status/2124129435209085147"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.028866,
+     0.013903
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sultan-hellfire",
+    "category": "vehicle",
+    "name": "Sultan / Hellfire",
+    "area:en": "Gellhorn Raceway",
+    "area:zh-Hans": "Gellhorn 赛道",
+    "area:zh-Hant": "Gellhorn 賽道",
+    "where:en": "The same raceway's spectator parking; both are there.",
+    "where:zh-Hans": "同一条赛道的观众停车场，两辆都在。",
+    "where:zh-Hant": "同一條賽道的觀眾停車場，兩輛都在。",
+    "note:en": "The place for a drift build.",
+    "note:zh-Hans": "想要漂移车就来这里。",
+    "note:zh-Hant": "想要漂移車就來這裡。",
+    "source": "https://x.com/vibeeval/status/2124129445099487322"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.026625,
+     0.015686
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "penumbra",
+    "category": "vehicle",
+    "name": "Maibatsu 97 Penumbra FF",
+    "area:en": "Vespucci Island",
+    "area:zh-Hans": "Vespucci 岛",
+    "area:zh-Hant": "Vespucci 島",
+    "where:en": "Neptune Circle, the villa behind the bushes. Go in through the main garage shutter.",
+    "where:zh-Hans": "Neptune Circle，灌木丛后面的别墅。开主车库卷帘门进。",
+    "where:zh-Hant": "Neptune Circle，灌木叢後面的別墅。開主車庫捲簾門進。",
+    "note:en": "The side door sets off the alarm.",
+    "note:zh-Hans": "走侧门会响警报。",
+    "note:zh-Hant": "走側門會響警報。",
+    "source": "https://x.com/vibeeval/status/2124129450564669460"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.037588,
+     0.003711
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "royal-ruby-emerus",
+    "category": "vehicle",
+    "name": "Progen Royal Ruby Emerus",
+    "area:en": "Vespucci Island",
+    "area:zh-Hans": "Vespucci 岛",
+    "area:zh-Hant": "Vespucci 島",
+    "where:en": "Right next door: the small garage at the Vespucci Mansion entrance.",
+    "where:zh-Hans": "就在隔壁：Vespucci Mansion 入口处的小车库。",
+    "where:zh-Hant": "就在隔壁：Vespucci Mansion 入口處的小車庫。",
+    "note:en": "Unlocked, no tracker. Lists at $33,000.",
+    "note:zh-Hans": "没锁，没有追踪器。标价 $33,000。",
+    "note:zh-Hant": "沒鎖，沒有追蹤器。標價 $33,000。",
+    "source": "https://x.com/vibeeval/status/2124129463793537395"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.038986,
+     0.003205
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "purple-drank-emerus",
+    "category": "vehicle",
+    "name": "Progen Purple Drank Emerus",
+    "area:en": "Waxman Island",
+    "area:zh-Hans": "Waxman 岛",
+    "area:zh-Hant": "Waxman 島",
+    "where:en": "Chatfield Storage, in the container by the water.",
+    "where:zh-Hans": "Chatfield Storage，水边的集装箱里。",
+    "where:zh-Hant": "Chatfield Storage，水邊的集裝箱裡。",
+    "note:en": "Comes with nitrous.",
+    "note:zh-Hans": "带氮气。",
+    "note:zh-Hant": "帶氮氣。",
+    "source": "https://x.com/vibeeval/status/2124129473574408308"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.036311,
+     -0.005879
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "elegy-90",
+    "category": "vehicle",
+    "name": "Annis 90 Elegy",
+    "area:en": "Starfish Island",
+    "area:zh-Hans": "Starfish 岛",
+    "area:zh-Hant": "Starfish 島",
+    "where:en": "In a mansion courtyard. Hop the fence.",
+    "where:zh-Hans": "豪宅的院子里，翻栅栏进去。",
+    "where:zh-Hant": "豪宅的院子裡，翻柵欄進去。",
+    "note:en": "No alarm.",
+    "note:zh-Hans": "没有警报。",
+    "note:zh-Hant": "沒有警報。",
+    "source": "https://x.com/vibeeval/status/2124129484139884547"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.039612,
+     -0.002361
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "node-thrax",
+    "category": "vehicle",
+    "name": "Truffade Andrew Node's Thrax",
+    "area:en": "Starfish Island",
+    "area:zh-Hans": "Starfish 岛",
+    "area:zh-Hant": "Starfish 島",
+    "where:en": "South Starfish Island, Sabal Cir: the big mansion's garage.",
+    "where:zh-Hans": "Starfish 岛南部，Sabal Cir，大豪宅的车库。",
+    "where:zh-Hant": "Starfish 島南部，Sabal Cir，大豪宅的車庫。",
+    "note:en": "No lock, no alarm.",
+    "note:zh-Hans": "没锁，没有警报。",
+    "note:zh-Hant": "沒鎖，沒有警報。",
+    "source": "https://x.com/vibeeval/status/2124129492914368579"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.039227,
+     -0.004506
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "thrax",
+    "category": "vehicle",
+    "name": "Truffade Thrax",
+    "area:en": "Hamlet",
+    "area:zh-Hans": "Hamlet",
+    "area:zh-Hant": "Hamlet",
+    "where:en": "Boone Speedway, south entrance, on top of a trailer.",
+    "where:zh-Hans": "Boone Speedway 南入口，停在拖车上。",
+    "where:zh-Hant": "Boone Speedway 南入口，停在拖車上。",
+    "note:en": "No guard, but it has a tracker: drive it off and run.",
+    "note:zh-Hans": "没有人看守，但装了追踪器：开下来就跑。",
+    "note:zh-Hant": "沒有人看守，但裝了追蹤器：開下來就跑。",
+    "flags": [
+     "tracker"
+    ],
+    "source": "https://x.com/vibeeval/status/2124129506839715869"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.005397,
+     -0.039034
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "anarchist-dominator",
+    "category": "vehicle",
+    "name": "Vapid Anarchist Dominator",
+    "area:en": "Dynamix Fitness",
+    "area:zh-Hans": "Dynamix Fitness",
+    "area:zh-Hant": "Dynamix Fitness",
+    "where:en": "Top floor of the parking garage next to Dynamix Fitness.",
+    "where:zh-Hans": "Dynamix Fitness 旁边停车楼的顶层。",
+    "where:zh-Hant": "Dynamix Fitness 旁邊停車樓的頂層。",
+    "note:en": "Daytime only.",
+    "note:zh-Hans": "只在白天出现。",
+    "note:zh-Hant": "只在白天出現。",
+    "flags": [
+     "day"
+    ],
+    "source": "https://x.com/vibeeval/status/2124129519422300380"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "charred-toros",
+    "category": "vehicle",
+    "name": "Pegassi Charred Toros",
+    "area:en": "La Perle",
+    "area:zh-Hans": "La Perle",
+    "area:zh-Hant": "La Perle",
+    "where:en": "NW 10th Ave, in front of the trap house.",
+    "where:zh-Hans": "NW 10th Ave，trap house 的前院。",
+    "where:zh-Hant": "NW 10th Ave，trap house 的前院。",
+    "note:en": "Lists at $23,045.",
+    "note:zh-Hans": "标价 $23,045。",
+    "note:zh-Hant": "標價 $23,045。",
+    "source": "https://x.com/vibeeval/status/2124129529580904796"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.024697,
+     0.006241
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "devils-rope-gauntlet",
+    "category": "vehicle",
+    "name": "Bravado Devil's Rope Gauntlet",
+    "area:en": "Ambrosia",
+    "area:zh-Hans": "Ambrosia",
+    "area:zh-Hant": "Ambrosia",
+    "where:en": "Acacia St, Hog Stars Garage. Take the ladder and enter through the roof window.",
+    "where:zh-Hans": "Acacia St，Hog Stars Garage。顺梯子上去，从屋顶天窗进。",
+    "where:zh-Hant": "Acacia St，Hog Stars Garage。順梯子上去，從屋頂天窗進。",
+    "note:en": "Lists at $21,890.",
+    "note:zh-Hans": "标价 $21,890。",
+    "note:zh-Hant": "標價 $21,890。",
+    "source": "https://x.com/vibeeval/status/2124129540867854463"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.006385,
+     0.029324
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "copperheads-gauntlet",
+    "category": "vehicle",
+    "name": "Bravado Copperheads Gauntlet",
+    "area:en": "Ambrosia",
+    "area:zh-Hans": "Ambrosia",
+    "area:zh-Hant": "Ambrosia",
+    "where:en": "Northeast Ambrosia, Reservoir St: the garage of the house by the river.",
+    "where:zh-Hans": "Ambrosia 东北，Reservoir St，河边那户人家的车库。",
+    "where:zh-Hant": "Ambrosia 東北，Reservoir St，河邊那戶人家的車庫。",
+    "source": "https://x.com/vibeeval/status/2124129551643033655"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.009445,
+     0.030504
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "firebug-dominator",
+    "category": "vehicle",
+    "name": "Vapid Firebug Dominator",
+    "area:en": "Port Gellhorn",
+    "area:zh-Hans": "Port Gellhorn",
+    "area:zh-Hant": "Port Gellhorn",
+    "where:en": "Gellhorn Ave, in front of the La Cascara Motel.",
+    "where:zh-Hans": "Gellhorn Ave，La Cascara 汽车旅馆门口。",
+    "where:zh-Hant": "Gellhorn Ave，La Cascara 汽車旅館門口。",
+    "note:en": "Locked, with an alarm.",
+    "note:zh-Hans": "锁着，有警报。",
+    "note:zh-Hant": "鎖著，有警報。",
+    "flags": [
+     "alarm"
+    ],
+    "source": "https://x.com/vibeeval/status/2124129570467016795"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.025541,
+     0.022336
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "red-hot-hustler",
+    "category": "vehicle",
+    "name": "Vapid Red Hot Hustler",
+    "area:en": "Capri",
+    "area:zh-Hans": "Capri",
+    "area:zh-Hant": "Capri",
+    "where:en": "Capri beach, a corner of the La Costa Hotel parking lot.",
+    "where:zh-Hans": "Capri 海滩，La Costa 酒店停车场的角落。",
+    "where:zh-Hant": "Capri 海灘，La Costa 酒店停車場的角落。",
+    "note:en": "Locked, with an alarm.",
+    "note:zh-Hans": "锁着，有警报。",
+    "note:zh-Hant": "鎖著，有警報。",
+    "flags": [
+     "alarm"
+    ],
+    "source": "https://x.com/vibeeval/status/2124129594588438793"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.032914,
+     -0.006457
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "brimstone-golfer",
+    "category": "vehicle",
+    "name": "Vapid Brimstone Golfer",
+    "area:en": "Leaf Links",
+    "area:zh-Hans": "Leaf Links",
+    "area:zh-Hant": "Leaf Links",
+    "where:en": "Delamore Dr, a mansion garage.",
+    "where:zh-Hans": "Delamore Dr，豪宅的车库。",
+    "where:zh-Hant": "Delamore Dr，豪宅的車庫。",
+    "source": "https://x.com/vibeeval/status/2124129609788833881"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.038335,
+     0.014337
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "later-cars",
+    "category": "vehicle",
+    "name": "Four more",
+    "name:zh-Hans": "另外四辆",
+    "name:zh-Hant": "另外四輛",
+    "area:en": "Around the map",
+    "area:zh-Hans": "各处",
+    "area:zh-Hant": "各處",
+    "where:en": "A Vigero, a Zorrusso, a Comet and a gold Toros.",
+    "where:zh-Hans": "Vigero、Zorrusso、Comet 和金色 Toros。",
+    "where:zh-Hant": "Vigero、Zorrusso、Comet 和金色 Toros。",
+    "note:en": "They need an item you get later in the story.",
+    "note:zh-Hans": "要推进剧情、拿到一件道具后才能开走。",
+    "note:zh-Hant": "要推進劇情、拿到一件道具後才能開走。",
+    "flags": [
+     "later"
+    ],
+    "source": "https://x.com/vibeeval/status/2124129619096019218"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "nipper",
+    "category": "weapon",
+    "name": "Assassin Nipper .38",
+    "area:en": "Permit Keys",
+    "area:zh-Hans": "Permit Keys",
+    "area:zh-Hant": "Permit Keys",
+    "where:en": "In a compartment of a beached wooden boat in the Permit Keys, west of Maroon Key. A suppressed pistol.",
+    "where:zh-Hans": "Maroon Key 西边，Permit Keys 一艘搁浅木船的暗格里。消音手枪。",
+    "where:zh-Hant": "Maroon Key 西邊，Permit Keys 一艘擱淺木船的暗格裡。消音手槍。",
+    "note:en": "One guide puts it in a wreck near Mile Zero Air Station instead.",
+    "note:zh-Hans": "也有攻略说在 Mile Zero 航空站附近的沉船里。",
+    "note:zh-Hant": "也有攻略說在 Mile Zero 航空站附近的沉船裡。",
+    "radius_m": 188,
+    "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.017132,
+     -0.065225
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "gorse",
+    "category": "weapon",
+    "name": "Smuggler Gorse 425",
+    "area:en": "Permit Keys",
+    "area:zh-Hans": "Permit Keys",
+    "area:zh-Hant": "Permit Keys",
+    "where:en": "Beside an abandoned boat on the northernmost island of the Permit Keys. A shotgun.",
+    "where:zh-Hans": "Permit Keys 最北边的小岛，废弃船的旁边。霰弹枪。",
+    "where:zh-Hant": "Permit Keys 最北邊的小島，廢棄船的旁邊。霰彈槍。",
+    "radius_m": 134,
+    "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.019734,
+     -0.061153
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "h-at",
+    "category": "weapon",
+    "name": "Hauners H-AT",
+    "area:en": "Griffin Shooting Range",
+    "area:zh-Hans": "Griffin 射击场",
+    "area:zh-Hant": "Griffin 射擊場",
+    "where:en": "In a hidden bunker under a trailer across the road from Griffin Shooting Range. A rocket launcher.",
+    "where:zh-Hans": "Griffin 射击场马路对面，拖车底下的暗堡里。火箭筒。",
+    "where:zh-Hant": "Griffin 射擊場馬路對面，拖車底下的暗堡裡。火箭筒。",
+    "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "hobo",
+    "category": "weapon",
+    "name": "Marabunta Grande Hobo",
+    "area:en": "South of Hamlet",
+    "area:zh-Hans": "Hamlet 以南",
+    "area:zh-Hant": "Hamlet 以南",
+    "where:en": "An industrial storage building south of Hamlet, by the highway. A shotgun.",
+    "where:zh-Hans": "Hamlet 以南、高速旁边的工业仓库。霰弹枪。",
+    "where:zh-Hant": "Hamlet 以南、高速旁邊的工業倉庫。霰彈槍。",
+    "radius_m": 241,
+    "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.010505,
+     -0.04154
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "type-9",
+    "category": "weapon",
+    "name": "Type 9",
+    "area:en": "South Vice-Dale",
+    "area:zh-Hans": "South Vice-Dale",
+    "area:zh-Hant": "South Vice-Dale",
+    "where:en": "A warehouse in South Vice-Dale. An SMG.",
+    "where:zh-Hans": "South Vice-Dale 的一个仓库。冲锋枪。",
+    "where:zh-Hant": "South Vice-Dale 的一個倉庫。衝鋒槍。",
+    "note:en": "Another guide says a bunker in Balsero.",
+    "note:zh-Hans": "也有攻略说在 Balsero 的地堡里。",
+    "note:zh-Hant": "也有攻略說在 Balsero 的地堡裡。",
+    "radius_m": 376,
+    "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.016216,
+     -0.03501
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "laird",
+    "category": "weapon",
+    "name": "Laird 350",
+    "area:en": "The wild",
+    "area:zh-Hans": "野外",
+    "area:zh-Hant": "野外",
+    "where:en": "Follow gunshots in the wild and help the injured hunter. A sniper rifle.",
+    "where:zh-Hans": "野外听到枪声就循声过去，帮一下受伤的猎人。狙击枪。",
+    "where:zh-Hant": "野外聽到槍聲就循聲過去，幫一下受傷的獵人。狙擊槍。",
+    "flags": [
+     "random"
+    ],
+    "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "skunk-ape",
+    "category": "easter-egg",
+    "name": "Skunk Ape",
+    "name:zh-Hans": "大脚怪",
+    "name:zh-Hant": "大腳怪",
+    "area:en": "Cottonmouth Lake",
+    "area:zh-Hans": "Cottonmouth Lake",
+    "area:zh-Hant": "Cottonmouth Lake",
+    "where:en": "The swamps around Cottonmouth Lake.",
+    "where:zh-Hans": "Cottonmouth Lake 一带的沼泽。",
+    "where:zh-Hant": "Cottonmouth Lake 一帶的沼澤。",
+    "radius_m": 429,
+    "source": "https://gta-zone.com/news/gta-6-easter-eggs/"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.00159,
+     -0.049997
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "ufo",
+    "category": "easter-egg",
+    "name": "UFO",
+    "area:en": "Kelly County",
+    "area:zh-Hans": "Kelly County",
+    "area:zh-Hant": "Kelly County",
+    "where:en": "A dirt road in Kelly County. A big area: drive around.",
+    "where:zh-Hans": "Kelly County 的一条土路。范围很大，开着车慢慢找。",
+    "where:zh-Hant": "Kelly County 的一條土路。範圍很大，開著車慢慢找。",
+    "note:en": "Worth a bronze trophy.",
+    "note:zh-Hans": "有一个铜奖杯。",
+    "note:zh-Hant": "有一個銅獎盃。",
+    "radius_m": 1127,
+    "source": "https://gta-zone.com/news/gta-6-easter-eggs/"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.013638,
+     0.013059
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "egg-nest",
+    "category": "easter-egg",
+    "name": "Eggs on the tower",
+    "name:zh-Hans": "塔顶的蛋",
+    "name:zh-Hant": "塔頂的蛋",
+    "area:en": "Vice-Dale County",
+    "area:zh-Hans": "Vice-Dale County",
+    "area:zh-Hant": "Vice-Dale County",
+    "where:en": "The tallest radio tower in Vice-Dale County has a nest on top. About a seven-minute climb; take an egg and throw it off.",
+    "where:zh-Hans": "Vice-Dale County 最高的电台塔，塔顶有个鸟窝。爬上去大约 7 分钟，拿一颗蛋往下扔。",
+    "where:zh-Hant": "Vice-Dale County 最高的電臺塔，塔頂有個鳥窩。爬上去大約 7 分鐘，拿一顆蛋往下扔。",
+    "radius_m": 1019,
+    "source": "https://leonidaverse.com/en/codex/gta-6-easter-eggs"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.029179,
+     -0.015493
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "dexter",
+    "category": "easter-egg",
+    "name": "Dexter's building",
+    "name:zh-Hans": "《嗜血法医》的公寓",
+    "name:zh-Hant": "《嗜血法醫》的公寓",
+    "area:en": "Washington Island",
+    "area:zh-Hans": "Washington Island",
+    "area:zh-Hant": "Washington Island",
+    "where:en": "Washington Island, near Top Fun Drones on Vice Beach: the waterfront apartment block.",
+    "where:zh-Hans": "Washington Island，Vice Beach 的 Top Fun Drones 附近，临水的那栋公寓。",
+    "where:zh-Hant": "Washington Island，Vice Beach 的 Top Fun Drones 附近，臨水的那棟公寓。",
+    "note:en": "Outside only; you can't go in.",
+    "note:zh-Hans": "只能看外观，进不去。",
+    "note:zh-Hant": "只能看外觀，進不去。",
+    "radius_m": 161,
+    "source": "https://leonidaverse.com/en/codex/gta-6-easter-eggs"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.045925,
+     0.012192
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "jet-ski-dog",
+    "category": "easter-egg",
+    "name": "The jet-ski dog",
+    "name:zh-Hans": "开水上摩托的狗",
+    "name:zh-Hant": "開水上摩托的狗",
+    "area:en": "At sea",
+    "area:zh-Hans": "海上",
+    "area:zh-Hant": "海上",
+    "where:en": "May turn up when you are stranded at sea.",
+    "where:zh-Hans": "在海上困住的时候，可能会遇到。",
+    "where:zh-Hant": "在海上困住的時候，可能會遇到。",
+    "flags": [
+     "random"
+    ],
+    "source": "https://leonidaverse.com/en/codex/gta-6-easter-eggs"
+   },
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "old-books",
+    "category": "easter-egg",
+    "name": "Series nods",
+    "name:zh-Hans": "前作的梗",
+    "name:zh-Hant": "前作的梗",
+    "area:en": "The first house",
+    "area:zh-Hans": "开局的家",
+    "area:zh-Hant": "開局的家",
+    "where:en": "Read the books and the fitness magazine in the first house.",
+    "where:zh-Hans": "开局的家里翻翻书和健身杂志。",
+    "where:zh-Hant": "開局的家裡翻翻書和健身雜誌。",
+    "source": "https://leonidaverse.com/en/codex/gta-6-easter-eggs"
+   },
+   "geometry": null
+  }
+ ]
+}

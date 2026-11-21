@@ -15,11 +15,12 @@ There are no ads, no analytics and no tracking. Story spoilers are not accepted.
 
 ## How the data is made
 
-Leonida's shape comes from the map Rockstar Games published at
-[rockstargames.com/VI/media](https://www.rockstargames.com/VI/media). `tools/extract.py` reads that image and
-writes a first automatic cut of the base layers (land, land use, buildings, roads) to `data/`, and
-`tools/names.py` does the same for place names. That cut is only a starting point: people then correct and
-extend it by hand, using what they see in the game.
+Roads, buildings, land and water are traced from the in-game map tiles published by GTADB.ORG —
+"GTA VI Map Tiles (CC BY 4.0) — https://map.gtadb.org" — which show the map without labels, icons or grid.
+`tools/trace_ingame.py` turns them into vector features (every road, every building with whether it can be entered,
+land, beach, swamp), aligned to the map Rockstar Games published at
+[rockstargames.com/VI/media](https://www.rockstargames.com/VI/media); `tools/names.py` reads the place names off
+Rockstar's map. That cut is only a starting point: people then correct and extend it by hand, using what they see in the game.
 
 Coordinates are longitude/latitude with the state placed on the equator around 0, 0, where degrees are
 close to square. One pixel of the official map is 1609.344 / 600 m (the poster's scale bar is 600 px to a

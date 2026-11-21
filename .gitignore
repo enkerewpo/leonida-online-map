@@ -5,3 +5,5 @@ dist/
 .DS_Store
 *.local
 public/data/
+public/tiles/
+__pycache__/

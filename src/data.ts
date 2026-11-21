@@ -1,5 +1,5 @@
 // Loads data/*.geojson (copied next to the app at build time) and prepares it for the map and the panel.
-import { circleRing, polygonAreaM2 } from './geo';
+import { circleRing } from './geo';
 
 export type FC = GeoJSON.FeatureCollection<GeoJSON.Geometry | null, Record<string, any>>;
 export type Feature = FC['features'][number];
@@ -14,19 +14,6 @@ export function fetchLayer(name: LayerName): Promise<FC> {
     if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);
     return r.json() as Promise<FC>;
   });
-}
-
-/** Buildings without a `height` get a modest one from their footprint, so 3D view has some relief. */
-export function withHeights(fc: FC): FC {
-  for (const f of fc.features) {
-    const p = (f.properties ??= {});
-    if (typeof p.height === 'number' && p.height > 0) { p.render_height = p.height; continue; }
-    const g = f.geometry;
-    const area = g?.type === 'Polygon' ? polygonAreaM2(g.coordinates)
-      : g?.type === 'MultiPolygon' ? g.coordinates.reduce((a, poly) => a + polygonAreaM2(poly), 0) : 0;
-    p.render_height = Math.round(Math.min(Math.max(5 + Math.sqrt(area) * 0.28, 6), 32));
-  }
-  return fc;
 }
 
 /** Only pinned finds go on the map; all of them are listed in the panel. */

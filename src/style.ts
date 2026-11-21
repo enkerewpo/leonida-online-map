@@ -11,7 +11,8 @@ export const COLORS = {
   landDark: '#669877',
   landLight: '#81b09e',
   urban: '#aeb9bc',
-  building: '#a0aeb8',
+  building: '#acb9cc',
+  buildingIn: '#96a7be',
   buildingEdge: '#8e9eaa',
   beach: '#d7cda5',
   swamp: '#5c9083',
@@ -63,7 +64,12 @@ const categoryColor: ExpressionSpecification = [
   category('').color,
 ] as unknown as ExpressionSpecification;
 
-export function buildStyle(glyphs: string, lang: Lang): StyleSpecification {
+const BASE_LAYERS = new Set(['land', 'landuse', 'buildings', 'roads']);
+
+/** Shown from a feature's own `minzoom` (fractional), so detail appears gradually as in a map app. */
+const byMinzoom: ExpressionSpecification = ['>=', ['zoom'], ['coalesce', ['get', 'minzoom'], 0]];
+
+export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleSpecification {
   const name = nameField(lang);
   const sp = (n: number) => spacing(lang, n);
   const src = (id: string, promoteId?: string) => ({ [id]: { type: 'geojson' as const, data: EMPTY, ...(promoteId ? { promoteId } : {}) } });
@@ -131,11 +137,11 @@ export function buildStyle(glyphs: string, lang: Lang): StyleSpecification {
       paint: { 'fill-color': '#8c979d' },
     },
     {
-      id: 'building', type: 'fill', source: 'buildings', minzoom: 14,
+      id: 'building', type: 'fill', source: 'buildings', minzoom: 12.5,
       paint: {
-        'fill-color': COLORS.building,
-        'fill-outline-color': COLORS.buildingEdge,
-        'fill-opacity': fade(14, 14.8),
+        'fill-color': ['case', ['boolean', ['get', 'enterable'], false], COLORS.buildingIn, COLORS.building],
+        'fill-outline-color': ['case', ['boolean', ['get', 'enterable'], false], '#7e8fa8', COLORS.buildingEdge],
+        'fill-opacity': fade(12.5, 13.5),
       },
     },
     // Roads: casings first, then fills, minor to major.
@@ -166,7 +172,7 @@ export function buildStyle(glyphs: string, lang: Lang): StyleSpecification {
       id: 'road-motorway-casing', type: 'line', source: 'roads',
       filter: cls('motorway'),
       layout: { 'line-cap': 'round', 'line-join': 'round' },
-      paint: { 'line-color': 'rgba(104, 122, 130, 0.55)', 'line-width': width([[10, 1.8], [12, 3.2], [14, 6.6], [16, 14], [18, 34]]) },
+      paint: { 'line-color': 'rgba(176, 160, 110, 0.75)', 'line-width': width([[10, 1.8], [12, 3.2], [14, 6.6], [16, 14], [18, 34]]) },
     },
     {
       id: 'road-street', type: 'line', source: 'roads', minzoom: 13.2,
@@ -192,7 +198,7 @@ export function buildStyle(glyphs: string, lang: Lang): StyleSpecification {
       id: 'road-motorway', type: 'line', source: 'roads',
       filter: cls('motorway'),
       layout: { 'line-cap': 'round', 'line-join': 'round' },
-      paint: { 'line-color': '#ffffff', 'line-width': width([[10, 0.9], [12, 1.8], [14, 4.2], [16, 10], [18, 26]]) },
+      paint: { 'line-color': '#ece4c4', 'line-width': width([[10, 0.9], [12, 1.8], [14, 4.2], [16, 10], [18, 26]]) },
     },
     {
       id: 'road-rail', type: 'line', source: 'roads', minzoom: 12.5,
@@ -233,7 +239,7 @@ export function buildStyle(glyphs: string, lang: Lang): StyleSpecification {
       id: 'building-3d', type: 'fill-extrusion', source: 'buildings', minzoom: 13.5,
       layout: { visibility: 'none' },
       paint: {
-        'fill-extrusion-color': '#a9b6bf',
+        'fill-extrusion-color': ['case', ['boolean', ['get', 'enterable'], false], '#9aabc2', '#b3bfd0'],
         'fill-extrusion-height': ['interpolate', ['linear'], ['zoom'], 13.5, 0, 14.5, ['get', 'render_height']],
         'fill-extrusion-opacity': 0.92,
         'fill-extrusion-vertical-gradient': true,
@@ -396,11 +402,19 @@ export function buildStyle(glyphs: string, lang: Lang): StyleSpecification {
     },
   ];
 
+  // Base layers come from the vector tiles; every feature waits for its own minzoom.
+  for (const l of layers as (LayerSpecification & { source?: string; filter?: ExpressionSpecification })[]) {
+    if (!l.source || !BASE_LAYERS.has(l.source)) continue;
+    (l as { 'source-layer'?: string })['source-layer'] = l.source;
+    l.source = 'base';
+    l.filter = l.filter ? ['all', l.filter, byMinzoom] as ExpressionSpecification : byMinzoom;
+  }
+
   return {
     version: 8,
     name: 'Leonida',
     glyphs,
-    sources: { ...src('land'), ...src('landuse'), ...src('buildings'), ...src('roads'), ...src('places'), ...src('poi'), ...src('poi-area', 'id'), ...src('selection') },
+    sources: { base: { type: 'vector', url: tilesUrl, attribution: 'Map data: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org; © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('poi-area', 'id'), ...src('selection') },
     layers,
     light: { anchor: 'viewport', color: '#ffffff', intensity: 0.32, position: [1.3, 210, 35] },
   };
