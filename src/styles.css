@@ -140,10 +140,8 @@ svg { flex: none; }
 .lang-caret { display: flex; transition: transform 0.3s var(--ease); }
 .lang.open .lang-caret { transform: rotate(180deg); }
 .lang-list {
-  position: absolute;
-  z-index: 20;
-  top: calc(100% + 8px);
-  right: 0;
+  position: fixed;
+  z-index: 60;
   width: 208px;
   margin: 0;
   padding: 8px;
@@ -158,6 +156,11 @@ svg { flex: none; }
   outline: none;
   color: var(--white);
   animation: menu-in 0.28s var(--ease) both;
+}
+.lang-list.up { animation-name: menu-in-up; }
+@keyframes menu-in-up {
+  from { opacity: 0; clip-path: inset(100% 0 0 0 round 12px); }
+  to { opacity: 1; clip-path: inset(0 0 0 0 round 12px); }
 }
 @keyframes menu-in {
   from { opacity: 0; clip-path: inset(0 0 100% 0 round 12px); }

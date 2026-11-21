@@ -673,7 +673,16 @@ function initLangMenu(): void {
   };
   const open = () => {
     if (!list.hidden) return;
+    // Moved to <body>: a transformed sheet would otherwise both clip it and become its containing block.
+    if (list.parentElement !== document.body) document.body.appendChild(list);
     list.hidden = false;
+    // Fixed to the viewport, so a sheet or panel that clips its content can't cut the list off; opens upward
+    // when there is not enough room below the button.
+    const r = btn.getBoundingClientRect(), h = list.offsetHeight, gap = 8;
+    const below = window.innerHeight - r.bottom - gap >= h + 12;
+    list.style.top = below ? `${r.bottom + gap}px` : `${Math.max(12, r.top - gap - h)}px`;
+    list.style.left = `${Math.max(12, Math.min(r.right - list.offsetWidth, window.innerWidth - list.offsetWidth - 12))}px`;
+    list.classList.toggle('up', !below);
     btn.setAttribute('aria-expanded', 'true');
     root.classList.add('open');
     mark(LANGS.indexOf(lang()));
@@ -708,7 +717,8 @@ function initLangMenu(): void {
     else return;
     e.preventDefault();
   });
-  document.addEventListener('pointerdown', (e) => { if (!root.contains(e.target as Node)) close(false); });
+  document.addEventListener('pointerdown', (e) => { if (!root.contains(e.target as Node) && !list.contains(e.target as Node)) close(false); });
+  window.addEventListener('resize', () => close(false));
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -826,7 +836,7 @@ async function boot(): Promise<void> {
       fitBoundsOptions: { padding: viewPadding() },
       maxBounds: maxBounds as LngLatBoundsLike,
       minZoom: 10,
-      maxZoom: 20,
+      maxZoom: 18.5,
       maxPitch: 70,
       attributionControl: false,
       localIdeographFontFamily: CJK_FONTS,

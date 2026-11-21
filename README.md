@@ -1,86 +1,72 @@
 # Leonida Online Map
 
-An unofficial, community-maintained vector map of the state of Leonida from Grand Theft Auto VI.
+An unofficial, community-maintained online map of the state of Leonida from Grand Theft Auto VI.
+雷奥奈达在线地图：社区共同维护的 GTA VI 地图。
 
 **Live map:** https://enkerewpo.github.io/leonida-online-map/
 
-![Screenshot of the map](docs/screenshot.png)
+![The map at Vice City](docs/screenshot.jpg)
 
-The map is drawn in the browser with [MapLibre GL JS](https://maplibre.org/) from plain GeoJSON files, so it
-zooms, rotates and tilts like any web map, and every line on it can be edited in a text editor or a GIS tool.
-It shows the coastline, land use, roads, buildings and place names, plus a list of community-found vehicles,
-weapons and easter eggs. The interface is in English, Simplified Chinese and Traditional Chinese.
+- The in-game map as the base, zooming level by level like any map app, from the whole state down to single
+  buildings.
+- On top of it: region and district names, 900+ named landmarks (gas stations, gun shops, clubs, restaurants,
+  hotels, police, hospitals…), highway numbers along the roads, and community finds (vehicles, weapons, easter
+  eggs, hideouts, freebies, hidden items). Each appears from the zoom where it fits.
+- English, 简体中文 and 繁體中文; desktop and phone.
+- Right-click (long-press on a phone) anywhere → **Add or fix here** opens a GitHub issue with the spot filled in.
 
-There are no ads, no analytics and no tracking. Story spoilers are not accepted.
+No ads, no analytics, no tracking. No story spoilers.
 
-## How the data is made
+## Where it comes from
 
-The base map is the in-game map itself: GTADB's tiles, "GTA VI Map Tiles (CC BY 4.0) — https://map.gtadb.org",
-served level by level like any map app (CI fetches them from [rolux/gtadb.org](https://github.com/rolux/gtadb.org)
-at build time; they are not stored in this repository). On top of it the site draws what lives in `data/`:
-region and place names (read off [Rockstar's official map](https://www.rockstargames.com/VI/media)), named
-landmarks ("GTA VI Landmarks Data (CC BY 4.0) — https://map.gtadb.org"), highway numbers and road names, and
-community finds, each shown from the zoom where it fits. All of it is plain GeoJSON that anyone can fix or extend
-with a pull request — see [CONTRIBUTING.md](CONTRIBUTING.md) · [社区手册（中文）](docs/handbook.zh-Hans.md).
-
-Coordinates are longitude/latitude with the state placed on the equator around 0, 0, where degrees are
-close to square. One pixel of the official map is 1609.344 / 600 m (the poster's scale bar is 600 px to a
-mile). `tools/geo.py` and `src/geo.ts` convert between the two.
-
-| File | What it holds |
+| Layer | Source |
 | --- | --- |
-| `data/land.geojson` | land polygons; lakes are holes, everything else is sea |
-| `data/landuse.geojson` | urban ground, beach, swamp, parks and so on |
-| `data/buildings.geojson` | building footprints, with an optional `height` |
-| `data/roads.geojson` | road centrelines by class, with optional `name` and `ref` |
-| `data/places.geojson` | labels: state, counties, cities, towns, districts, islands, water, landmarks |
-| `data/poi.geojson` | finds: vehicles, weapons, easter eggs and more, each with a source link |
+| Base map | The in-game map: "GTA VI Map Tiles (CC BY 4.0) — https://map.gtadb.org" ([rolux/gtadb.org](https://github.com/rolux/gtadb.org)). CI fetches the tiles at build time; they are not stored here. |
+| `data/places.geojson` | Region and place names read off [Rockstar's official Leonida map](https://www.rockstargames.com/VI/media) |
+| `data/landmarks.geojson` | "GTA VI Landmarks Data (CC BY 4.0) — https://map.gtadb.org", plus community additions |
+| `data/roads-named.geojson` | Highway numbers from the official map's shields along the in-game highways; street names from the community |
+| `data/poi.geojson` | Community finds, each with a source link |
+| `tools/i18n/zh-Hans.json` | Chinese names: official where Rockstar or the game has one, otherwise community translations |
 
-The full property schema is in [CONTRIBUTING.md](CONTRIBUTING.md).
+## Contributing / 参与
 
-## Contributing
+Everything on the map is plain GeoJSON in [`data/`](data). Fix a name, add a shop, draw a street name, correct a
+translation — small pull requests are welcome, and CI checks every change.
 
-Corrections and additions are welcome, small ones included.
+- English guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- 中文社区手册：[docs/handbook.zh-Hans.md](docs/handbook.zh-Hans.md)
+- No code? Use the [issue forms](../../issues/new/choose) (add, fix, remove, translate) or the map's right-click menu.
 
-1. Edit the GeoJSON in `data/`. [QGIS](https://qgis.org/) and [geojson.io](https://geojson.io/) both work;
-   so does a text editor for names and notes.
-2. Run `npm run validate` and fix anything it reports.
-3. Open a pull request saying what you changed and how you know.
-
-Every change needs a source someone else can check: a screenshot you took in the game, your own in-game
-observation, or official Rockstar material. Leaked builds, datamined or extracted game files and story spoilers
-are not accepted, and neither are copied images or icons from the game.
-
-If you would rather not edit files, open an issue with a map link (the address bar keeps the current view and
-selection) and a screenshot.
+Every change needs a source someone else can check: your own in-game screenshot or observation, or official
+Rockstar material. No leaked or extracted game files, no copied game icons, no spoilers.
 
 ## Running it locally
 
-Needs Node.js 22 or newer.
+Needs Node.js 22+.
 
 ```sh
-npm install
-npm run dev        # http://localhost:5173/leonida-online-map/
-npm run validate   # check data/*.geojson
-npm run build      # static site in dist/
-npm run preview    # serve dist/
+npm ci
+git clone --depth 1 --filter=blob:none --sparse https://github.com/rolux/gtadb.org /tmp/gtadb
+git -C /tmp/gtadb sparse-checkout set maps/tiles/6/day
+npm run tiles -- /tmp/gtadb/maps/tiles/6/day   # in-game tiles -> public/tiles/day
+npm run validate                                # check data/*.geojson
+npm run dev                                     # http://localhost:5173/leonida-online-map/
+npm run build                                   # static site in dist/
 ```
-
-The app reads `data/` directly during development, and the build copies it into `dist/data/`.
 
 ## Legal
 
 Unofficial fan project. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. Grand Theft
-Auto and related marks are trademarks of Take-Two Interactive.
-
-The map geometry is traced from Rockstar's officially released Leonida map, © Rockstar Games. It is used for
-non-commercial fan purposes and will be removed on request. The site contains no game files, no extracted game
-assets, no ads and no donation links. The icons are our own drawings and the fonts are open-source.
+Auto and related marks are trademarks of Take-Two Interactive. Map art © Rockstar Games, used for non-commercial
+fan purposes and removed on request. The site contains no extracted game files, no ads and no donation links;
+icons are our own drawings and fonts are open-source.
 
 ## Licences
 
 - Code: MIT, see [LICENSE](LICENSE).
-- Map data in `data/`: CC BY-NC-SA 4.0, see [data/LICENSE](data/LICENSE). This covers contributors' work only
-  and grants no rights in Rockstar's material.
+- Data in `data/`: CC BY-NC-SA 4.0 for contributors' work, see [data/LICENSE](data/LICENSE); third-party data keeps
+  its own licence (GTADB: CC BY 4.0). Grants no rights in Rockstar's material.
 - Fonts (Jost, Inter, Noto Sans SC, Noto Sans TC): SIL Open Font License 1.1, see [fonts/](fonts/).
 - MapLibre GL JS: BSD-3-Clause.
+
+Made by [wheatfox](https://x.com/wheat_fox) and contributors.
