@@ -4,7 +4,7 @@ import { circleRing } from './geo';
 export type FC = GeoJSON.FeatureCollection<GeoJSON.Geometry | null, Record<string, any>>;
 export type Feature = FC['features'][number];
 
-export const LAYERS = ['land', 'landuse', 'buildings', 'roads', 'places', 'poi'] as const;
+export const LAYERS = ['places', 'poi', 'landmarks', 'roads-named'] as const;
 export type LayerName = typeof LAYERS[number];
 
 const url = (name: string) => `${import.meta.env.BASE_URL}data/${name}.geojson`;

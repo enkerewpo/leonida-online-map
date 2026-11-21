@@ -1,17 +1,7 @@
-// Interface icons (our own, 24x24, stroke-based). The app mark is the one place the sunset gradient appears.
+// Interface icons (our own, 24x24, stroke-based, monochrome).
 const I = (d: string, extra = '') => `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${d}</svg>`;
 
 export const ICONS = {
-  mark: `<svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
-    <defs>
-      <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#ffb86b"/><stop offset=".5" stop-color="#ff7aa2"/><stop offset="1" stop-color="#8b5cf6"/>
-      </linearGradient>
-      <clipPath id="sun-cut"><path d="M0 0h40v22.5H0zM0 25h40v2.6H0zM0 30h40v2H0zM0 34.2h40v1.5H0z"/></clipPath>
-    </defs>
-    <rect width="40" height="40" rx="11" fill="#1d1838"/>
-    <circle cx="20" cy="22" r="12" fill="url(#sunset)" clip-path="url(#sun-cut)"/>
-  </svg>`,
   search: I('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/>'),
   close: I('<path d="M6 6l12 12M18 6 6 18"/>'),
   info: I('<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/>'),
@@ -26,5 +16,8 @@ export const ICONS = {
   pin: I('<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>', 'width="18" height="18"'),
   target: I('<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/>', 'width="18" height="18"'),
   link: I('<path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/>', 'width="18" height="18"'),
+  globe: I('<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.5 5.2 3.5 8.5s-1.1 6.2-3.5 8.5c-2.4-2.3-3.5-5.2-3.5-8.5S9.6 5.8 12 3.5z"/>', 'width="18" height="18" stroke-width="1.6"'),
+  caret: I('<path d="m7 10 5 5 5-5"/>', 'width="16" height="16"'),
+  x: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4 4h4.6l3.9 5.4L17.1 4H20l-6.2 7.2L20.5 20h-4.6l-4.2-5.8L6.6 20H3.7l6.7-7.6z"/></svg>`,
   github: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.7-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2.2z"/></svg>`,
 };
