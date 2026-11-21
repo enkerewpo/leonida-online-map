@@ -47,7 +47,8 @@ maplibregl.setWorkerUrl(workerUrl);
 const REPO = 'https://github.com/enkerewpo/leonida-online-map';
 const X_URL = 'https://x.com/wheat_fox';
 const TILES_URL = 'https://map.gtadb.org';
-const CJK_FONTS = '"Noto Sans SC","Noto Sans TC",sans-serif';
+// System CJK fonts first (no download, available at once on Apple and Windows), then the webfonts.
+const CJK_FONTS = '"PingFang SC","PingFang TC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans TC",sans-serif';
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const phoneQuery = matchMedia('(max-width: 760px)');
 
@@ -241,7 +242,14 @@ function poiItemHTML(f: Feature): string {
 }
 
 function resultsHTML(): string {
-  const hits = search(state.index, state.query);
+  // The same name can come from the official map's labels and from a landmark; list it once.
+  const seen = new Set<string>();
+  const hits = search(state.index, state.query).filter((e) => {
+    const key = e.type === 'poi' ? poiName(e.feature) : prop(e.feature.properties ?? {}, 'name');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
   if (!hits.length) return `<p class="empty">${esc(t('noResults', { q: state.query.trim() }))}</p>`;
   return `<ul class="list results">${hits.map((e) => {
     const p = e.feature.properties ?? {};
@@ -353,9 +361,21 @@ function renderAbout(): void {
 const SHEET_ORDER = ['peek', 'half', 'full'] as const;
 
 function sheetHeights() {
-  const vh = window.innerHeight;
+  // The visual viewport shrinks when the on-screen keyboard opens; the sheet must fit what is visible.
+  const vh = window.visualViewport?.height ?? window.innerHeight;
   const headH = ($('.panel-head', panel).offsetHeight || 56) + ($('.search', panel).offsetHeight || 48) + 30;
   return { peek: Math.min(headH, vh * 0.4), half: Math.round(vh * 0.5), full: vh - 64 };
+}
+
+/** Keeps the sheet sitting on top of the on-screen keyboard (iOS Safari only shrinks the visual viewport). */
+function fitSheetToKeyboard(): void {
+  const vv = window.visualViewport;
+  if (!vv || !phoneQuery.matches) { panel.style.bottom = ''; return; }
+  const inset = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+  panel.style.bottom = inset > 40 ? `${inset}px` : '';
+  // The page itself never scrolls; undo any scroll Safari does to reveal the focused field.
+  if (window.scrollY || document.documentElement.scrollTop) window.scrollTo(0, 0);
+  panel.style.height = `${sheetHeights()[state.sheet]}px`;
 }
 
 function setSheet(s: typeof state.sheet): void {
@@ -421,7 +441,7 @@ function initSheet(): void {
 
 function viewPadding(): maplibregl.PaddingOptions {
   if (phoneQuery.matches) {
-    const bottom = state.sheet === 'peek' ? panel.offsetHeight : sheetHeights().half;
+    const bottom = sheetHeights()[state.sheet === 'full' ? 'half' : state.sheet];
     return { top: 64, bottom: bottom + 16, left: 16, right: 16 };
   }
   const left = panel.getBoundingClientRect().right;
@@ -589,6 +609,8 @@ function bindUI(): void {
     body.scrollTop = 0;
   });
   input.addEventListener('focus', () => { if (phoneQuery.matches && state.sheet === 'peek') setSheet('full'); });
+  window.visualViewport?.addEventListener('resize', fitSheetToKeyboard);
+  window.visualViewport?.addEventListener('scroll', fitSheetToKeyboard);
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') { e.preventDefault(); body.querySelector<HTMLButtonElement>('.item')?.click(); }
     if (e.key === 'Escape' && input.value) { e.stopPropagation(); clearSearch(); }
@@ -623,13 +645,29 @@ function bindUI(): void {
       return;
     }
     const poi = el.closest<HTMLButtonElement>('[data-poi]');
-    if (poi) { selectPoi(poi.dataset.poi!, { focus: true }); return; }
+    if (poi) {
+      const id = poi.dataset.poi!;
+      // Phones: close the keyboard and drop the sheet to half height first, so the map shows the target.
+      if (phoneQuery.matches && document.activeElement === input) {
+        input.blur();
+        setSheet('half');
+        window.setTimeout(() => selectPoi(id, { focus: true }), 260);
+      } else selectPoi(id, { focus: true });
+      return;
+    }
     const place = el.closest<HTMLButtonElement>('[data-place]');
     if (place) {
       const f = state.places[Number(place.dataset.place)];
       if (f?.geometry?.type === 'Point') {
         if (phoneQuery.matches) { input.blur(); setSheet('peek'); }
-        flyTo(f.geometry.coordinates as [number, number], PLACE_ZOOM[f.properties?.kind] ?? 13.5);
+        // Place labels sit where the official map prints the text, often beside the thing itself; when a
+        // landmark has the same name, go to the landmark.
+        const en = String(f.properties?.name ?? '').toLowerCase();
+        const twin = state.landmarks.find((l) => l.geometry?.type === 'Point' && String(l.properties?.name ?? '').toLowerCase() === en);
+        const target = ((twin ?? f).geometry as GeoJSON.Point).coordinates as [number, number];
+        // On phones wait for the keyboard to close, so the padding is measured for the sheet as it ends up.
+        if (phoneQuery.matches) window.setTimeout(() => flyTo(target, PLACE_ZOOM[f.properties?.kind] ?? 13.5), 260);
+        else flyTo(target, PLACE_ZOOM[f.properties?.kind] ?? 13.5);
       }
       return;
     }
@@ -826,14 +864,17 @@ async function boot(): Promise<void> {
   let failed = false;
   const fail = (e: unknown) => { console.error(e); if (!failed) { failed = true; showToast(t('loadError')); } return null; };
 
-  const [places, pois, landmarks] = await Promise.all([loads.places.catch(fail), loads.poi.catch(fail), loads.landmarks.catch(fail), prepareImages()]);
-  state.places = places?.features ?? [];
-  state.pois = pois?.features ?? [];
-  state.landmarks = landmarks?.features ?? [];
-  state.index = buildIndex(state.places, [...state.pois, ...state.landmarks]);
-  renderBody();
-
-  await ensureCjkFonts(lang());
+  // Data, icons and fonts load while the map is created, so the tiles start loading at once.
+  const dataReady = Promise.all([loads.places.catch(fail), loads.poi.catch(fail), loads.landmarks.catch(fail), prepareImages()])
+    .then(([places, pois, landmarks]) => {
+      state.places = places?.features ?? [];
+      state.pois = pois?.features ?? [];
+      state.landmarks = landmarks?.features ?? [];
+      state.index = buildIndex(state.places, [...state.pois, ...state.landmarks]);
+      renderBody();
+      void ensureCjkFonts(lang());
+      return { places, pois, landmarks };
+    });
 
   const hash = readHash();
   // Generous and square, so a wide desktop window can still see the whole state at once.
@@ -870,9 +911,11 @@ async function boot(): Promise<void> {
 
   m.addControl(new GameScale(), 'bottom-left');
   m.keyboard.enable();
-  addImages(map);
 
-  m.on('load', () => {
+  m.on('load', async () => {
+    const { places, pois, landmarks } = await dataReady;
+    if (map !== m) return;
+    addImages(m);
     mapReady = true;
     const setData = (id: string, fc: FC | null) => fc && (m.getSource(id) as maplibregl.GeoJSONSource).setData(fc as GeoJSON.FeatureCollection);
     setData('places', places as FC);
