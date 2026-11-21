@@ -6,6 +6,7 @@ on:
       - 'data/**'
       - 'src/schema.json'
       - 'scripts/validate.mjs'
+      - 'tools/i18n/**'
 
 permissions:
   contents: read
@@ -20,3 +21,11 @@ jobs:
           node-version: 22
       - name: Validate map data
         run: node scripts/validate.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Chinese names match the glossary
+        run: |
+          pip install -q opencc-python-reimplemented
+          python tools/apply_i18n.py
+          git diff --exit-code -- data/ || { echo "::error::data/ differs from tools/i18n/zh-Hans.json — run python3 tools/apply_i18n.py and commit"; exit 1; }

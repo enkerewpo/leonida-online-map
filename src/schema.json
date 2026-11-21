@@ -1,32 +1,114 @@
 {
   "$comment": "Allowed values for data/*.geojson. Shared by scripts/validate.mjs and the app. Add a value here (and a style/icon entry in src/) to extend the map.",
-  "langs": ["en", "zh-Hans", "zh-Hant"],
-  "extent": { "lon": [-0.2, 0.2], "lat": [-0.2, 0.2] },
+  "langs": [
+    "en",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "extent": {
+    "lon": [
+      -0.18,
+      0.18
+    ],
+    "lat": [
+      -0.18,
+      0.18
+    ]
+  },
   "layers": {
-    "land": {
-      "geometry": ["Polygon", "MultiPolygon"],
-      "class": ["land"]
-    },
-    "landuse": {
-      "geometry": ["Polygon", "MultiPolygon"],
-      "class": ["urban", "industrial", "beach", "swamp", "park", "forest", "grass", "golf", "farmland", "airport", "runway", "water"]
-    },
-    "buildings": {
-      "geometry": ["Polygon", "MultiPolygon"],
-      "class": ["building"]
-    },
-    "roads": {
-      "geometry": ["LineString", "MultiLineString"],
-      "class": ["motorway", "trunk", "primary", "secondary", "street", "service", "track", "path", "rail", "ferry"]
-    },
     "places": {
-      "geometry": ["Point"],
-      "kind": ["state", "county", "city", "town", "district", "island", "water", "airport", "landmark"]
+      "geometry": [
+        "Point"
+      ],
+      "kind": [
+        "state",
+        "county",
+        "city",
+        "town",
+        "district",
+        "island",
+        "water",
+        "airport",
+        "landmark"
+      ]
     },
     "poi": {
-      "geometry": ["Point", null],
-      "category": ["vehicle", "weapon", "easter-egg", "shop", "gas", "pay-n-spray", "clothes", "barber", "tattoo", "food", "safehouse", "landmark", "activity", "collectible"],
-      "flags": ["day", "night", "alarm", "tracker", "random", "later"]
+      "geometry": [
+        "Point",
+        null
+      ],
+      "category": [
+        "activity",
+        "barber",
+        "clothes",
+        "collectible",
+        "easter-egg",
+        "food",
+        "freebie",
+        "gas",
+        "hidden-item",
+        "hideout",
+        "landmark",
+        "nightclub",
+        "pay-n-spray",
+        "safehouse",
+        "shop",
+        "tattoo",
+        "vehicle",
+        "weapon"
+      ],
+      "flags": [
+        "day",
+        "night",
+        "alarm",
+        "tracker",
+        "random",
+        "later"
+      ]
+    },
+    "landmarks": {
+      "geometry": [
+        "Point"
+      ],
+      "category": [
+        "building",
+        "transit",
+        "industrial",
+        "nature",
+        "shop",
+        "civic",
+        "leisure",
+        "hotel",
+        "food",
+        "residential",
+        "gas",
+        "landmark",
+        "airport",
+        "sport",
+        "venue",
+        "office",
+        "marina",
+        "club",
+        "guns",
+        "bar",
+        "salon",
+        "safehouse",
+        "police",
+        "modshop",
+        "clothes",
+        "hospital"
+      ]
+    },
+    "roads-named": {
+      "geometry": [
+        "LineString",
+        "MultiLineString"
+      ],
+      "class": [
+        "motorway",
+        "primary",
+        "street"
+      ]
     }
   }
 }

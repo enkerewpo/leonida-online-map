@@ -1,144 +1,2553 @@
-{"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"name":"Leonida","kind":"state","rank":0,"name:zh-Hans":"雷奥奈达州","name:zh-Hant":"雷奧奈達州","source":"Rockstar Games"},"geometry":{"type":"Point","coordinates":[0.0,0.003662]}},
-{"type":"Feature","properties":{"name":"Saint Attaway Islands","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.003964,0.070056]}},
-{"type":"Feature","properties":{"name":"Frampton Islands","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.019902,0.067237]}},
-{"type":"Feature","properties":{"name":"Lake Tallaloko","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.018156,0.056165]}},
-{"type":"Feature","properties":{"name":"East Lummox County","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.016397,0.050889]}},
-{"type":"Feature","properties":{"name":"Little Hardin Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.038166,0.047756]}},
-{"type":"Feature","properties":{"name":"North Leonard County","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.013662,0.047094]}},
-{"type":"Feature","properties":{"name":"Richard Barebone State Park","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.029938,0.044636]}},
-{"type":"Feature","properties":{"name":"North Kelly County","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.001205,0.041841]}},
-{"type":"Feature","properties":{"name":"Lake Leonida","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.014577,0.035444]}},
-{"type":"Feature","properties":{"name":"Waning Sands","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.033347,0.033612]}},
-{"type":"Feature","properties":{"name":"Port Gellhorn","kind":"city","rank":2,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.027227,0.027047]}},
-{"type":"Feature","properties":{"name":"Leonard County","kind":"county","rank":1,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.023312,0.026239]}},
-{"type":"Feature","properties":{"name":"Wild Hog Airfield","kind":"airport","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.032576,0.023444]}},
-{"type":"Feature","properties":{"name":"Wild Hog Point","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.035251,0.021035]}},
-{"type":"Feature","properties":{"name":"Emerald Springs","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.005566,0.015156]}},
-{"type":"Feature","properties":{"name":"South Leonard County","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.014806,0.012698]}},
-{"type":"Feature","properties":{"name":"Washington Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.045853,0.012662]}},
-{"type":"Feature","properties":{"name":"Decor District","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.031396,0.012662]}},
-{"type":"Feature","properties":{"name":"Washington Beach","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.048744,0.009566]}},
-{"type":"Feature","properties":{"name":"Buckskin Swamp","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.002759,0.005084]}},
-{"type":"Feature","properties":{"name":"Burial Creek","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.019661,0.005241]}},
-{"type":"Feature","properties":{"name":"South Kelly County","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.014734,-0.001012]}},
-{"type":"Feature","properties":{"name":"Starfish Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.039769,-0.002687]}},
-{"type":"Feature","properties":{"name":"West Vice-Dale County","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.006204,-0.006795]}},
-{"type":"Feature","properties":{"name":"Vice-Dale County","kind":"county","rank":1,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.031275,-0.016071]}},
-{"type":"Feature","properties":{"name":"Tola Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.022637,-0.026023]}},
-{"type":"Feature","properties":{"name":"Henry J Edwards Airport","kind":"airport","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.018878,-0.030058]}},
-{"type":"Feature","properties":{"name":"South Vice-Dale","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.016385,-0.033805]}},
-{"type":"Feature","properties":{"name":"Pelican River","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.004385,-0.037528]}},
-{"type":"Feature","properties":{"name":"Watson Bay","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.009265,-0.038817]}},
-{"type":"Feature","properties":{"name":"Pelican Valley","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.003036,-0.044178]}},
-{"type":"Feature","properties":{"name":"Mariana County","kind":"county","rank":1,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.014096,-0.043781]}},
-{"type":"Feature","properties":{"name":"Shoeless Keys","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.014614,-0.049142]}},
-{"type":"Feature","properties":{"name":"Cottonmouth Lake","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.001482,-0.050732]}},
-{"type":"Feature","properties":{"name":"Goose Key","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.03142,-0.0659]}},
-{"type":"Feature","properties":{"name":"Maroon Key","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.006771,-0.06855]}},
-{"type":"Feature","properties":{"name":"Mile Zero Air Station","kind":"airport","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.031083,-0.070381]}},
-{"type":"Feature","properties":{"name":"Hyde Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.010337,0.073056]}},
-{"type":"Feature","properties":{"name":"Partridge Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.018264,0.072839]}},
-{"type":"Feature","properties":{"name":"Okchiloha Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.008819,0.070502]}},
-{"type":"Feature","properties":{"name":"Bonanza","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.00253,0.068116]}},
-{"type":"Feature","properties":{"name":"Moreau River","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.00853,0.067418]}},
-{"type":"Feature","properties":{"name":"Featherstone Islands","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.016626,0.065273]}},
-{"type":"Feature","properties":{"name":"Moreau","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.002193,0.063563]}},
-{"type":"Feature","properties":{"name":"Lummox County","kind":"county","rank":1,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.000241,0.05684]}},
-{"type":"Feature","properties":{"name":"San Malo Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.023444,0.054334]}},
-{"type":"Feature","properties":{"name":"Mount Kalaga National Park","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.000337,0.051997]}},
-{"type":"Feature","properties":{"name":"Millport Basin","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.033468,0.051828]}},
-{"type":"Feature","properties":{"name":"Millport","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022191,0.051202]}},
-{"type":"Feature","properties":{"name":"Zephyr Islands","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.034624,0.046624]}},
-{"type":"Feature","properties":{"name":"Draper Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.035733,0.037925]}},
-{"type":"Feature","properties":{"name":"Ambrosia","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.007734,0.027179]}},
-{"type":"Feature","properties":{"name":"Atlantic Ocean","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.051973,0.034528]}},
-{"type":"Feature","properties":{"name":"Vinewood Beach","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.04019,0.031372]}},
-{"type":"Feature","properties":{"name":"Frogswater","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.007855,0.029781]}},
-{"type":"Feature","properties":{"name":"Draper Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.034287,0.029589]}},
-{"type":"Feature","properties":{"name":"Kelly County","kind":"county","rank":1,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.01224,0.019854]}},
-{"type":"Feature","properties":{"name":"Belville","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.021951,0.019758]}},
-{"type":"Feature","properties":{"name":"Sandbars","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.049708,0.018119]}},
-{"type":"Feature","properties":{"name":"Borrachero Sound","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.03807,0.017132]}},
-{"type":"Feature","properties":{"name":"Leaf Links","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.038191,0.015638]}},
-{"type":"Feature","properties":{"name":"Gellhorn","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.020529,0.010072]}},
-{"type":"Feature","properties":{"name":"Crude Islands","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.043371,0.011903]}},
-{"type":"Feature","properties":{"name":"Penmarch Isle","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.041564,0.010891]}},
-{"type":"Feature","properties":{"name":"Stockyard","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.031034,0.009566]}},
-{"type":"Feature","properties":{"name":"La Perle","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.024986,0.006771]}},
-{"type":"Feature","properties":{"name":"Bayside","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.030432,0.005277]}},
-{"type":"Feature","properties":{"name":"Vice Beach","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.048816,0.001976]}},
-{"type":"Feature","properties":{"name":"Crosstown","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.027565,0.00053]}},
-{"type":"Feature","properties":{"name":"Rockridge","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.021228,0.00041]}},
-{"type":"Feature","properties":{"name":"Balsero","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.011975,2.4e-05]}},
-{"type":"Feature","properties":{"name":"Capri Sound","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.039275,-0.001301]}},
-{"type":"Feature","properties":{"name":"Vice City","kind":"city","rank":2,"name:zh-Hans":"罪恶城","name:zh-Hant":"罪惡城","source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.023661,-0.003879]}},
-{"type":"Feature","properties":{"name":"Ocean Beach","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.05031,-0.004241]}},
-{"type":"Feature","properties":{"name":"Capri","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.029444,-0.005325]}},
-{"type":"Feature","properties":{"name":"Waxman Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.037685,-0.006265]}},
-{"type":"Feature","properties":{"name":"Little Cuba","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022505,-0.006265]}},
-{"type":"Feature","properties":{"name":"Downtown","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.027854,-0.006626]}},
-{"type":"Feature","properties":{"name":"Salton","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.016939,-0.007783]}},
-{"type":"Feature","properties":{"name":"Belpoint","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.045058,-0.009301]}},
-{"type":"Feature","properties":{"name":"Nehrling River","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.016553,-0.010337]}},
-{"type":"Feature","properties":{"name":"Port Vice City","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.042479,-0.010674]}},
-{"type":"Feature","properties":{"name":"VCIA","kind":"airport","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.009108,-0.013349]}},
-{"type":"Feature","properties":{"name":"Catalan Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.046021,-0.01477]}},
-{"type":"Feature","properties":{"name":"Breakwater Quarry","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.009277,-0.015806]}},
-{"type":"Feature","properties":{"name":"Tequesta","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.024601,-0.018336]}},
-{"type":"Feature","properties":{"name":"Bobcat Bight","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.030914,-0.017589]}},
-{"type":"Feature","properties":{"name":"Dalton Island","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.050768,-0.018047]}},
-{"type":"Feature","properties":{"name":"Big Pine","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.014746,-0.023396]}},
-{"type":"Feature","properties":{"name":"Gloriana Key","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.041323,-0.023806]}},
-{"type":"Feature","properties":{"name":"Bluegrass","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.008602,-0.025227]}},
-{"type":"Feature","properties":{"name":"Gulf of Leonida","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.051443,-0.026408]}},
-{"type":"Feature","properties":{"name":"Peacock Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022842,-0.026553]}},
-{"type":"Feature","properties":{"name":"Catalan Key","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.031854,-0.027035]}},
-{"type":"Feature","properties":{"name":"Southside","kind":"district","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.017228,-0.028504]}},
-{"type":"Feature","properties":{"name":"Grassrivers","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.006867,-0.03101]}},
-{"type":"Feature","properties":{"name":"Hamlet","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.008481,-0.035323]}},
-{"type":"Feature","properties":{"name":"Leonida Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.01718,-0.049563]}},
-{"type":"Feature","properties":{"name":"Gambit Bay","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.008626,-0.054551]}},
-{"type":"Feature","properties":{"name":"Riquezas Keys","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.039709,-0.062671]}},
-{"type":"Feature","properties":{"name":"Key Lento","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.009807,-0.063394]}},
-{"type":"Feature","properties":{"name":"Permit Keys","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.018866,-0.065394]}},
-{"type":"Feature","properties":{"name":"Southwind","kind":"town","rank":3,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.023878,-0.067442]}},
-{"type":"Feature","properties":{"name":"Abismo Key","kind":"island","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.007012,-0.074622]}},
-{"type":"Feature","properties":{"name":"Leonida Straits","kind":"water","rank":4,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.028022,-0.0832]}},
-{"type":"Feature","properties":{"name":"MacAlister Gold Mine","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.004072,0.062888]}},
-{"type":"Feature","properties":{"name":"Tallaloko Lakeside Resort","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.014337,0.060141]}},
-{"type":"Feature","properties":{"name":"Mount Hailes","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022842,0.043467]}},
-{"type":"Feature","properties":{"name":"Country Club","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022842,0.042696]}},
-{"type":"Feature","properties":{"name":"Father Scrumpy's","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.020963,0.040166]}},
-{"type":"Feature","properties":{"name":"Raceway Park","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.00559,0.03648]}},
-{"type":"Feature","properties":{"name":"Thrillbilly","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.002771,0.035709]}},
-{"type":"Feature","properties":{"name":"Thrilbily Mua club","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.002747,0.035359]}},
-{"type":"Feature","properties":{"name":"Mud Club","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.002891,0.035058]}},
-{"type":"Feature","properties":{"name":"Sabal Palms","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.028384,0.033709]}},
-{"type":"Feature","properties":{"name":"Rodeo Association","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.003903,0.031878]}},
-{"type":"Feature","properties":{"name":"Evergreen Mall","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.030601,0.029781]}},
-{"type":"Feature","properties":{"name":"Allied","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.006722,0.02448]}},
-{"type":"Feature","properties":{"name":"Grystal","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.006771,0.02383]}},
-{"type":"Feature","properties":{"name":"Howe Dairy","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.008795,0.023469]}},
-{"type":"Feature","properties":{"name":"Chateau Cellerica","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.018481,0.022673]}},
-{"type":"Feature","properties":{"name":"Tucker's Citrus Farms","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.003687,0.02236]}},
-{"type":"Feature","properties":{"name":"Cellerica","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.021252,0.017589]}},
-{"type":"Feature","properties":{"name":"Raceway","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.027806,0.011927]}},
-{"type":"Feature","properties":{"name":"Leonida State Prison","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.013469,0.007506]}},
-{"type":"Feature","properties":{"name":"Fleeca Field","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.01889,0.002373]}},
-{"type":"Feature","properties":{"name":"Salton Memorial Island","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.039323,0.000458]}},
-{"type":"Feature","properties":{"name":"Flea Market","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.007469,-0.000554]}},
-{"type":"Feature","properties":{"name":"Sahara Arena","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.030842,-0.002988]}},
-{"type":"Feature","properties":{"name":"VICE CITY INTERNATIONAL AIRPORT","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.009132,-0.014818]}},
-{"type":"Feature","properties":{"name":"Oceanarium","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.03301,-0.021951]}},
-{"type":"Feature","properties":{"name":"Sahara Network Data Cer","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.005494,-0.022878]}},
-{"type":"Feature","properties":{"name":"Data Center","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.005397,-0.023324]}},
-{"type":"Feature","properties":{"name":"Courtland","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.029902,-0.023999]}},
-{"type":"Feature","properties":{"name":"Peacock","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022264,-0.030119]}},
-{"type":"Feature","properties":{"name":"Estates","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.022264,-0.030769]}},
-{"type":"Feature","properties":{"name":"Correctional Institution","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.007108,-0.033143]}},
-{"type":"Feature","properties":{"name":"Paradise RV Park","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[-0.004,-0.034118]}},
-{"type":"Feature","properties":{"name":"Boone","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.006747,-0.037347]}},
-{"type":"Feature","properties":{"name":"Speedway","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.006722,-0.038046]}},
-{"type":"Feature","properties":{"name":"T.H. Power Station","kind":"landmark","rank":5,"source":"Rockstar Games official Leonida map (rockstargames.com/VI/media)"},"geometry":{"type":"Point","coordinates":[0.018047,-0.040202]}}
-]}
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Leonida",
+    "kind": "state",
+    "rank": 0,
+    "name:zh-Hans": "雷奥奈达州",
+    "name:zh-Hant": "雷奧奈達州",
+    "source": "Rockstar Games"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0388058,
+     0.0129697
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Saint Attaway Islands",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "圣阿特威群岛",
+    "name:zh-Hant": "聖阿特威群島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0341105,
+     0.0916703
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Frampton Islands",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "弗兰普顿群岛",
+    "name:zh-Hant": "弗蘭普頓群島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0152269,
+     0.0883393
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Lake Tallaloko",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "塔拉洛科湖",
+    "name:zh-Hant": "塔拉洛科湖"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0172953,
+     0.0752144
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "East Lummox County",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "东拉莫克斯县",
+    "name:zh-Hant": "東拉莫克斯縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0582341,
+     0.0689379
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Little Hardin Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "小哈丁岛",
+    "name:zh-Hant": "小哈丁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0064129,
+     0.0652602
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "North Leonard County",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "北伦纳德县",
+    "name:zh-Hant": "北倫納德縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0226197,
+     0.0644594
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Richard Barebone State Park",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "理查德·贝尔博恩州立公园",
+    "name:zh-Hant": "理查德·貝爾博恩州立公園"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0033357,
+     0.0615566
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "North Kelly County",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "北凯利县",
+    "name:zh-Hant": "北凱利縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0402342,
+     0.0582232
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Lake Leonida",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "雷奥奈达湖",
+    "name:zh-Hant": "雷奧奈達湖"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0215354,
+     0.0506511
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Waning Sands",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "残沙",
+    "name:zh-Hant": "殘沙"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0007036,
+     0.0484919
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Port Gellhorn",
+    "kind": "city",
+    "rank": 2,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "格尔霍恩港",
+    "name:zh-Hant": "格爾霍恩港"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0710652,
+     0.0406705
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Leonard County",
+    "kind": "county",
+    "rank": 1,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "伦纳德县",
+    "name:zh-Hant": "倫納德縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0111859,
+     0.0397459
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Wild Hog Airfield",
+    "kind": "airport",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "野猪飞机场",
+    "name:zh-Hant": "野豬飛機場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0774027,
+     0.0363963
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Wild Hog Point",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "野猪角",
+    "name:zh-Hant": "野豬角"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.080572,
+     0.0335391
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Emerald Springs",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "翡翠泉",
+    "name:zh-Hant": "翡翠泉"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0454007,
+     0.0265901
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "South Leonard County",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "南伦纳德县",
+    "name:zh-Hant": "南倫納德縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0212636,
+     0.02369
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Washington Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "华盛顿岛",
+    "name:zh-Hant": "華盛頓島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0155212,
+     0.0236677
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Decor District",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "装饰艺术区",
+    "name:zh-Hant": "裝飾藝術區"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0016076,
+     0.0236582
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Washington Beach",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "华盛顿海滩",
+    "name:zh-Hant": "華盛頓海灘"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0189466,
+     0.0199998
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Buckskin Swamp",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "鹿皮沼泽",
+    "name:zh-Hant": "鹿皮沼澤"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0420747,
+     0.0146535
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Burial Creek",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "埋骨溪",
+    "name:zh-Hant": "埋骨溪"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0621004,
+     0.0148285
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "South Kelly County",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "南凯利县",
+    "name:zh-Hant": "南凱利縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0562628,
+     0.0074199
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Starfish Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "海星岛",
+    "name:zh-Hant": "海星島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0083131,
+     0.0054703
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "West Vice-Dale County",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "西罪恶谷县",
+    "name:zh-Hant": "西罪惡谷縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0461562,
+     0.0005708
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Vice-Dale County",
+    "kind": "county",
+    "rank": 1,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "罪恶谷县",
+    "name:zh-Hant": "罪惡谷縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0017504,
+     -0.0103996
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tola Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "托拉湾",
+    "name:zh-Hant": "托拉灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0656259,
+     -0.0222313
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Henry J Edwards Airport",
+    "kind": "airport",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "亨利·J·爱德华兹机场",
+    "name:zh-Hant": "亨利·J·愛德華茲機場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0611721,
+     -0.0270116
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "South Vice-Dale",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "南罪恶谷",
+    "name:zh-Hant": "南罪惡谷"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0193919,
+     -0.0314298
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Pelican River",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "鹈鹕河",
+    "name:zh-Hant": "鵜鶘河"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0440004,
+     -0.0358564
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Watson Bay",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "沃森湾",
+    "name:zh-Hant": "沃森灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0497823,
+     -0.0373874
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Pelican Valley",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "鹈鹕谷",
+    "name:zh-Hant": "鵜鶘谷"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0352078,
+     -0.0437338
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Mariana County",
+    "kind": "county",
+    "rank": 1,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "玛丽安娜县",
+    "name:zh-Hant": "瑪麗安娜縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.055506,
+     -0.0432745
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Shoeless Keys",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "赤足群礁",
+    "name:zh-Hant": "赤足群礁"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0214899,
+     -0.0496102
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Cottonmouth Lake",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "蝮蛇湖",
+    "name:zh-Hant": "蝮蛇湖"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0370489,
+     -0.0515034
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Goose Key",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "鹅礁岛",
+    "name:zh-Hant": "鵝礁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0760313,
+     -0.0695039
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Maroon Key",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "马隆礁岛",
+    "name:zh-Hant": "馬隆礁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0468268,
+     -0.0726288
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Mile Zero Air Station",
+    "kind": "airport",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "零英里航空站",
+    "name:zh-Hant": "零英里航空站"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0756319,
+     -0.0748151
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Hyde Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "海德岛",
+    "name:zh-Hant": "海德島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0265597,
+     0.0952304
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Partridge Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "鹧鸪湾",
+    "name:zh-Hant": "鷓鴣灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0171677,
+     0.0949784
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Okchiloha Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "奥奇洛哈湾",
+    "name:zh-Hant": "奧奇洛哈灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0492559,
+     0.0921905
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bonanza",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "博南扎",
+    "name:zh-Hant": "博南扎"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0418046,
+     0.0893665
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Moreau River",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "莫罗河",
+    "name:zh-Hant": "莫羅河"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0287006,
+     0.0885464
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Featherstone Islands",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "费瑟斯通群岛",
+    "name:zh-Hant": "費瑟斯通群島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0585057,
+     0.0859874
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Moreau",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "莫罗",
+    "name:zh-Hant": "莫羅"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0362087,
+     0.0839728
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Lummox County",
+    "kind": "county",
+    "rank": 1,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "拉莫克斯县",
+    "name:zh-Hant": "拉莫克斯縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0390924,
+     0.0760024
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "San Malo Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "圣马洛湾",
+    "name:zh-Hant": "聖馬洛灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0665835,
+     0.0730167
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Mount Kalaga National Park",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "卡拉加山国家公园",
+    "name:zh-Hant": "卡拉加山國家公園"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.039206,
+     0.0702618
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Millport Basin",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "米尔波特港池",
+    "name:zh-Hant": "米爾波特港池"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0008466,
+     0.0700837
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Millport",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "米尔波特",
+    "name:zh-Hant": "米爾波特"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0125145,
+     0.0693343
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Zephyr Islands",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "西风群岛",
+    "name:zh-Hant": "西風群島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0798296,
+     0.0638706
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Draper Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "德雷珀岛",
+    "name:zh-Hant": "德雷珀島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0811434,
+     0.0535588
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Ambrosia",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "安布罗西亚",
+    "name:zh-Hant": "安布羅西亞"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0296429,
+     0.0408499
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Atlantic Ocean",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "大西洋",
+    "name:zh-Hant": "大西洋"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0227719,
+     0.0495899
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Vinewood Beach",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "维恩伍德海滩",
+    "name:zh-Hant": "維恩伍德海灘"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0088113,
+     0.0458413
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Frogswater",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "蛙水",
+    "name:zh-Hant": "蛙水"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.048113,
+     0.0439239
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Draper Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "德雷珀湾",
+    "name:zh-Hant": "德雷珀灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.07943,
+     0.043679
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Kelly County",
+    "kind": "county",
+    "rank": 1,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "凯利县",
+    "name:zh-Hant": "凱利縣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0533082,
+     0.0321544
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Belville",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "贝尔维尔",
+    "name:zh-Hant": "貝爾維爾"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0127983,
+     0.032063
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sandbars",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "沙洲",
+    "name:zh-Hant": "沙洲"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0977008,
+     0.0300732
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Borrachero Sound",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "博拉切罗海湾",
+    "name:zh-Hant": "博拉切羅海灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0839119,
+     0.028911
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Leaf Links",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "利夫林克斯",
+    "name:zh-Hant": "利夫林克斯"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0064432,
+     0.0271902
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Gellhorn",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "格尔霍恩",
+    "name:zh-Hant": "格爾霍恩"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.063129,
+     0.0205542
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Crude Islands",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "原油群岛",
+    "name:zh-Hant": "原油群島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0901925,
+     0.0227095
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Penmarch Isle",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "彭马奇岛",
+    "name:zh-Hant": "彭馬奇島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0104396,
+     0.0215657
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Stockyard",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "畜栏区",
+    "name:zh-Hant": "畜欄區"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0020364,
+     0.0199882
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "La Perle",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "拉佩尔",
+    "name:zh-Hant": "拉佩爾"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0092021,
+     0.0166713
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bayside",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "湾畔",
+    "name:zh-Hant": "灣畔"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0027496,
+     0.014904
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Vice Beach",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "罪恶海滩",
+    "name:zh-Hant": "罪惡海灘"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0190321,
+     0.0110033
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Crosstown",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "跨城区",
+    "name:zh-Hant": "跨城區"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0061464,
+     0.0092754
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Rockridge",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "石岭",
+    "name:zh-Hant": "石嶺"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0136545,
+     0.009129
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Balsero",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "巴尔塞罗",
+    "name:zh-Hant": "巴爾塞羅"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0246176,
+     0.0086654
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Capri Sound",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "卡普里海湾",
+    "name:zh-Hant": "卡普里海灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0853392,
+     0.0070612
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Vice City",
+    "kind": "city",
+    "rank": 2,
+    "name:zh-Hans": "罪恶城",
+    "name:zh-Hant": "罪惡城",
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0107718,
+     0.0040468
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Ocean Beach",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "大洋海滩",
+    "name:zh-Hant": "大洋海灘"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0208023,
+     0.0036352
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Capri",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "卡普里",
+    "name:zh-Hant": "卡普里"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0736913,
+     0.002298
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Waxman Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "瓦克斯曼岛",
+    "name:zh-Hant": "瓦克斯曼島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0058441,
+     0.0012278
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Little Cuba",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "小古巴",
+    "name:zh-Hant": "小古巴"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0121414,
+     0.0012179
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Downtown",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "市中心",
+    "name:zh-Hant": "市中心"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0058038,
+     0.0007935
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Salton",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "索尔顿",
+    "name:zh-Hant": "索爾頓"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.018736,
+     -0.0005851
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Belpoint",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "贝尔角",
+    "name:zh-Hant": "貝爾角"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0921909,
+     -0.0024251
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Nehrling River",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "内尔林河",
+    "name:zh-Hant": "內爾林河"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0584177,
+     -0.0036344
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Port Vice City",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "罪恶城港",
+    "name:zh-Hant": "罪惡城港"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0115241,
+     -0.0039951
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "VCIA",
+    "kind": "airport",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "罪恶城国际机场",
+    "name:zh-Hant": "罪惡城國際機場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0280142,
+     -0.0071877
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Catalan Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "加泰罗尼亚湾",
+    "name:zh-Hant": "加泰羅尼亞灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0157208,
+     -0.0088478
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Breakwater Quarry",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "防波堤采石场",
+    "name:zh-Hant": "防波堤採石場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0497969,
+     -0.0101121
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tequesta",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "特奎斯塔",
+    "name:zh-Hant": "特奎斯塔"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0096578,
+     -0.0130887
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bobcat Bight",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "山猫海湾",
+    "name:zh-Hant": "山貓海灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0754327,
+     -0.0122397
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Dalton Island",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "道尔顿岛",
+    "name:zh-Hant": "道爾頓島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0213452,
+     -0.012729
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Big Pine",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "大松",
+    "name:zh-Hant": "大松"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0562765,
+     -0.0191123
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Gloriana Key",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "格洛丽安娜礁岛",
+    "name:zh-Hant": "格洛麗安娜礁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0101547,
+     -0.0195614
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Bluegrass",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "蓝草",
+    "name:zh-Hant": "藍草"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0286135,
+     -0.0212672
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Gulf of Leonida",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "雷奥奈达大湾",
+    "name:zh-Hant": "雷奧奈達大灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0997556,
+     -0.0227065
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Peacock Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "孔雀湾",
+    "name:zh-Hant": "孔雀灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0117417,
+     -0.0228296
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Catalan Key",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "加泰罗尼亚礁岛",
+    "name:zh-Hant": "加泰羅尼亞礁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0010642,
+     -0.023395
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Southside",
+    "kind": "district",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "南区",
+    "name:zh-Hant": "南區"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0183932,
+     -0.0251459
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Grassrivers",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "草河",
+    "name:zh-Hant": "草河"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0469413,
+     -0.0281321
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Hamlet",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "哈姆雷特",
+    "name:zh-Hant": "哈姆雷特"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0287567,
+     -0.0332343
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Leonida Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "雷奥奈达湾",
+    "name:zh-Hant": "雷奧奈達灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0591599,
+     -0.05013
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Gambit Bay",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "甘比特湾",
+    "name:zh-Hant": "甘位元灣"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0285845,
+     -0.0560255
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Riquezas Keys",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "里克萨斯群礁",
+    "name:zh-Hant": "裡克薩斯群礁"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0858523,
+     -0.065682
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Key Lento",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "伦托礁岛",
+    "name:zh-Hant": "倫託礁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0271851,
+     -0.0665065
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Permit Keys",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "佩米特群礁",
+    "name:zh-Hant": "佩米特群礁"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0611572,
+     -0.0688959
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Southwind",
+    "kind": "town",
+    "rank": 3,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "南风",
+    "name:zh-Hant": "南風"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0670954,
+     -0.0713267
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Abismo Key",
+    "kind": "island",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "阿比斯莫礁岛",
+    "name:zh-Hant": "阿比斯莫礁島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0471122,
+     -0.0798262
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Leonida Straits",
+    "kind": "water",
+    "rank": 4,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "雷奥奈达海峡",
+    "name:zh-Hant": "雷奧奈達海峽"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.072005,
+     -0.0900077
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "MacAlister Gold Mine",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "麦卡利斯特金矿",
+    "name:zh-Hant": "麥卡利斯特金礦"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0436315,
+     0.0831686
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tallaloko Lakeside Resort",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "塔拉洛科湖畔度假村",
+    "name:zh-Hant": "塔拉洛科湖畔度假村"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0218202,
+     0.0799247
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Mount Hailes",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "海尔斯山",
+    "name:zh-Hant": "海爾斯山"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0117431,
+     0.0601663
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Country Club",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "乡村俱乐部",
+    "name:zh-Hant": "鄉村俱樂部"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0117431,
+     0.0592524
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Father Scrumpy's",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0636437,
+     0.0562248
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Raceway Park",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "赛车公园",
+    "name:zh-Hant": "賽車公園"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0321833,
+     0.0518731
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Thrillbilly",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0420895,
+     0.0509538
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Thrilbily Mua club",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "Thrillbilly泥地俱乐部",
+    "name:zh-Hant": "Thrillbilly泥地俱樂部"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0420611,
+     0.0505389
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Mud Club",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "泥地俱乐部",
+    "name:zh-Hant": "泥地俱樂部"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0422317,
+     0.0501821
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sabal Palms",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "萨巴尔棕榈",
+    "name:zh-Hant": "薩巴爾棕櫚"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0051766,
+     0.0486036
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Rodeo Association",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "牛仔竞技协会",
+    "name:zh-Hant": "牛仔競技協會"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.034182,
+     0.0464172
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Evergreen Mall",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "常青购物中心",
+    "name:zh-Hant": "常青購物中心"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0025498,
+     0.0439491
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Allied",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0308419,
+     0.0376501
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Grystal",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0307838,
+     0.0368797
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Howe Dairy",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "豪氏乳品厂",
+    "name:zh-Hant": "豪氏乳品廠"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0492266,
+     0.0364415
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Chateau Cellerica",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "塞勒里卡酒庄",
+    "name:zh-Hant": "塞勒裡卡酒莊"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0169096,
+     0.0355159
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Tucker's Citrus Farms",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "塔克柑橘农场",
+    "name:zh-Hant": "塔克柑橘農場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0431746,
+     0.0351304
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Cellerica",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "塞勒里卡",
+    "name:zh-Hant": "塞勒裡卡"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0136264,
+     0.0294916
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Raceway",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "赛车场",
+    "name:zh-Hant": "賽車場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0717509,
+     0.0227481
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Leonida State Prison",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "雷奥奈达州立监狱",
+    "name:zh-Hant": "雷奧奈達州立監獄"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0547641,
+     0.0175173
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Fleeca Field",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "Fleeca球场",
+    "name:zh-Hant": "Fleeca球場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0164247,
+     0.0114543
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Salton Memorial Island",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "索尔顿纪念岛",
+    "name:zh-Hant": "索爾頓紀念島"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0077847,
+     0.0091978
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Flea Market",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "跳蚤市场",
+    "name:zh-Hant": "跳蚤市場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0299564,
+     0.0079773
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sahara Arena",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "Sahara体育馆",
+    "name:zh-Hant": "Sahara體育館"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0022637,
+     0.0051076
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "VICE CITY INTERNATIONAL AIRPORT",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "罪恶城国际机场",
+    "name:zh-Hant": "罪惡城國際機場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0279857,
+     -0.0089289
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Oceanarium",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "海洋馆",
+    "name:zh-Hant": "海洋館"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0003054,
+     -0.0173681
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Sahara Network Data Cer",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "Sahara Network数据中心",
+    "name:zh-Hant": "Sahara Network資料中心"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0453147,
+     -0.0184922
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Data Center",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "数据中心",
+    "name:zh-Hant": "資料中心"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0451997,
+     -0.0190208
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Courtland",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "考特兰",
+    "name:zh-Hant": "考特蘭"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.003377,
+     -0.0197977
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Peacock",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "孔雀",
+    "name:zh-Hant": "孔雀"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0124265,
+     -0.0270569
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Estates",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "庄园区",
+    "name:zh-Hant": "莊園區"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0124265,
+     -0.0278273
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Correctional Institution",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "惩教所",
+    "name:zh-Hant": "懲教所"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0303835,
+     -0.0306512
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Paradise RV Park",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "天堂房车营地",
+    "name:zh-Hant": "天堂房車營地"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0435443,
+     -0.0318142
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Boone",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "布恩",
+    "name:zh-Hant": "布恩"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0308111,
+     -0.0356345
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Speedway",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "赛车场",
+    "name:zh-Hant": "賽車場"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0308407,
+     -0.0364631
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "T.H. Power Station",
+    "kind": "landmark",
+    "rank": 5,
+    "source": "Rockstar Games official Leonida map (rockstargames.com/VI/media)",
+    "name:zh-Hans": "T.H.发电站",
+    "name:zh-Hant": "T.H.發電站"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0174227,
+     -0.0390112
+    ]
+   }
+  }
+ ]
+}

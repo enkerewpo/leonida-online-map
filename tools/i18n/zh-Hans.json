@@ -1,0 +1,3058 @@
+{
+ "Leonida": {
+  "zh": "雷奥奈达州",
+  "status": "official",
+  "note": "Rockstar zh site, per https://finance.sina.cn/tech/2023-12-06/detail-imzwywnp1051447.d.html"
+ },
+ "Saint Attaway Islands": {
+  "zh": "圣阿特威群岛",
+  "status": "community"
+ },
+ "Frampton Islands": {
+  "zh": "弗兰普顿群岛",
+  "status": "community"
+ },
+ "Lake Tallaloko": {
+  "zh": "塔拉洛科湖",
+  "status": "community"
+ },
+ "East Lummox County": {
+  "zh": "东拉莫克斯县",
+  "status": "community"
+ },
+ "Little Hardin Island": {
+  "zh": "小哈丁岛",
+  "status": "community"
+ },
+ "North Leonard County": {
+  "zh": "北伦纳德县",
+  "status": "community"
+ },
+ "Richard Barebone State Park": {
+  "zh": "理查德·贝尔博恩州立公园",
+  "status": "community"
+ },
+ "North Kelly County": {
+  "zh": "北凯利县",
+  "status": "community"
+ },
+ "Lake Leonida": {
+  "zh": "雷奥奈达湖",
+  "status": "community",
+  "note": "Leonida official"
+ },
+ "Waning Sands": {
+  "zh": "残沙",
+  "status": "community"
+ },
+ "Port Gellhorn": {
+  "zh": "格尔霍恩港",
+  "status": "community",
+  "note": "common in CN coverage (gamersky)"
+ },
+ "Leonard County": {
+  "zh": "伦纳德县",
+  "status": "community"
+ },
+ "Wild Hog Airfield": {
+  "zh": "野猪飞机场",
+  "status": "community"
+ },
+ "Wild Hog Point": {
+  "zh": "野猪角",
+  "status": "community"
+ },
+ "Emerald Springs": {
+  "zh": "翡翠泉",
+  "status": "community"
+ },
+ "South Leonard County": {
+  "zh": "南伦纳德县",
+  "status": "community"
+ },
+ "Washington Island": {
+  "zh": "华盛顿岛",
+  "status": "community"
+ },
+ "Decor District": {
+  "zh": "装饰艺术区",
+  "status": "community",
+  "note": "Art Deco district"
+ },
+ "Washington Beach": {
+  "zh": "华盛顿海滩",
+  "status": "series",
+  "note": "GTA Vice City district, common CN name"
+ },
+ "Buckskin Swamp": {
+  "zh": "鹿皮沼泽",
+  "status": "community"
+ },
+ "Burial Creek": {
+  "zh": "埋骨溪",
+  "status": "community"
+ },
+ "South Kelly County": {
+  "zh": "南凯利县",
+  "status": "community"
+ },
+ "Starfish Island": {
+  "zh": "海星岛",
+  "status": "series",
+  "note": "GTA Vice City island, common CN name"
+ },
+ "West Vice-Dale County": {
+  "zh": "西罪恶谷县",
+  "status": "community"
+ },
+ "Vice-Dale County": {
+  "zh": "罪恶谷县",
+  "status": "community"
+ },
+ "Tola Bay": {
+  "zh": "托拉湾",
+  "status": "community"
+ },
+ "Henry J Edwards Airport": {
+  "zh": "亨利·J·爱德华兹机场",
+  "status": "community"
+ },
+ "South Vice-Dale": {
+  "zh": "南罪恶谷",
+  "status": "community"
+ },
+ "Pelican River": {
+  "zh": "鹈鹕河",
+  "status": "community"
+ },
+ "Watson Bay": {
+  "zh": "沃森湾",
+  "status": "community"
+ },
+ "Pelican Valley": {
+  "zh": "鹈鹕谷",
+  "status": "community"
+ },
+ "Mariana County": {
+  "zh": "玛丽安娜县",
+  "status": "community"
+ },
+ "Shoeless Keys": {
+  "zh": "赤足群礁",
+  "status": "community"
+ },
+ "Cottonmouth Lake": {
+  "zh": "蝮蛇湖",
+  "status": "community",
+  "note": "cottonmouth = water moccasin"
+ },
+ "Goose Key": {
+  "zh": "鹅礁岛",
+  "status": "community"
+ },
+ "Maroon Key": {
+  "zh": "马隆礁岛",
+  "status": "community"
+ },
+ "Mile Zero Air Station": {
+  "zh": "零英里航空站",
+  "status": "community"
+ },
+ "Hyde Island": {
+  "zh": "海德岛",
+  "status": "community"
+ },
+ "Partridge Bay": {
+  "zh": "鹧鸪湾",
+  "status": "community"
+ },
+ "Okchiloha Bay": {
+  "zh": "奥奇洛哈湾",
+  "status": "community"
+ },
+ "Bonanza": {
+  "zh": "博南扎",
+  "status": "community"
+ },
+ "Moreau River": {
+  "zh": "莫罗河",
+  "status": "community"
+ },
+ "Featherstone Islands": {
+  "zh": "费瑟斯通群岛",
+  "status": "community"
+ },
+ "Moreau": {
+  "zh": "莫罗",
+  "status": "community"
+ },
+ "Lummox County": {
+  "zh": "拉莫克斯县",
+  "status": "community"
+ },
+ "San Malo Bay": {
+  "zh": "圣马洛湾",
+  "status": "community"
+ },
+ "Mount Kalaga National Park": {
+  "zh": "卡拉加山国家公园",
+  "status": "community",
+  "note": "common in CN coverage (gamersky)"
+ },
+ "Millport Basin": {
+  "zh": "米尔波特港池",
+  "status": "community"
+ },
+ "Millport": {
+  "zh": "米尔波特",
+  "status": "community"
+ },
+ "Zephyr Islands": {
+  "zh": "西风群岛",
+  "status": "community"
+ },
+ "Draper Island": {
+  "zh": "德雷珀岛",
+  "status": "community"
+ },
+ "Ambrosia": {
+  "zh": "安布罗西亚",
+  "status": "community",
+  "note": "common in CN coverage (gamersky)"
+ },
+ "Atlantic Ocean": {
+  "zh": "大西洋",
+  "status": "community",
+  "note": "standard name"
+ },
+ "Vinewood Beach": {
+  "zh": "维恩伍德海滩",
+  "status": "community"
+ },
+ "Frogswater": {
+  "zh": "蛙水",
+  "status": "community"
+ },
+ "Draper Bay": {
+  "zh": "德雷珀湾",
+  "status": "community"
+ },
+ "Kelly County": {
+  "zh": "凯利县",
+  "status": "community"
+ },
+ "Belville": {
+  "zh": "贝尔维尔",
+  "status": "community"
+ },
+ "Sandbars": {
+  "zh": "沙洲",
+  "status": "community"
+ },
+ "Borrachero Sound": {
+  "zh": "博拉切罗海湾",
+  "status": "community",
+  "note": "Sound → 海湾 throughout"
+ },
+ "Leaf Links": {
+  "zh": "利夫林克斯",
+  "status": "community",
+  "note": "GTA Vice City golf club name, no settled CN form"
+ },
+ "Gellhorn": {
+  "zh": "格尔霍恩",
+  "status": "community"
+ },
+ "Crude Islands": {
+  "zh": "原油群岛",
+  "status": "community"
+ },
+ "Penmarch Isle": {
+  "zh": "彭马奇岛",
+  "status": "community"
+ },
+ "Stockyard": {
+  "zh": "畜栏区",
+  "status": "community"
+ },
+ "La Perle": {
+  "zh": "拉佩尔",
+  "status": "community"
+ },
+ "Bayside": {
+  "zh": "湾畔",
+  "status": "community"
+ },
+ "Vice Beach": {
+  "zh": "罪恶海滩",
+  "status": "community",
+  "note": "follows 罪恶城"
+ },
+ "Crosstown": {
+  "zh": "跨城区",
+  "status": "community"
+ },
+ "Rockridge": {
+  "zh": "石岭",
+  "status": "community"
+ },
+ "Balsero": {
+  "zh": "巴尔塞罗",
+  "status": "community"
+ },
+ "Capri Sound": {
+  "zh": "卡普里海湾",
+  "status": "community"
+ },
+ "Vice City": {
+  "zh": "罪恶城",
+  "status": "official",
+  "note": "Rockstar zh site, per https://finance.sina.cn/tech/2023-12-06/detail-imzwywnp1051447.d.html"
+ },
+ "Ocean Beach": {
+  "zh": "大洋海滩",
+  "status": "series",
+  "note": "GTA Vice City district, common CN name"
+ },
+ "Capri": {
+  "zh": "卡普里",
+  "status": "community"
+ },
+ "Waxman Island": {
+  "zh": "瓦克斯曼岛",
+  "status": "community"
+ },
+ "Little Cuba": {
+  "zh": "小古巴",
+  "status": "community"
+ },
+ "Downtown": {
+  "zh": "市中心",
+  "status": "series",
+  "note": "GTA Vice City district, common CN name"
+ },
+ "Salton": {
+  "zh": "索尔顿",
+  "status": "community"
+ },
+ "Belpoint": {
+  "zh": "贝尔角",
+  "status": "community"
+ },
+ "Nehrling River": {
+  "zh": "内尔林河",
+  "status": "community"
+ },
+ "Port Vice City": {
+  "zh": "罪恶城港",
+  "status": "community"
+ },
+ "VCIA": {
+  "zh": "罪恶城国际机场",
+  "status": "community",
+  "note": "abbr. of Vice City International Airport"
+ },
+ "Catalan Bay": {
+  "zh": "加泰罗尼亚湾",
+  "status": "community"
+ },
+ "Breakwater Quarry": {
+  "zh": "防波堤采石场",
+  "status": "community"
+ },
+ "Tequesta": {
+  "zh": "特奎斯塔",
+  "status": "community"
+ },
+ "Bobcat Bight": {
+  "zh": "山猫海湾",
+  "status": "community"
+ },
+ "Dalton Island": {
+  "zh": "道尔顿岛",
+  "status": "community"
+ },
+ "Big Pine": {
+  "zh": "大松",
+  "status": "community"
+ },
+ "Gloriana Key": {
+  "zh": "格洛丽安娜礁岛",
+  "status": "community"
+ },
+ "Bluegrass": {
+  "zh": "蓝草",
+  "status": "community"
+ },
+ "Gulf of Leonida": {
+  "zh": "雷奥奈达大湾",
+  "status": "community",
+  "note": "大湾 to keep apart from Leonida Bay"
+ },
+ "Peacock Bay": {
+  "zh": "孔雀湾",
+  "status": "community"
+ },
+ "Catalan Key": {
+  "zh": "加泰罗尼亚礁岛",
+  "status": "community"
+ },
+ "Southside": {
+  "zh": "南区",
+  "status": "community"
+ },
+ "Grassrivers": {
+  "zh": "草河",
+  "status": "community",
+  "note": "common in CN coverage (gamersky 草河湿地)"
+ },
+ "Hamlet": {
+  "zh": "哈姆雷特",
+  "status": "community"
+ },
+ "Leonida Bay": {
+  "zh": "雷奥奈达湾",
+  "status": "community"
+ },
+ "Gambit Bay": {
+  "zh": "甘比特湾",
+  "status": "community"
+ },
+ "Riquezas Keys": {
+  "zh": "里克萨斯群礁",
+  "status": "community"
+ },
+ "Key Lento": {
+  "zh": "伦托礁岛",
+  "status": "community"
+ },
+ "Permit Keys": {
+  "zh": "佩米特群礁",
+  "status": "community"
+ },
+ "Southwind": {
+  "zh": "南风",
+  "status": "community"
+ },
+ "Abismo Key": {
+  "zh": "阿比斯莫礁岛",
+  "status": "community"
+ },
+ "Leonida Straits": {
+  "zh": "雷奥奈达海峡",
+  "status": "community"
+ },
+ "MacAlister Gold Mine": {
+  "zh": "麦卡利斯特金矿",
+  "status": "community"
+ },
+ "Tallaloko Lakeside Resort": {
+  "zh": "塔拉洛科湖畔度假村",
+  "status": "community"
+ },
+ "Mount Hailes": {
+  "zh": "海尔斯山",
+  "status": "community"
+ },
+ "Country Club": {
+  "zh": "乡村俱乐部",
+  "status": "community"
+ },
+ "Father Scrumpy's": {
+  "zh": "Father Scrumpy's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Raceway Park": {
+  "zh": "赛车公园",
+  "status": "community"
+ },
+ "Thrillbilly": {
+  "zh": "Thrillbilly",
+  "status": "keep",
+  "note": "business"
+ },
+ "Thrilbily Mua club": {
+  "zh": "Thrillbilly泥地俱乐部",
+  "status": "community",
+  "note": "map label typo of Thrillbilly Mud Club"
+ },
+ "Mud Club": {
+  "zh": "泥地俱乐部",
+  "status": "community"
+ },
+ "Sabal Palms": {
+  "zh": "萨巴尔棕榈",
+  "status": "community"
+ },
+ "Rodeo Association": {
+  "zh": "牛仔竞技协会",
+  "status": "community"
+ },
+ "Evergreen Mall": {
+  "zh": "常青购物中心",
+  "status": "community"
+ },
+ "Allied": {
+  "zh": "Allied",
+  "status": "keep",
+  "note": "brand (Allied Crystal)"
+ },
+ "Grystal": {
+  "zh": "Crystal",
+  "status": "keep",
+  "note": "map label typo of Crystal (Allied Crystal)"
+ },
+ "Howe Dairy": {
+  "zh": "豪氏乳品厂",
+  "status": "community"
+ },
+ "Chateau Cellerica": {
+  "zh": "塞勒里卡酒庄",
+  "status": "community"
+ },
+ "Tucker's Citrus Farms": {
+  "zh": "塔克柑橘农场",
+  "status": "community"
+ },
+ "Cellerica": {
+  "zh": "塞勒里卡",
+  "status": "community"
+ },
+ "Raceway": {
+  "zh": "赛车场",
+  "status": "community"
+ },
+ "Leonida State Prison": {
+  "zh": "雷奥奈达州立监狱",
+  "status": "community"
+ },
+ "Fleeca Field": {
+  "zh": "Fleeca球场",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Salton Memorial Island": {
+  "zh": "索尔顿纪念岛",
+  "status": "community"
+ },
+ "Flea Market": {
+  "zh": "跳蚤市场",
+  "status": "community"
+ },
+ "Sahara Arena": {
+  "zh": "Sahara体育馆",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "VICE CITY INTERNATIONAL AIRPORT": {
+  "zh": "罪恶城国际机场",
+  "status": "community",
+  "note": "Vice City official"
+ },
+ "Oceanarium": {
+  "zh": "海洋馆",
+  "status": "community"
+ },
+ "Sahara Network Data Cer": {
+  "zh": "Sahara Network数据中心",
+  "status": "community",
+  "note": "truncated label; brand kept"
+ },
+ "Data Center": {
+  "zh": "数据中心",
+  "status": "community"
+ },
+ "Courtland": {
+  "zh": "考特兰",
+  "status": "community"
+ },
+ "Peacock": {
+  "zh": "孔雀",
+  "status": "community"
+ },
+ "Estates": {
+  "zh": "庄园区",
+  "status": "community"
+ },
+ "Correctional Institution": {
+  "zh": "惩教所",
+  "status": "community"
+ },
+ "Paradise RV Park": {
+  "zh": "天堂房车营地",
+  "status": "community"
+ },
+ "Boone": {
+  "zh": "布恩",
+  "status": "community"
+ },
+ "Speedway": {
+  "zh": "赛车场",
+  "status": "community"
+ },
+ "T.H. Power Station": {
+  "zh": "T.H.发电站",
+  "status": "community"
+ },
+ "Vice Regal": {
+  "zh": "罪恶丽晶酒店",
+  "status": "community"
+ },
+ "Albany Hotel": {
+  "zh": "奥尔巴尼酒店",
+  "status": "community"
+ },
+ "Y Vice City": {
+  "zh": "Y Vice City",
+  "status": "keep",
+  "note": "business"
+ },
+ "Crystal": {
+  "zh": "Crystal",
+  "status": "keep",
+  "note": "business"
+ },
+ "Sachem": {
+  "zh": "Sachem",
+  "status": "keep",
+  "note": "business"
+ },
+ "The Atoll": {
+  "zh": "环礁酒店",
+  "status": "community"
+ },
+ "Bayfront Heights": {
+  "zh": "湾畔高地",
+  "status": "community"
+ },
+ "Dominion Hotel": {
+  "zh": "自治领酒店",
+  "status": "community"
+ },
+ "Hotel Dixon": {
+  "zh": "迪克森酒店",
+  "status": "community"
+ },
+ "Paramour Hotel": {
+  "zh": "情人酒店",
+  "status": "community"
+ },
+ "Ocean View Hotel": {
+  "zh": "海景酒店",
+  "status": "community"
+ },
+ "Seven Seas Seafood": {
+  "zh": "七海海鲜",
+  "status": "community"
+ },
+ "Boardwalk": {
+  "zh": "木栈道酒店",
+  "status": "community"
+ },
+ "Hotel Neptune": {
+  "zh": "海王星酒店",
+  "status": "community"
+ },
+ "Parsons Hotel?": {
+  "zh": "帕森斯酒店？",
+  "status": "community"
+ },
+ "Seashell Hotel": {
+  "zh": "贝壳酒店",
+  "status": "community"
+ },
+ "Cortez Hotel": {
+  "zh": "科尔特斯酒店",
+  "status": "community"
+ },
+ "Bobby Hurricane's": {
+  "zh": "Bobby Hurricane's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Atlantis Hotel": {
+  "zh": "亚特兰蒂斯酒店",
+  "status": "community"
+ },
+ "Seahorse": {
+  "zh": "海马酒店",
+  "status": "community"
+ },
+ "Cordelia": {
+  "zh": "Cordelia",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vice Museum of Art": {
+  "zh": "罪恶艺术博物馆",
+  "status": "community"
+ },
+ "Fence": {
+  "zh": "Fence",
+  "status": "keep",
+  "note": "business"
+ },
+ "Firefly Plaza": {
+  "zh": "萤火虫广场",
+  "status": "community"
+ },
+ "Vice Beach Welcome Mural": {
+  "zh": "罪恶海滩欢迎壁画",
+  "status": "community"
+ },
+ "Effluvia": {
+  "zh": "Effluvia",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vice Beach Marina": {
+  "zh": "罪恶海滩码头",
+  "status": "community"
+ },
+ "Tennis Stadium": {
+  "zh": "网球体育场",
+  "status": "community"
+ },
+ "Pegassi Residences South Tower": {
+  "zh": "Pegassi公寓南楼",
+  "status": "community",
+  "note": "GTA brand kept"
+ },
+ "Pegassi Residences North Tower": {
+  "zh": "Pegassi公寓北楼",
+  "status": "community",
+  "note": "GTA brand kept"
+ },
+ "Redwood Suites": {
+  "zh": "红木套房",
+  "status": "community"
+ },
+ "Construction Site": {
+  "zh": "建筑工地",
+  "status": "community"
+ },
+ "Arrow Gas Station": {
+  "zh": "Arrow加油站",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Water Tower": {
+  "zh": "水塔",
+  "status": "community"
+ },
+ "Parking Lot": {
+  "zh": "停车场",
+  "status": "community"
+ },
+ "Park": {
+  "zh": "公园",
+  "status": "community"
+ },
+ "Archez": {
+  "zh": "Archez",
+  "status": "keep",
+  "note": "business"
+ },
+ "Crescent": {
+  "zh": "Crescent",
+  "status": "keep",
+  "note": "business"
+ },
+ "Archipelago (N)": {
+  "zh": "群岛大厦（北）",
+  "status": "community"
+ },
+ "Gemini Tower": {
+  "zh": "双子座大厦",
+  "status": "community"
+ },
+ "The Sumerian": {
+  "zh": "苏美尔酒店",
+  "status": "community"
+ },
+ "Galina Ballet Opera House": {
+  "zh": "加琳娜芭蕾歌剧院",
+  "status": "community"
+ },
+ "The Celtica Hotel?": {
+  "zh": "凯尔提卡酒店？",
+  "status": "community"
+ },
+ "NINE1NINE": {
+  "zh": "NINE1NINE",
+  "status": "keep",
+  "note": "business"
+ },
+ "Venture Apts North": {
+  "zh": "Venture公寓北楼",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Venture Apts South": {
+  "zh": "Venture公寓南楼",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Lou's": {
+  "zh": "Lou's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Fleeca Field Metro Station": {
+  "zh": "Fleeca球场地铁站",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Rockridge Neighborhood Service Center": {
+  "zh": "石岭社区服务中心",
+  "status": "community"
+ },
+ "Navaro Shipping Terminal": {
+  "zh": "纳瓦罗航运码头",
+  "status": "community"
+ },
+ "Arcadia Towers (N)": {
+  "zh": "阿卡迪亚大厦（北）",
+  "status": "community"
+ },
+ "Megamundo": {
+  "zh": "Megamundo",
+  "status": "keep",
+  "note": "business"
+ },
+ "El Gabeto Center": {
+  "zh": "El Gabeto中心",
+  "status": "community",
+  "note": "name kept"
+ },
+ "Autograph Hangar 2": {
+  "zh": "Autograph 2号机库",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "VCIA Metro Mover Station": {
+  "zh": "罪恶城国际机场Metro Mover站",
+  "status": "community"
+ },
+ "Heath Tower": {
+  "zh": "希思大厦",
+  "status": "community"
+ },
+ "Piker Financial Center": {
+  "zh": "派克金融中心",
+  "status": "community"
+ },
+ "Gico? Huxley Hotels": {
+  "zh": "Gico? Huxley Hotels",
+  "status": "keep",
+  "note": "business"
+ },
+ "ShoreFront": {
+  "zh": "ShoreFront",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vice Tower?": {
+  "zh": "罪恶大厦？",
+  "status": "community"
+ },
+ "Sahara HQ": {
+  "zh": "Sahara总部",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Grand Majestic": {
+  "zh": "Grand Majestic",
+  "status": "keep",
+  "note": "business"
+ },
+ "International Online Unlimited": {
+  "zh": "International Online Unlimited",
+  "status": "keep",
+  "note": "business"
+ },
+ "\"Stiltsville Bridge\"": {
+  "zh": "高跷村桥",
+  "status": "community"
+ },
+ "Fuzzard Power Station (N)": {
+  "zh": "法扎德发电站（北）",
+  "status": "community"
+ },
+ "Beacon": {
+  "zh": "灯塔",
+  "status": "community"
+ },
+ "Rattlers": {
+  "zh": "Rattlers",
+  "status": "keep",
+  "note": "business"
+ },
+ "Te Invito": {
+  "zh": "Te Invito",
+  "status": "keep",
+  "note": "business"
+ },
+ "LTD Gas Station": {
+  "zh": "LTD加油站",
+  "status": "community",
+  "note": "GTA brand kept"
+ },
+ "Hamlet Water Tower": {
+  "zh": "哈姆雷特水塔",
+  "status": "community"
+ },
+ "Sewage Treatment Plant": {
+  "zh": "污水处理厂",
+  "status": "community"
+ },
+ "Radio Mast": {
+  "zh": "无线电桅杆",
+  "status": "community"
+ },
+ "Sunrise RV Park": {
+  "zh": "日出房车营地",
+  "status": "community"
+ },
+ "Jason's House": {
+  "zh": "杰森的家",
+  "status": "community",
+  "note": "protagonist Jason"
+ },
+ "Cell Tower": {
+  "zh": "基站塔",
+  "status": "community"
+ },
+ "Air Force Radar Station": {
+  "zh": "空军雷达站",
+  "status": "community"
+ },
+ "Blimp": {
+  "zh": "飞艇",
+  "status": "community"
+ },
+ "Radio Tower": {
+  "zh": "无线电塔",
+  "status": "community"
+ },
+ "Guard Booth": {
+  "zh": "岗亭",
+  "status": "community"
+ },
+ "Warehouse": {
+  "zh": "仓库",
+  "status": "community"
+ },
+ "Gellhorn International Raceway": {
+  "zh": "格尔霍恩国际赛车场",
+  "status": "community"
+ },
+ "Red Raccoon Diner": {
+  "zh": "红浣熊餐馆",
+  "status": "community"
+ },
+ "Pawn & Gun": {
+  "zh": "Pawn & Gun",
+  "status": "keep",
+  "note": "business"
+ },
+ "Port Gellhorn Smokestack": {
+  "zh": "格尔霍恩港烟囱",
+  "status": "community"
+ },
+ "Taco Bomb": {
+  "zh": "Taco Bomb",
+  "status": "keep",
+  "note": "business"
+ },
+ "Starlet Motel Sign": {
+  "zh": "星光汽车旅馆标牌",
+  "status": "community"
+ },
+ "Easy Inn Motel": {
+  "zh": "Easy Inn汽车旅馆",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Hank's Waffles": {
+  "zh": "Hank's Waffles",
+  "status": "keep",
+  "note": "business"
+ },
+ "Tank": {
+  "zh": "储罐",
+  "status": "community"
+ },
+ "Bridge": {
+  "zh": "桥",
+  "status": "community"
+ },
+ "Schlott Construction": {
+  "zh": "Schlott Construction",
+  "status": "keep",
+  "note": "business"
+ },
+ "Car Wash": {
+  "zh": "洗车场",
+  "status": "community"
+ },
+ "Bocamar Bridge": {
+  "zh": "博卡马桥",
+  "status": "community"
+ },
+ "Dry Dock": {
+  "zh": "干船坞",
+  "status": "community"
+ },
+ "Container Crane (1)": {
+  "zh": "1号集装箱起重机",
+  "status": "community"
+ },
+ "Hotel Valetta": {
+  "zh": "瓦莱塔酒店",
+  "status": "community"
+ },
+ "The Rusty Anchor": {
+  "zh": "锈锚酒吧",
+  "status": "community"
+ },
+ "Brian's Boat Works & Marina": {
+  "zh": "布赖恩船厂及码头",
+  "status": "community"
+ },
+ "Key Lento Marina Club": {
+  "zh": "伦托礁岛码头俱乐部",
+  "status": "community"
+ },
+ "Wonder Whale": {
+  "zh": "Wonder Whale",
+  "status": "keep",
+  "note": "business"
+ },
+ "24/7 Supermarket": {
+  "zh": "24/7超市",
+  "status": "community",
+  "note": "brand 24/7"
+ },
+ "VCIA Control Tower": {
+  "zh": "罪恶城国际机场塔台",
+  "status": "community"
+ },
+ "Three Toe Lake": {
+  "zh": "三趾湖",
+  "status": "community"
+ },
+ "Mexican Restaurant": {
+  "zh": "墨西哥餐厅",
+  "status": "community"
+ },
+ "Sara's Unisex Salon": {
+  "zh": "Sara's美发店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Burger Shot": {
+  "zh": "Burger Shot",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "Vinylism": {
+  "zh": "Vinylism",
+  "status": "keep",
+  "note": "business"
+ },
+ "Kurt's Barber Shop": {
+  "zh": "Kurt's理发店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Lifeguard Tower": {
+  "zh": "救生塔",
+  "status": "community"
+ },
+ "Pegassi Residences West Tower": {
+  "zh": "Pegassi公寓西楼",
+  "status": "community",
+  "note": "GTA brand kept"
+ },
+ "Bite House": {
+  "zh": "Bite House",
+  "status": "keep",
+  "note": "business"
+ },
+ "Sugar Mill": {
+  "zh": "制糖厂",
+  "status": "community"
+ },
+ "Silo": {
+  "zh": "筒仓",
+  "status": "community"
+ },
+ "W. Blanco's Cuban Foods": {
+  "zh": "W. Blanco's古巴食品",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Xero Gas Station": {
+  "zh": "Xero加油站",
+  "status": "community",
+  "note": "GTA brand kept"
+ },
+ "Jeudy's Food Depot": {
+  "zh": "Jeudy's Food Depot",
+  "status": "keep",
+  "note": "business"
+ },
+ "Conch King": {
+  "zh": "Conch King",
+  "status": "keep",
+  "note": "business"
+ },
+ "Simon's Tires": {
+  "zh": "Simon's轮胎店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Rivo Bridge": {
+  "zh": "里沃桥",
+  "status": "community"
+ },
+ "Leaf Links Golf Club?": {
+  "zh": "利夫林克斯高尔夫俱乐部？",
+  "status": "community"
+ },
+ "Port Vice City Tunnel": {
+  "zh": "罪恶城港隧道",
+  "status": "community"
+ },
+ "Palaestra Tower": {
+  "zh": "帕莱斯特拉大厦",
+  "status": "community"
+ },
+ "Dock Ring": {
+  "zh": "码头环",
+  "status": "community"
+ },
+ "V-Rock Café": {
+  "zh": "V-Rock咖啡馆",
+  "status": "series",
+  "note": "V-Rock is the GTA Vice City radio brand, kept"
+ },
+ "Vice City Arts Center Metro Station": {
+  "zh": "罪恶城艺术中心地铁站",
+  "status": "community"
+ },
+ "Presidential Bunker": {
+  "zh": "总统地堡",
+  "status": "community"
+ },
+ "Underwater Research Station": {
+  "zh": "水下研究站",
+  "status": "community"
+ },
+ "What's Cooking": {
+  "zh": "What's Cooking",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vice City Sign": {
+  "zh": "罪恶城标牌",
+  "status": "community"
+ },
+ "Lake": {
+  "zh": "湖",
+  "status": "community"
+ },
+ "Lombank": {
+  "zh": "Lombank",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "Waste Transfer Services": {
+  "zh": "垃圾转运站",
+  "status": "community"
+ },
+ "Allied Air Hangar": {
+  "zh": "Allied Air机库",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Glamour Clothing": {
+  "zh": "Glamour Clothing",
+  "status": "keep",
+  "note": "business"
+ },
+ "Goliath?": {
+  "zh": "Goliath?",
+  "status": "keep",
+  "note": "brand"
+ },
+ "Panos Plaza": {
+  "zh": "帕诺斯广场",
+  "status": "community"
+ },
+ "Going Spare": {
+  "zh": "Going Spare",
+  "status": "keep",
+  "note": "business"
+ },
+ "Shunters": {
+  "zh": "Shunters",
+  "status": "keep",
+  "note": "business"
+ },
+ "Kirkwood Distribution": {
+  "zh": "Kirkwood Distribution",
+  "status": "keep",
+  "note": "business"
+ },
+ "\"House B\"": {
+  "zh": "B号屋",
+  "status": "community"
+ },
+ "\"House C\"": {
+  "zh": "C号屋",
+  "status": "community"
+ },
+ "\"House D\"": {
+  "zh": "D号屋",
+  "status": "community"
+ },
+ "Hoodwinks Bar": {
+  "zh": "Hoodwinks酒吧",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Thrillbilly Mud Club": {
+  "zh": "Thrillbilly泥地俱乐部",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Buckme": {
+  "zh": "Buckme",
+  "status": "keep",
+  "note": "business"
+ },
+ "Prison": {
+  "zh": "监狱",
+  "status": "community"
+ },
+ "\"Mount Waffles\"": {
+  "zh": "华夫山",
+  "status": "community"
+ },
+ "\"Mount Mountain\"": {
+  "zh": "山山",
+  "status": "community"
+ },
+ "Mount Kalaga": {
+  "zh": "卡拉加山",
+  "status": "community",
+  "note": "common in CN coverage"
+ },
+ "\"Easy Hill\"": {
+  "zh": "易山",
+  "status": "community"
+ },
+ "Leaf Links Golf Club": {
+  "zh": "利夫林克斯高尔夫俱乐部",
+  "status": "community"
+ },
+ "Refinery?": {
+  "zh": "炼油厂？",
+  "status": "community"
+ },
+ "Factory?": {
+  "zh": "工厂？",
+  "status": "community"
+ },
+ "Port Gellhorn Train Station": {
+  "zh": "格尔霍恩港火车站",
+  "status": "community"
+ },
+ "Vice City Pawn": {
+  "zh": "罪恶城当铺",
+  "status": "community"
+ },
+ "Tequesta Retreat Bridge": {
+  "zh": "特奎斯塔静苑桥",
+  "status": "community"
+ },
+ "Watson Bay Water Tower": {
+  "zh": "沃森湾水塔",
+  "status": "community"
+ },
+ "Evergreen Mall Sign": {
+  "zh": "常青购物中心标牌",
+  "status": "community"
+ },
+ "J.C. Anglin United States Courthouse": {
+  "zh": "J.C.安格林美国联邦法院",
+  "status": "community"
+ },
+ "The Vault": {
+  "zh": "The Vault",
+  "status": "keep",
+  "note": "business"
+ },
+ "X Hotel": {
+  "zh": "X酒店",
+  "status": "community"
+ },
+ "Clarissa Hotel": {
+  "zh": "克拉丽莎酒店",
+  "status": "community"
+ },
+ "Parking Garage": {
+  "zh": "停车楼",
+  "status": "community"
+ },
+ "Ambrosia Raceway Park": {
+  "zh": "安布罗西亚赛车公园",
+  "status": "community"
+ },
+ "Ambrosia Station": {
+  "zh": "安布罗西亚站",
+  "status": "community"
+ },
+ "Repair & Salvage": {
+  "zh": "维修与回收",
+  "status": "community"
+ },
+ "Train Bridge": {
+  "zh": "铁路桥",
+  "status": "community"
+ },
+ "Vice Pass": {
+  "zh": "罪恶通道",
+  "status": "community"
+ },
+ "Kington Hotel": {
+  "zh": "金顿酒店",
+  "status": "community"
+ },
+ "Metro Station": {
+  "zh": "地铁站",
+  "status": "community"
+ },
+ "Grassrivers Visitor Center": {
+  "zh": "草河游客中心",
+  "status": "community"
+ },
+ "Delights": {
+  "zh": "Delights",
+  "status": "keep",
+  "note": "business"
+ },
+ "Tequesta Retreat Park": {
+  "zh": "特奎斯塔静苑公园",
+  "status": "community"
+ },
+ "Spaceship House": {
+  "zh": "飞船屋",
+  "status": "community"
+ },
+ "Vice River": {
+  "zh": "罪恶河",
+  "status": "community"
+ },
+ "Transformer Station": {
+  "zh": "变压站",
+  "status": "community"
+ },
+ "The Amalfi": {
+  "zh": "阿马尔菲",
+  "status": "community"
+ },
+ "Shoreline Market": {
+  "zh": "海滨市场",
+  "status": "community"
+ },
+ "Cipher Mall": {
+  "zh": "Cipher购物中心",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Chariot Empire Suites": {
+  "zh": "Chariot Empire Suites",
+  "status": "keep",
+  "note": "business"
+ },
+ "Main Prison Building": {
+  "zh": "监狱主楼",
+  "status": "community"
+ },
+ "Container Crane #9": {
+  "zh": "9号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #8": {
+  "zh": "8号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #7": {
+  "zh": "7号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #6": {
+  "zh": "6号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #5": {
+  "zh": "5号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #4": {
+  "zh": "4号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #3": {
+  "zh": "3号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #2": {
+  "zh": "2号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane #1": {
+  "zh": "1号集装箱起重机",
+  "status": "community"
+ },
+ "Status Auto Resort": {
+  "zh": "Status Auto Resort",
+  "status": "keep",
+  "note": "business"
+ },
+ "Judith's?": {
+  "zh": "Judith's?",
+  "status": "keep",
+  "note": "business"
+ },
+ "Arcadia Towers (S)": {
+  "zh": "阿卡迪亚大厦（南）",
+  "status": "community"
+ },
+ "Autograph Hangar 1": {
+  "zh": "Autograph 1号机库",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Break Inn": {
+  "zh": "Break Inn",
+  "status": "keep",
+  "note": "business"
+ },
+ "Tennis Court": {
+  "zh": "网球场",
+  "status": "community"
+ },
+ "Goliath": {
+  "zh": "Goliath",
+  "status": "keep",
+  "note": "brand"
+ },
+ "Submerged Tank": {
+  "zh": "沉没坦克",
+  "status": "community"
+ },
+ "Archipelago (S)": {
+  "zh": "群岛大厦（南）",
+  "status": "community"
+ },
+ "Calle Creativa": {
+  "zh": "Calle Creativa",
+  "status": "keep",
+  "note": "business"
+ },
+ "Temple Park": {
+  "zh": "神殿公园",
+  "status": "community"
+ },
+ "Donovan Roeder Jr. Community Center": {
+  "zh": "小多诺万·罗德社区中心",
+  "status": "community"
+ },
+ "Train Tunnel": {
+  "zh": "铁路隧道",
+  "status": "community"
+ },
+ "Water Tank": {
+  "zh": "水箱",
+  "status": "community"
+ },
+ "Soccer Field": {
+  "zh": "足球场",
+  "status": "community"
+ },
+ "Guardhouse": {
+  "zh": "警卫室",
+  "status": "community"
+ },
+ "Shoreline Park?": {
+  "zh": "海滨公园？",
+  "status": "community"
+ },
+ "Control Tower": {
+  "zh": "塔台",
+  "status": "community"
+ },
+ "Radar Tower": {
+  "zh": "雷达塔",
+  "status": "community"
+ },
+ "Hangar": {
+  "zh": "机库",
+  "status": "community"
+ },
+ "Weather Radar": {
+  "zh": "气象雷达",
+  "status": "community"
+ },
+ "Ambrosia Police Department": {
+  "zh": "安布罗西亚警察局",
+  "status": "community"
+ },
+ "Domed Hills": {
+  "zh": "穹丘",
+  "status": "community"
+ },
+ "Hamilton Private Health Clinic": {
+  "zh": "汉密尔顿私立诊所",
+  "status": "community"
+ },
+ "Fuzzard Power Station (S)": {
+  "zh": "法扎德发电站（南）",
+  "status": "community"
+ },
+ "Fuzzard Power Station (1)": {
+  "zh": "法扎德发电站（1）",
+  "status": "community"
+ },
+ "Fuzzard Power Station (2)": {
+  "zh": "法扎德发电站（2）",
+  "status": "community"
+ },
+ "Fuzzard Power Station (3)": {
+  "zh": "法扎德发电站（3）",
+  "status": "community"
+ },
+ "Sculpture": {
+  "zh": "雕塑",
+  "status": "community"
+ },
+ "Outdoor Movie Screen?": {
+  "zh": "露天电影银幕？",
+  "status": "community"
+ },
+ "River": {
+  "zh": "河",
+  "status": "community"
+ },
+ "Vice City Hall": {
+  "zh": "罪恶城市政厅",
+  "status": "community"
+ },
+ "Empty Lot": {
+  "zh": "空地",
+  "status": "community"
+ },
+ "Limit HQ": {
+  "zh": "Limit总部",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Prison Tower (1)": {
+  "zh": "监狱1号塔楼",
+  "status": "community"
+ },
+ "Prison Tower (2)": {
+  "zh": "监狱2号塔楼",
+  "status": "community"
+ },
+ "Prison Tower (3)": {
+  "zh": "监狱3号塔楼",
+  "status": "community"
+ },
+ "Prison Tower (4)": {
+  "zh": "监狱4号塔楼",
+  "status": "community"
+ },
+ "Prison Tower (5)": {
+  "zh": "监狱5号塔楼",
+  "status": "community"
+ },
+ "Prison Tower (6)": {
+  "zh": "监狱6号塔楼",
+  "status": "community"
+ },
+ "Office Building": {
+  "zh": "办公楼",
+  "status": "community"
+ },
+ "Football Stadium?": {
+  "zh": "橄榄球场？",
+  "status": "community"
+ },
+ "Mason's Shrimp Shack": {
+  "zh": "Mason's鲜虾小屋",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Pier": {
+  "zh": "栈桥",
+  "status": "community"
+ },
+ "Juice Fruit Sign": {
+  "zh": "Juice Fruit标牌",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Welcome to Port Gellhorn Sign": {
+  "zh": "“欢迎来到格尔霍恩港”标牌",
+  "status": "community"
+ },
+ "Wasteland Off-Road": {
+  "zh": "Wasteland Off-Road",
+  "status": "keep",
+  "note": "business"
+ },
+ "Cafe Carraway": {
+  "zh": "Cafe Carraway",
+  "status": "keep",
+  "note": "business"
+ },
+ "Canal": {
+  "zh": "运河",
+  "status": "community"
+ },
+ "\"Mariana Island\"": {
+  "zh": "玛丽安娜岛",
+  "status": "community"
+ },
+ "Pawn Shop": {
+  "zh": "当铺",
+  "status": "community"
+ },
+ "Muscle Sands": {
+  "zh": "肌肉沙滩",
+  "status": "community"
+ },
+ "\"Yellow House\"": {
+  "zh": "黄屋",
+  "status": "community"
+ },
+ "\"Blue House\"": {
+  "zh": "蓝屋",
+  "status": "community"
+ },
+ "\"White House\"": {
+  "zh": "白屋",
+  "status": "community"
+ },
+ "Wonder Whale?": {
+  "zh": "Wonder Whale?",
+  "status": "keep",
+  "note": "business"
+ },
+ "Wholesale Furniture Outlet": {
+  "zh": "家具批发店",
+  "status": "community"
+ },
+ "Cospace": {
+  "zh": "Cospace",
+  "status": "keep",
+  "note": "business"
+ },
+ "Catalan Boulevard Bridge": {
+  "zh": "加泰罗尼亚大道桥",
+  "status": "community"
+ },
+ "Trailer Park": {
+  "zh": "拖车营地",
+  "status": "community"
+ },
+ "Underwater Ruins": {
+  "zh": "水下遗迹",
+  "status": "community"
+ },
+ "Capri City Jackals Stadium": {
+  "zh": "卡普里城豺狼队体育场",
+  "status": "community"
+ },
+ "Sugar Fields": {
+  "zh": "甘蔗田",
+  "status": "community"
+ },
+ "Bobcat Key": {
+  "zh": "山猫礁岛",
+  "status": "community"
+ },
+ "\"Corkscrew Hill\"": {
+  "zh": "螺旋山",
+  "status": "community"
+ },
+ "Phil's Ammu-Nation": {
+  "zh": "Phil's Ammu-Nation",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "Container Crane (2)": {
+  "zh": "2号集装箱起重机",
+  "status": "community"
+ },
+ "Container Crane (3)": {
+  "zh": "3号集装箱起重机",
+  "status": "community"
+ },
+ "Ammu-Nation?": {
+  "zh": "Ammu-Nation?",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "Bus Parking Lot": {
+  "zh": "公交停车场",
+  "status": "community"
+ },
+ "Bite": {
+  "zh": "Bite",
+  "status": "keep",
+  "note": "business"
+ },
+ "Bump & Grind": {
+  "zh": "Bump & Grind",
+  "status": "keep",
+  "note": "business"
+ },
+ "Harmon & Fenix": {
+  "zh": "Harmon & Fenix",
+  "status": "keep",
+  "note": "business"
+ },
+ "Core Software": {
+  "zh": "Core Software",
+  "status": "keep",
+  "note": "business"
+ },
+ "Marco Wholesale Footwear": {
+  "zh": "Marco鞋类批发",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Autograph Flight Support Building": {
+  "zh": "Autograph飞行保障楼",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Main Gate": {
+  "zh": "正门",
+  "status": "community"
+ },
+ "Sandeep Plaza": {
+  "zh": "桑迪普广场",
+  "status": "community"
+ },
+ "Pool": {
+  "zh": "泳池",
+  "status": "community"
+ },
+ "Gas Station": {
+  "zh": "加油站",
+  "status": "community"
+ },
+ "Water Tower?": {
+  "zh": "水塔？",
+  "status": "community"
+ },
+ "Lake Bonner": {
+  "zh": "邦纳湖",
+  "status": "community"
+ },
+ "Whiz": {
+  "zh": "Whiz",
+  "status": "keep",
+  "note": "business"
+ },
+ "Tequesta Station": {
+  "zh": "特奎斯塔站",
+  "status": "community"
+ },
+ "Autograph": {
+  "zh": "Autograph",
+  "status": "keep",
+  "note": "business"
+ },
+ "Runway": {
+  "zh": "跑道",
+  "status": "community"
+ },
+ "Vice Beach Police Department": {
+  "zh": "罪恶海滩警察局",
+  "status": "community"
+ },
+ "Golf Carts": {
+  "zh": "高尔夫球车",
+  "status": "community"
+ },
+ "Marbles": {
+  "zh": "Marbles",
+  "status": "keep",
+  "note": "business"
+ },
+ "Liquor Store": {
+  "zh": "酒类商店",
+  "status": "community"
+ },
+ "Boat Ramp": {
+  "zh": "下水坡道",
+  "status": "community"
+ },
+ "Intersection": {
+  "zh": "路口",
+  "status": "community"
+ },
+ "Baseball Field?": {
+  "zh": "棒球场？",
+  "status": "community"
+ },
+ "Star Island Bridge": {
+  "zh": "星岛桥",
+  "status": "community"
+ },
+ "\"Maple Syrup Hill\"": {
+  "zh": "枫糖山",
+  "status": "community"
+ },
+ "Manifest Canyon": {
+  "zh": "昭示峡谷",
+  "status": "community"
+ },
+ "Prison Building": {
+  "zh": "监狱楼",
+  "status": "community"
+ },
+ "Banner Hotel & Spa": {
+  "zh": "班纳酒店及水疗",
+  "status": "community"
+ },
+ "Fuzzard Drain Canal": {
+  "zh": "法扎德排水渠",
+  "status": "community"
+ },
+ "Lighthouse": {
+  "zh": "灯塔",
+  "status": "community"
+ },
+ "Euroform Automotive": {
+  "zh": "Euroform Automotive",
+  "status": "keep",
+  "note": "business"
+ },
+ "P?": {
+  "zh": "P?",
+  "status": "keep",
+  "note": "unreadable label"
+ },
+ "Piano": {
+  "zh": "钢琴",
+  "status": "community"
+ },
+ "162°S": {
+  "zh": "162°S",
+  "status": "keep",
+  "note": "business"
+ },
+ "Bohemia": {
+  "zh": "Bohemia",
+  "status": "keep",
+  "note": "business"
+ },
+ "Chip's Body Shop": {
+  "zh": "Chip's车身店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Peewees": {
+  "zh": "Peewees",
+  "status": "keep",
+  "note": "business"
+ },
+ "Gellhorn Roadhouse": {
+  "zh": "格尔霍恩路边酒馆",
+  "status": "community"
+ },
+ "Airfield": {
+  "zh": "飞机场",
+  "status": "community"
+ },
+ "\"Escher Bridge\"": {
+  "zh": "埃舍尔桥",
+  "status": "community"
+ },
+ "Bus Stop": {
+  "zh": "公交站",
+  "status": "community"
+ },
+ "Brian's Marina Workshop": {
+  "zh": "布赖恩码头工坊",
+  "status": "community"
+ },
+ "Gellhorn Roadhouse Sign": {
+  "zh": "格尔霍恩路边酒馆标牌",
+  "status": "community"
+ },
+ "\"Vake Island\"": {
+  "zh": "韦克岛",
+  "status": "community"
+ },
+ "National Coast Guard": {
+  "zh": "国家海岸警卫队",
+  "status": "community"
+ },
+ "Tunnel Entrance": {
+  "zh": "隧道入口",
+  "status": "community"
+ },
+ "Electric Fang Tattoo": {
+  "zh": "Electric Fang纹身店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Stock 305": {
+  "zh": "Stock 305",
+  "status": "keep",
+  "note": "business"
+ },
+ "PTT YOUNGIN$ Illegal Goods Store": {
+  "zh": "PTT YOUNGIN$违禁品店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Paradise Garage": {
+  "zh": "Paradise Garage",
+  "status": "keep",
+  "note": "business"
+ },
+ "Fake Tunnel Mural": {
+  "zh": "假隧道壁画",
+  "status": "community"
+ },
+ "Big House": {
+  "zh": "大宅",
+  "status": "community"
+ },
+ "Turn 16": {
+  "zh": "第16号弯道",
+  "status": "community"
+ },
+ "Turn 18": {
+  "zh": "第18号弯道",
+  "status": "community"
+ },
+ "Turn 20": {
+  "zh": "第20号弯道",
+  "status": "community"
+ },
+ "Turn 32": {
+  "zh": "第32号弯道",
+  "status": "community"
+ },
+ "\"Mount Leonida\"": {
+  "zh": "雷奥奈达山",
+  "status": "community"
+ },
+ "Tortoise Lake": {
+  "zh": "陆龟湖",
+  "status": "community"
+ },
+ "Hobbs Milford": {
+  "zh": "Hobbs Milford",
+  "status": "keep",
+  "note": "business"
+ },
+ "\"Dudz Island\"": {
+  "zh": "达兹岛",
+  "status": "community"
+ },
+ "Southpoint Airfield": {
+  "zh": "南角飞机场",
+  "status": "community"
+ },
+ "Dawson Dam": {
+  "zh": "道森水坝",
+  "status": "community"
+ },
+ "Sundown Private Airfield": {
+  "zh": "日落私人飞机场",
+  "status": "community"
+ },
+ "Boone Speedway": {
+  "zh": "布恩赛车场",
+  "status": "community"
+ },
+ "Church": {
+  "zh": "教堂",
+  "status": "community"
+ },
+ "Hospital": {
+  "zh": "医院",
+  "status": "community"
+ },
+ "Strip Mall": {
+  "zh": "商业街",
+  "status": "community"
+ },
+ "Juicy Joes": {
+  "zh": "Juicy Joes",
+  "status": "keep",
+  "note": "business"
+ },
+ "Gator Plaza": {
+  "zh": "鳄鱼广场",
+  "status": "community"
+ },
+ "Marlin Motors": {
+  "zh": "Marlin Motors",
+  "status": "keep",
+  "note": "business"
+ },
+ "WLC Community Centre": {
+  "zh": "WLC社区中心",
+  "status": "community",
+  "note": "abbreviation kept"
+ },
+ "Railyard": {
+  "zh": "铁路货场",
+  "status": "community"
+ },
+ "Vice City Casino Racetrack": {
+  "zh": "罪恶城赌场赛马场",
+  "status": "community"
+ },
+ "Motorcycle Customs Shop?": {
+  "zh": "摩托车改装店？",
+  "status": "community"
+ },
+ "Mattress Madness": {
+  "zh": "Mattress Madness",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vapid Dealership": {
+  "zh": "Vapid经销店",
+  "status": "community",
+  "note": "GTA brand kept"
+ },
+ "Welcome Sign": {
+  "zh": "欢迎标牌",
+  "status": "community"
+ },
+ "Spender's": {
+  "zh": "Spender's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vice City Shopping Plaza": {
+  "zh": "罪恶城购物广场",
+  "status": "community"
+ },
+ "Redford Gallery": {
+  "zh": "雷德福画廊",
+  "status": "community"
+ },
+ "Avis": {
+  "zh": "Avis",
+  "status": "keep",
+  "note": "business"
+ },
+ "Lârss & Elbö": {
+  "zh": "Lârss & Elbö",
+  "status": "keep",
+  "note": "business"
+ },
+ "84": {
+  "zh": "84",
+  "status": "keep",
+  "note": "business"
+ },
+ "Bean Machine": {
+  "zh": "Bean Machine",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "247 Supermarket": {
+  "zh": "24/7超市",
+  "status": "community",
+  "note": "brand 24/7"
+ },
+ "Al Dentes": {
+  "zh": "Al Dentes",
+  "status": "keep",
+  "note": "business"
+ },
+ "Allure Resort Services": {
+  "zh": "Allure Resort Services",
+  "status": "keep",
+  "note": "business"
+ },
+ "Orion K?": {
+  "zh": "Orion K?",
+  "status": "keep",
+  "note": "business"
+ },
+ "Downtown Metro Station": {
+  "zh": "市中心地铁站",
+  "status": "community"
+ },
+ "The Hub Gallery": {
+  "zh": "The Hub画廊",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Deadzombie": {
+  "zh": "Deadzombie",
+  "status": "keep",
+  "note": "business"
+ },
+ "Evoke": {
+  "zh": "Evoke",
+  "status": "keep",
+  "note": "business"
+ },
+ "Footbridge": {
+  "zh": "人行桥",
+  "status": "community"
+ },
+ "Chacey's": {
+  "zh": "Chacey's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Cell Tower Lot": {
+  "zh": "基站塔场地",
+  "status": "community"
+ },
+ "Lock": {
+  "zh": "船闸",
+  "status": "community"
+ },
+ "Vice Vinyl": {
+  "zh": "Vice Vinyl",
+  "status": "keep",
+  "note": "business"
+ },
+ "Fleeca": {
+  "zh": "Fleeca",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "Eye & Dry": {
+  "zh": "Eye & Dry",
+  "status": "keep",
+  "note": "business"
+ },
+ "Diamond Dawgs": {
+  "zh": "Diamond Dawgs",
+  "status": "keep",
+  "note": "business"
+ },
+ "Glazin' Glory": {
+  "zh": "Glazin' Glory",
+  "status": "keep",
+  "note": "business"
+ },
+ "Corsair Key": {
+  "zh": "海盗礁岛",
+  "status": "community"
+ },
+ "Casino": {
+  "zh": "赌场",
+  "status": "community"
+ },
+ "Dam?": {
+  "zh": "水坝？",
+  "status": "community"
+ },
+ "Turn 34": {
+  "zh": "第34号弯道",
+  "status": "community"
+ },
+ "Turn 2": {
+  "zh": "第2号弯道",
+  "status": "community"
+ },
+ "\"Ambrosia Hill\"": {
+  "zh": "安布罗西亚山",
+  "status": "community"
+ },
+ "\"Bridge Ridge\"": {
+  "zh": "桥岭",
+  "status": "community"
+ },
+ "\"Lollipop Ridge\"": {
+  "zh": "棒棒糖岭",
+  "status": "community"
+ },
+ "\"Thrillbilly Hill\"": {
+  "zh": "Thrillbilly山",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Turn 27": {
+  "zh": "第27号弯道",
+  "status": "community"
+ },
+ "Public Restrooms": {
+  "zh": "公共厕所",
+  "status": "community"
+ },
+ "Drawbridge": {
+  "zh": "吊桥",
+  "status": "community"
+ },
+ "Catalyst Realty": {
+  "zh": "Catalyst Realty",
+  "status": "keep",
+  "note": "business"
+ },
+ "Lulu": {
+  "zh": "Lulu",
+  "status": "keep",
+  "note": "business"
+ },
+ "Ajax Gym": {
+  "zh": "Ajax健身房",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Papasco's": {
+  "zh": "Papasco's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Train Station": {
+  "zh": "火车站",
+  "status": "community"
+ },
+ "Breakwater": {
+  "zh": "防波堤",
+  "status": "community"
+ },
+ "Turn 31": {
+  "zh": "第31号弯道",
+  "status": "community"
+ },
+ "\"Carousell Hill\"": {
+  "zh": "旋转木马山",
+  "status": "community"
+ },
+ "\"Kelly Hill\"": {
+  "zh": "凯利山",
+  "status": "community"
+ },
+ "\"Starlet Hill\"": {
+  "zh": "星光山",
+  "status": "community"
+ },
+ "Perkins Deli": {
+  "zh": "Perkins熟食店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Josefina": {
+  "zh": "Josefina",
+  "status": "keep",
+  "note": "business"
+ },
+ "Bruiser? Skate Shop": {
+  "zh": "Bruiser?滑板店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Port": {
+  "zh": "港口",
+  "status": "community"
+ },
+ "\"Mount Lummox\"": {
+  "zh": "拉莫克斯山",
+  "status": "community"
+ },
+ "Vice City Oceanarium": {
+  "zh": "罪恶城海洋馆",
+  "status": "community"
+ },
+ "Train Station?": {
+  "zh": "火车站？",
+  "status": "community"
+ },
+ "Vice City Casino": {
+  "zh": "罪恶城赌场",
+  "status": "community"
+ },
+ "Broadcast Tower": {
+  "zh": "广播塔",
+  "status": "community"
+ },
+ "Crys": {
+  "zh": "Crys",
+  "status": "keep",
+  "note": "truncated (Allied Crystal)"
+ },
+ "Parlor WO13?": {
+  "zh": "Parlor WO13?",
+  "status": "keep",
+  "note": "business"
+ },
+ "The Anderson": {
+  "zh": "安德森",
+  "status": "community"
+ },
+ "Palometa Seafood Restaurant": {
+  "zh": "Palometa海鲜餐厅",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Frills & Fancy": {
+  "zh": "Frills & Fancy",
+  "status": "keep",
+  "note": "business"
+ },
+ "Pharmacy": {
+  "zh": "药房",
+  "status": "community"
+ },
+ "Electrical": {
+  "zh": "电气设施",
+  "status": "community"
+ },
+ "Void": {
+  "zh": "Void",
+  "status": "keep",
+  "note": "business"
+ },
+ "Ocean Beach Pharmacy": {
+  "zh": "大洋海滩药房",
+  "status": "community"
+ },
+ "Juxta Gallery": {
+  "zh": "Juxta画廊",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Lickety Split": {
+  "zh": "Lickety Split",
+  "status": "keep",
+  "note": "business"
+ },
+ "Pharaoh": {
+  "zh": "Pharaoh",
+  "status": "keep",
+  "note": "business"
+ },
+ "Electrotoke": {
+  "zh": "Electrotoke",
+  "status": "keep",
+  "note": "business"
+ },
+ "Oceanside Style": {
+  "zh": "Oceanside Style",
+  "status": "keep",
+  "note": "business"
+ },
+ "Luna": {
+  "zh": "Luna",
+  "status": "keep",
+  "note": "business"
+ },
+ "City Picnic Market": {
+  "zh": "城市野餐市场",
+  "status": "community"
+ },
+ "Fufu": {
+  "zh": "Fufu",
+  "status": "keep",
+  "note": "business"
+ },
+ "Car Park": {
+  "zh": "停车场",
+  "status": "community"
+ },
+ "Excavator Parking Lot": {
+  "zh": "挖掘机停放场",
+  "status": "community"
+ },
+ "Café Coyote": {
+  "zh": "Café Coyote",
+  "status": "keep",
+  "note": "business"
+ },
+ "DJB Shipyard": {
+  "zh": "DJB造船厂",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "City of Vice Fire Rescue Station": {
+  "zh": "罪恶城消防救援站",
+  "status": "community"
+ },
+ "Partytown USA": {
+  "zh": "Partytown USA",
+  "status": "keep",
+  "note": "business"
+ },
+ "Mami's Grocery Market": {
+  "zh": "Mami's杂货市场",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "A1 Fashions": {
+  "zh": "A1 Fashions",
+  "status": "keep",
+  "note": "business"
+ },
+ "Rideout Customs": {
+  "zh": "Rideout Customs",
+  "status": "keep",
+  "note": "business"
+ },
+ "The Flamingrill": {
+  "zh": "The Flamingrill",
+  "status": "keep",
+  "note": "business"
+ },
+ "Carnicero": {
+  "zh": "Carnicero",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vetiver Minimarket": {
+  "zh": "Vetiver小超市",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Banner Parking Garage": {
+  "zh": "班纳停车楼",
+  "status": "community"
+ },
+ "G. Hanson": {
+  "zh": "G. Hanson",
+  "status": "keep",
+  "note": "business"
+ },
+ "Hangars": {
+  "zh": "机库群",
+  "status": "community"
+ },
+ "Service Gate": {
+  "zh": "服务门",
+  "status": "community"
+ },
+ "Electric Substation": {
+  "zh": "变电站",
+  "status": "community"
+ },
+ "Gator's Piano Bar?": {
+  "zh": "Gator's钢琴酒吧？",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "X Hotel Parking Lot": {
+  "zh": "X酒店停车场",
+  "status": "community"
+ },
+ "Covered Parking Lot": {
+  "zh": "有顶停车场",
+  "status": "community"
+ },
+ "Cash For Scrap Scrapyard": {
+  "zh": "Cash For Scrap废品场",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Gator Plaza Sign": {
+  "zh": "鳄鱼广场标牌",
+  "status": "community"
+ },
+ "Apollo Aggregates": {
+  "zh": "Apollo Aggregates",
+  "status": "keep",
+  "note": "business"
+ },
+ "Complete Tools": {
+  "zh": "Complete Tools",
+  "status": "keep",
+  "note": "business"
+ },
+ "Kalaga Reservoir": {
+  "zh": "卡拉加水库",
+  "status": "community"
+ },
+ "Bus Loop?": {
+  "zh": "公交环线？",
+  "status": "community"
+ },
+ "Go Postal": {
+  "zh": "Go Postal",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "\"Welcome to Hamlet\" Sign": {
+  "zh": "“欢迎来到哈姆雷特”标牌",
+  "status": "community"
+ },
+ "R": {
+  "zh": "R",
+  "status": "keep",
+  "note": "business"
+ },
+ "Infinity Tower": {
+  "zh": "无限大厦",
+  "status": "community"
+ },
+ "Marina": {
+  "zh": "码头",
+  "status": "community"
+ },
+ "Alpha": {
+  "zh": "Alpha",
+  "status": "keep",
+  "note": "business"
+ },
+ "Ride & Glide": {
+  "zh": "Ride & Glide",
+  "status": "keep",
+  "note": "business"
+ },
+ "Go Postal Office": {
+  "zh": "Go Postal邮局",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Ficroth Capital Garage": {
+  "zh": "Ficroth Capital停车楼",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Bus Station": {
+  "zh": "公交总站",
+  "status": "community"
+ },
+ "Overkeel": {
+  "zh": "倾覆船",
+  "status": "community"
+ },
+ "Adelphila? Jewelry": {
+  "zh": "Adelphila?珠宝",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Hamlet Platinum(?) Plaza": {
+  "zh": "哈姆雷特白金(?)广场",
+  "status": "community"
+ },
+ "Binco": {
+  "zh": "Binco",
+  "status": "keep",
+  "note": "GTA brand"
+ },
+ "Mio": {
+  "zh": "Mio",
+  "status": "keep",
+  "note": "business"
+ },
+ "Cash...": {
+  "zh": "Cash...",
+  "status": "keep",
+  "note": "truncated business name"
+ },
+ "Paperclips": {
+  "zh": "Paperclips",
+  "status": "keep",
+  "note": "business"
+ },
+ "Bocamar Bay": {
+  "zh": "博卡马湾",
+  "status": "community"
+ },
+ "Third Eye": {
+  "zh": "Third Eye",
+  "status": "keep",
+  "note": "business"
+ },
+ "Paño Rojo": {
+  "zh": "Paño Rojo",
+  "status": "keep",
+  "note": "business"
+ },
+ "Tunnel": {
+  "zh": "隧道",
+  "status": "community"
+ },
+ "Turn 6B": {
+  "zh": "第6B号弯道",
+  "status": "community"
+ },
+ "Turn 5": {
+  "zh": "第5号弯道",
+  "status": "community"
+ },
+ "Turn 6": {
+  "zh": "第6号弯道",
+  "status": "community"
+ },
+ "Turn 10": {
+  "zh": "第10号弯道",
+  "status": "community"
+ },
+ "Turn 11": {
+  "zh": "第11号弯道",
+  "status": "community"
+ },
+ "Turn 12": {
+  "zh": "第12号弯道",
+  "status": "community"
+ },
+ "Turn 13": {
+  "zh": "第13号弯道",
+  "status": "community"
+ },
+ "Turn 14": {
+  "zh": "第14号弯道",
+  "status": "community"
+ },
+ "Turn 15": {
+  "zh": "第15号弯道",
+  "status": "community"
+ },
+ "Turn ?": {
+  "zh": "第?号弯道",
+  "status": "community"
+ },
+ "Turn 7": {
+  "zh": "第7号弯道",
+  "status": "community"
+ },
+ "Turn 3": {
+  "zh": "第3号弯道",
+  "status": "community"
+ },
+ "Turn 4": {
+  "zh": "第4号弯道",
+  "status": "community"
+ },
+ "Turn 41": {
+  "zh": "第41号弯道",
+  "status": "community"
+ },
+ "Turn 42": {
+  "zh": "第42号弯道",
+  "status": "community"
+ },
+ "Turn 1": {
+  "zh": "第1号弯道",
+  "status": "community"
+ },
+ "Turn 22": {
+  "zh": "第22号弯道",
+  "status": "community"
+ },
+ "Turn 37": {
+  "zh": "第37号弯道",
+  "status": "community"
+ },
+ "Turn 38": {
+  "zh": "第38号弯道",
+  "status": "community"
+ },
+ "Turn 39": {
+  "zh": "第39号弯道",
+  "status": "community"
+ },
+ "Turn 40": {
+  "zh": "第40号弯道",
+  "status": "community"
+ },
+ "Turn 4B": {
+  "zh": "第4B号弯道",
+  "status": "community"
+ },
+ "Turn 4C": {
+  "zh": "第4C号弯道",
+  "status": "community"
+ },
+ "Turn 25": {
+  "zh": "第25号弯道",
+  "status": "community"
+ },
+ "Turn 26": {
+  "zh": "第26号弯道",
+  "status": "community"
+ },
+ "Turn 28": {
+  "zh": "第28号弯道",
+  "status": "community"
+ },
+ "Turn 29": {
+  "zh": "第29号弯道",
+  "status": "community"
+ },
+ "Turn 30": {
+  "zh": "第30号弯道",
+  "status": "community"
+ },
+ "Turn 33": {
+  "zh": "第33号弯道",
+  "status": "community"
+ },
+ "Turn 35": {
+  "zh": "第35号弯道",
+  "status": "community"
+ },
+ "Turn 36": {
+  "zh": "第36号弯道",
+  "status": "community"
+ },
+ "Turn 5B": {
+  "zh": "第5B号弯道",
+  "status": "community"
+ },
+ "Turn 8C": {
+  "zh": "第8C号弯道",
+  "status": "community"
+ },
+ "Turn 9C": {
+  "zh": "第9C号弯道",
+  "status": "community"
+ },
+ "Turn 10C": {
+  "zh": "第10C号弯道",
+  "status": "community"
+ },
+ "Turn 11C": {
+  "zh": "第11C号弯道",
+  "status": "community"
+ },
+ "Turn 23": {
+  "zh": "第23号弯道",
+  "status": "community"
+ },
+ "Turn 24": {
+  "zh": "第24号弯道",
+  "status": "community"
+ },
+ "Vercetti Estate": {
+  "zh": "维赛迪庄园",
+  "status": "series",
+  "note": "Tommy Vercetti's mansion in GTA Vice City; 维赛迪 is the common CN rendering"
+ },
+ "Turn 8": {
+  "zh": "第8号弯道",
+  "status": "community"
+ },
+ "Turn 9": {
+  "zh": "第9号弯道",
+  "status": "community"
+ },
+ "Fruitshots": {
+  "zh": "Fruitshots",
+  "status": "keep",
+  "note": "business"
+ },
+ "The Grain of Truth": {
+  "zh": "The Grain of Truth",
+  "status": "keep",
+  "note": "business"
+ },
+ "Diangelo": {
+  "zh": "Diangelo",
+  "status": "keep",
+  "note": "business"
+ },
+ "Little Gems Jewellery": {
+  "zh": "Little Gems珠宝",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Berth": {
+  "zh": "泊位",
+  "status": "community"
+ },
+ "Zeke's Gadgets": {
+  "zh": "Zeke's Gadgets",
+  "status": "keep",
+  "note": "business"
+ },
+ "Video Forever": {
+  "zh": "Video Forever",
+  "status": "keep",
+  "note": "business"
+ },
+ "Joyeria Empenos": {
+  "zh": "Joyeria Empenos",
+  "status": "keep",
+  "note": "business"
+ },
+ "Vice City Hospital": {
+  "zh": "罪恶城医院",
+  "status": "community"
+ },
+ "Interchange": {
+  "zh": "立交桥",
+  "status": "community"
+ },
+ "Fire Station": {
+  "zh": "消防站",
+  "status": "community"
+ },
+ "El Rincón Notorio": {
+  "zh": "El Rincón Notorio",
+  "status": "keep",
+  "note": "business"
+ },
+ "Cove": {
+  "zh": "小海湾",
+  "status": "community"
+ },
+ "Tamarro": {
+  "zh": "Tamarro",
+  "status": "keep",
+  "note": "business"
+ },
+ "Turn 17": {
+  "zh": "第17号弯道",
+  "status": "community"
+ },
+ "Turn 21": {
+  "zh": "第21号弯道",
+  "status": "community"
+ },
+ "Turn 19": {
+  "zh": "第19号弯道",
+  "status": "community"
+ },
+ "Turn 33B": {
+  "zh": "第33B号弯道",
+  "status": "community"
+ },
+ "Cave": {
+  "zh": "洞穴",
+  "status": "community"
+ },
+ "Copyshop": {
+  "zh": "复印店",
+  "status": "community"
+ },
+ "The Captain's Cabins": {
+  "zh": "船长小屋",
+  "status": "community"
+ },
+ "Waterfall": {
+  "zh": "瀑布",
+  "status": "community"
+ },
+ "Nirvana Spa": {
+  "zh": "Nirvana水疗",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Royals": {
+  "zh": "Royals",
+  "status": "keep",
+  "note": "business"
+ },
+ "\"La Perle River\"": {
+  "zh": "拉佩尔河",
+  "status": "community"
+ },
+ "Port VC Tunnel": {
+  "zh": "罪恶城港隧道",
+  "status": "community"
+ },
+ "Grandstands": {
+  "zh": "看台",
+  "status": "community"
+ },
+ "Covered Grandstands": {
+  "zh": "有顶看台",
+  "status": "community"
+ },
+ "Farmacia": {
+  "zh": "药房",
+  "status": "community"
+ },
+ "Little Cuba Souvenir Shop": {
+  "zh": "小古巴纪念品店",
+  "status": "community"
+ },
+ "Riverbank": {
+  "zh": "河岸",
+  "status": "community"
+ },
+ "Billie Bob's": {
+  "zh": "Billie Bob's",
+  "status": "keep",
+  "note": "business"
+ },
+ "Leonard County Sheriff's Office": {
+  "zh": "伦纳德县警长办公室",
+  "status": "community"
+ },
+ "Waning Sands Police Department": {
+  "zh": "残沙警察局",
+  "status": "community"
+ },
+ "VCIA Train Station": {
+  "zh": "罪恶城国际机场火车站",
+  "status": "community"
+ },
+ "VCIA Metro Station": {
+  "zh": "罪恶城国际机场地铁站",
+  "status": "community"
+ },
+ "Metro Mover Station": {
+  "zh": "Metro Mover站",
+  "status": "community",
+  "note": "people-mover brand kept"
+ },
+ "Roasters Coffee Cafe": {
+  "zh": "Roasters咖啡馆",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Fenestra Plaza": {
+  "zh": "费内斯特拉广场",
+  "status": "community"
+ },
+ "Gate Building": {
+  "zh": "大门楼",
+  "status": "community"
+ },
+ "Mammacita's": {
+  "zh": "Mammacita's",
+  "status": "keep",
+  "note": "business"
+ },
+ "August Hill Farm": {
+  "zh": "奥古斯特山农场",
+  "status": "community"
+ },
+ "Docks": {
+  "zh": "码头",
+  "status": "community"
+ },
+ "Hamlet Police Department?": {
+  "zh": "哈姆雷特警察局？",
+  "status": "community"
+ },
+ "Peninsula": {
+  "zh": "半岛",
+  "status": "community"
+ },
+ "Brian's Marina Boat Racks": {
+  "zh": "布赖恩码头船架",
+  "status": "community"
+ },
+ "\"Mount Redhill\"": {
+  "zh": "红丘山",
+  "status": "community"
+ },
+ "Beach Volleyball": {
+  "zh": "沙滩排球场",
+  "status": "community"
+ },
+ "Turn 7B": {
+  "zh": "第7B号弯道",
+  "status": "community"
+ },
+ "Turn 8B": {
+  "zh": "第8B号弯道",
+  "status": "community"
+ },
+ "Turn 6C": {
+  "zh": "第6C号弯道",
+  "status": "community"
+ },
+ "Turn 7C": {
+  "zh": "第7C号弯道",
+  "status": "community"
+ },
+ "The Old Mill Barber Shop": {
+  "zh": "老磨坊理发店",
+  "status": "community"
+ },
+ "Trotman's Super Market": {
+  "zh": "Trotman's超市",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Jacob's Tavern Bar": {
+  "zh": "Jacob's Tavern酒吧",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Reynold's Pharmacy": {
+  "zh": "Reynold's药房",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "Tennis Courts": {
+  "zh": "网球场",
+  "status": "community"
+ },
+ "Ricardo's Tires": {
+  "zh": "Ricardo's轮胎店",
+  "status": "community",
+  "note": "brand kept"
+ },
+ "RES TRADE PAINT": {
+  "zh": "RES TRADE PAINT",
+  "status": "keep",
+  "note": "business"
+ },
+ "The Atoll Bar & Grill": {
+  "zh": "环礁酒吧烧烤",
+  "status": "community"
+ },
+ "Wetman Bay": {
+  "zh": "韦特曼湾",
+  "status": "community"
+ },
+ "Gullet Marsh": {
+  "zh": "咽喉沼泽",
+  "status": "community"
+ },
+ "Gellhorn Drive-In Theatre": {
+  "zh": "格尔霍恩汽车影院",
+  "status": "community"
+ },
+ "Effete": {
+  "zh": "Effete",
+  "status": "keep",
+  "note": "business"
+ },
+ "Sharktooth Island": {
+  "zh": "鲨齿岛",
+  "status": "community"
+ },
+ "Peregrine Bay": {
+  "zh": "游隼湾",
+  "status": "community"
+ },
+ "Leith River": {
+  "zh": "利斯河",
+  "status": "community"
+ },
+ "The Monument of Leonidan Supremacy": {
+  "zh": "雷奥奈达至上纪念碑",
+  "status": "community"
+ },
+ "Vespucci": {
+  "zh": "韦斯普奇",
+  "status": "community",
+  "note": "used inside find descriptions"
+ },
+ "Vespucci Island": {
+  "zh": "韦斯普奇岛",
+  "status": "community"
+ }
+}

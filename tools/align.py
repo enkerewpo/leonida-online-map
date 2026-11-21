@@ -49,6 +49,8 @@ for sig in (6, 3, 1.5):
 Mi = np.linalg.inv(np.vstack([M, [0, 0, 1]]))
 T = np.diag([1 / s_ref, 1 / s_ref, 1]) @ Mi @ np.diag([s_ing0, s_ing0, 1])
 np.save(ROOT / 'reference/z5_to_ref.npy', T[:2])
+import json
+json.dump({'$comment': 'Affine (2x3) from GTADB day-tile zoom-5 mosaic pixels (origin tile 17,17) to poster pixels of tools/geo.py; fitted by tools/align.py.', 'matrix': T[:2].tolist()}, open(ROOT / 'tools/z5_to_ref.json', 'w'), indent=1)
 print(T[:2])
 b2 = cv2.warpAffine(B, M, (W, H), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP)
 inter = ((A > .5) & (b2 > .5)).sum(); union = ((A > .5) | (b2 > .5)).sum(); print('IoU', inter / union)

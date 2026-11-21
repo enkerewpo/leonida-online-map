@@ -7,6 +7,7 @@ import { basename, resolve } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
 const schema = JSON.parse(readFileSync(resolve(root, 'src/schema.json'), 'utf8'));
 const LANGS = schema.langs;
+const i18nReport = [];
 const I18N_FIELDS = ['name', 'area', 'where', 'note'];
 const MAX_ERRORS_PER_FILE = 50;
 
@@ -22,6 +23,7 @@ for (const name of Object.keys(schema.layers)) {
 
 for (const file of files) validateFile(file);
 
+if (i18nReport.length) console.log(`\nTranslation coverage:\n  ${i18nReport.join('\n  ')}`);
 console.log(`\n${errorCount ? '✗' : '✓'} ${files.length} file(s), ${errorCount} error(s), ${warningCount} warning(s)`);
 process.exit(errorCount ? 1 : 0);
 
@@ -81,6 +83,11 @@ function validateFile(file) {
     if (layer === 'buildings' && 'height' in p && !(typeof p.height === 'number' && p.height > 0 && p.height < 1000)) err(at, '"height" must be a positive number of metres');
     if (layer === 'roads' && 'ref' in p && (typeof p.ref !== 'string' || !p.ref.trim())) err(at, '"ref" must be a non-empty string');
 
+    if (layer === 'landmarks') {
+      if (!rules.category.includes(p.category)) err(at, `category "${p.category}" not allowed (allowed: ${rules.category.join(', ')})`);
+      if (!(typeof p.minzoom === 'number' && p.minzoom >= 12 && p.minzoom <= 20)) err(at, '"minzoom" must be a number from 12 to 20');
+      if (typeof p.source !== 'string' || !/^https?:\/\/\S+$/.test(p.source)) err(at, '"source" is required: an http(s) link');
+    }
     if (layer === 'poi') {
       if (typeof p.id !== 'string' || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(p.id)) err(at, '"id" must be a lowercase slug like "turbo-ruiner"');
       else if (ids.has(p.id)) err(at, `duplicate id "${p.id}"`);
@@ -98,6 +105,9 @@ function validateFile(file) {
     }
   });
   const n = fc.features.length;
+  const named = fc.features.filter((f) => typeof f?.properties?.name === 'string');
+  const zh = named.filter((f) => f.properties['name:zh-Hans']).length;
+  if (named.length) i18nReport.push(`${rel}: ${zh}/${named.length} names have Chinese`);
   console.log(`${errorCount === before ? 'ok   ' : 'FAIL '}  ${rel}: ${n} feature(s)${errorCount - before ? `, ${errorCount - before} error(s)` : ''}`);
 }
 

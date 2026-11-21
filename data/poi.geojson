@@ -30,18 +30,18 @@
     "category": "vehicle",
     "name": "Vapid Driveshaft Hustler",
     "area:en": "Key Lento",
-    "area:zh-Hans": "Key Lento",
-    "area:zh-Hant": "Key Lento",
+    "area:zh-Hans": "伦托礁岛",
+    "area:zh-Hant": "倫託礁島",
     "where:en": "Southeast Key Lento, Dolphin Dr: the front yard of the house east of Jeb's Snack Bar.",
-    "where:zh-Hans": "Key Lento 东南，Dolphin Dr，Jeb's Snack Bar 东边那户人家的前院。",
-    "where:zh-Hant": "Key Lento 東南，Dolphin Dr，Jeb's Snack Bar 東邊那戶人家的前院。",
+    "where:zh-Hans": "伦托礁岛 东南，Dolphin Dr，Jeb's Snack Bar 东边那户人家的前院。",
+    "where:zh-Hant": "倫託礁島 東南，Dolphin Dr，Jeb's Snack Bar 東邊那戶人家的前院。",
     "source": "https://x.com/vibeeval/status/2124129417186165033"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.010361,
-     -0.065418
+     -0.0265286,
+     -0.0689052
     ]
    }
   },
@@ -52,11 +52,11 @@
     "category": "vehicle",
     "name": "Annis Drifter Elegy",
     "area:en": "Gellhorn Raceway",
-    "area:zh-Hans": "Gellhorn 赛道",
-    "area:zh-Hant": "Gellhorn 賽道",
+    "area:zh-Hans": "格尔霍恩 赛道",
+    "area:zh-Hant": "格爾霍恩 賽道",
     "where:en": "Gellhorn International Raceway: the shed by the small twisty track. Open the left shutter.",
-    "where:zh-Hans": "Gellhorn International Raceway，小弯道赛道旁的棚子，打开左边的卷帘门。",
-    "where:zh-Hant": "Gellhorn International Raceway，小彎道賽道旁的棚子，開啟左邊的捲簾門。",
+    "where:zh-Hans": "格尔霍恩国际赛车场，小弯道赛道旁的棚子，打开左边的卷帘门。",
+    "where:zh-Hant": "格爾霍恩國際賽車場，小彎道賽道旁的棚子，開啟左邊的捲簾門。",
     "note:en": "Nitrous on L3.",
     "note:zh-Hans": "氮气在 L3。",
     "note:zh-Hant": "氮氣在 L3。",
@@ -65,8 +65,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.028866,
-     0.013903
+     -0.0730068,
+     0.0250896
     ]
    }
   },
@@ -77,8 +77,8 @@
     "category": "vehicle",
     "name": "Sultan / Hellfire",
     "area:en": "Gellhorn Raceway",
-    "area:zh-Hans": "Gellhorn 赛道",
-    "area:zh-Hant": "Gellhorn 賽道",
+    "area:zh-Hans": "格尔霍恩 赛道",
+    "area:zh-Hant": "格爾霍恩 賽道",
     "where:en": "The same raceway's spectator parking; both are there.",
     "where:zh-Hans": "同一条赛道的观众停车场，两辆都在。",
     "where:zh-Hant": "同一條賽道的觀眾停車場，兩輛都在。",
@@ -90,8 +90,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.026625,
-     0.015686
+     -0.0703517,
+     0.0272045
     ]
    }
   },
@@ -102,8 +102,8 @@
     "category": "vehicle",
     "name": "Maibatsu 97 Penumbra FF",
     "area:en": "Vespucci Island",
-    "area:zh-Hans": "Vespucci 岛",
-    "area:zh-Hant": "Vespucci 島",
+    "area:zh-Hans": "韦斯普奇 岛",
+    "area:zh-Hant": "韋斯普奇 島",
     "where:en": "Neptune Circle, the villa behind the bushes. Go in through the main garage shutter.",
     "where:zh-Hans": "Neptune Circle，灌木丛后面的别墅。开主车库卷帘门进。",
     "where:zh-Hant": "Neptune Circle，灌木叢後面的別墅。開主車庫捲簾門進。",
@@ -115,8 +115,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.037588,
-     0.003711
+     0.0057289,
+     0.0130525
     ]
    }
   },
@@ -127,11 +127,11 @@
     "category": "vehicle",
     "name": "Progen Royal Ruby Emerus",
     "area:en": "Vespucci Island",
-    "area:zh-Hans": "Vespucci 岛",
-    "area:zh-Hant": "Vespucci 島",
+    "area:zh-Hans": "韦斯普奇 岛",
+    "area:zh-Hant": "韋斯普奇 島",
     "where:en": "Right next door: the small garage at the Vespucci Mansion entrance.",
-    "where:zh-Hans": "就在隔壁：Vespucci Mansion 入口处的小车库。",
-    "where:zh-Hant": "就在隔壁：Vespucci Mansion 入口處的小車庫。",
+    "where:zh-Hans": "就在隔壁：韦斯普奇 Mansion 入口处的小车库。",
+    "where:zh-Hant": "就在隔壁：韋斯普奇 Mansion 入口處的小車庫。",
     "note:en": "Unlocked, no tracker. Lists at $33,000.",
     "note:zh-Hans": "没锁，没有追踪器。标价 $33,000。",
     "note:zh-Hant": "沒鎖，沒有追蹤器。標價 $33,000。",
@@ -140,8 +140,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.038986,
-     0.003205
+     0.0073853,
+     0.0124536
     ]
    }
   },
@@ -152,8 +152,8 @@
     "category": "vehicle",
     "name": "Progen Purple Drank Emerus",
     "area:en": "Waxman Island",
-    "area:zh-Hans": "Waxman 岛",
-    "area:zh-Hant": "Waxman 島",
+    "area:zh-Hans": "韦克斯曼 岛",
+    "area:zh-Hant": "韋克斯曼 島",
     "where:en": "Chatfield Storage, in the container by the water.",
     "where:zh-Hans": "Chatfield Storage，水边的集装箱里。",
     "where:zh-Hant": "Chatfield Storage，水邊的集裝箱裡。",
@@ -165,8 +165,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.036311,
-     -0.005879
+     0.0042161,
+     0.0016845
     ]
    }
   },
@@ -177,8 +177,8 @@
     "category": "vehicle",
     "name": "Annis 90 Elegy",
     "area:en": "Starfish Island",
-    "area:zh-Hans": "Starfish 岛",
-    "area:zh-Hant": "Starfish 島",
+    "area:zh-Hans": "海星 岛",
+    "area:zh-Hant": "海星 島",
     "where:en": "In a mansion courtyard. Hop the fence.",
     "where:zh-Hans": "豪宅的院子里，翻栅栏进去。",
     "where:zh-Hant": "豪宅的院子裡，翻柵欄進去。",
@@ -190,8 +190,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.039612,
-     -0.002361
+     0.0081271,
+     0.0058566
     ]
    }
   },
@@ -202,11 +202,11 @@
     "category": "vehicle",
     "name": "Truffade Andrew Node's Thrax",
     "area:en": "Starfish Island",
-    "area:zh-Hans": "Starfish 岛",
-    "area:zh-Hant": "Starfish 島",
+    "area:zh-Hans": "海星 岛",
+    "area:zh-Hant": "海星 島",
     "where:en": "South Starfish Island, Sabal Cir: the big mansion's garage.",
-    "where:zh-Hans": "Starfish 岛南部，Sabal Cir，大豪宅的车库。",
-    "where:zh-Hant": "Starfish 島南部，Sabal Cir，大豪宅的車庫。",
+    "where:zh-Hans": "海星 岛南部，Sabal Cir，大豪宅的车库。",
+    "where:zh-Hant": "海星 島南部，Sabal Cir，大豪宅的車庫。",
     "note:en": "No lock, no alarm.",
     "note:zh-Hans": "没锁，没有警报。",
     "note:zh-Hant": "沒鎖，沒有警報。",
@@ -215,8 +215,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.039227,
-     -0.004506
+     0.007671,
+     0.0033138
     ]
    }
   },
@@ -227,11 +227,11 @@
     "category": "vehicle",
     "name": "Truffade Thrax",
     "area:en": "Hamlet",
-    "area:zh-Hans": "Hamlet",
-    "area:zh-Hant": "Hamlet",
+    "area:zh-Hans": "哈姆雷特",
+    "area:zh-Hant": "哈姆雷特",
     "where:en": "Boone Speedway, south entrance, on top of a trailer.",
-    "where:zh-Hans": "Boone Speedway 南入口，停在拖车上。",
-    "where:zh-Hant": "Boone Speedway 南入口，停在拖車上。",
+    "where:zh-Hans": "布恩赛车场 南入口，停在拖车上。",
+    "where:zh-Hant": "布恩賽車場 南入口，停在拖車上。",
     "note:en": "No guard, but it has a tracker: drive it off and run.",
     "note:zh-Hans": "没有人看守，但装了追踪器：开下来就跑。",
     "note:zh-Hant": "沒有人看守，但裝了追蹤器：開下來就跑。",
@@ -243,8 +243,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.005397,
-     -0.039034
+     -0.0324106,
+     -0.037635
     ]
    }
   },
@@ -277,8 +277,8 @@
     "category": "vehicle",
     "name": "Pegassi Charred Toros",
     "area:en": "La Perle",
-    "area:zh-Hans": "La Perle",
-    "area:zh-Hant": "La Perle",
+    "area:zh-Hans": "拉佩尔",
+    "area:zh-Hant": "拉佩爾",
     "where:en": "NW 10th Ave, in front of the trap house.",
     "where:zh-Hans": "NW 10th Ave，trap house 的前院。",
     "where:zh-Hant": "NW 10th Ave，trap house 的前院。",
@@ -290,8 +290,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.024697,
-     0.006241
+     -0.0095445,
+     0.0160429
     ]
    }
   },
@@ -302,8 +302,8 @@
     "category": "vehicle",
     "name": "Bravado Devil's Rope Gauntlet",
     "area:en": "Ambrosia",
-    "area:zh-Hans": "Ambrosia",
-    "area:zh-Hant": "Ambrosia",
+    "area:zh-Hans": "安布罗西亚",
+    "area:zh-Hant": "安布羅西亞",
     "where:en": "Acacia St, Hog Stars Garage. Take the ladder and enter through the roof window.",
     "where:zh-Hans": "Acacia St，Hog Stars Garage。顺梯子上去，从屋顶天窗进。",
     "where:zh-Hant": "Acacia St，Hog Stars Garage。順梯子上去，從屋頂天窗進。",
@@ -315,8 +315,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.006385,
-     0.029324
+     -0.0312413,
+     0.0433915
     ]
    }
   },
@@ -327,18 +327,18 @@
     "category": "vehicle",
     "name": "Bravado Copperheads Gauntlet",
     "area:en": "Ambrosia",
-    "area:zh-Hans": "Ambrosia",
-    "area:zh-Hant": "Ambrosia",
+    "area:zh-Hans": "安布罗西亚",
+    "area:zh-Hant": "安布羅西亞",
     "where:en": "Northeast Ambrosia, Reservoir St: the garage of the house by the river.",
-    "where:zh-Hans": "Ambrosia 东北，Reservoir St，河边那户人家的车库。",
-    "where:zh-Hant": "Ambrosia 東北，Reservoir St，河邊那戶人家的車庫。",
+    "where:zh-Hans": "安布罗西亚 东北，Reservoir St，河边那户人家的车库。",
+    "where:zh-Hant": "安布羅西亞 東北，Reservoir St，河邊那戶人家的車庫。",
     "source": "https://x.com/vibeeval/status/2124129551643033655"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.009445,
-     0.030504
+     -0.0276158,
+     0.0447922
     ]
    }
   },
@@ -349,11 +349,11 @@
     "category": "vehicle",
     "name": "Vapid Firebug Dominator",
     "area:en": "Port Gellhorn",
-    "area:zh-Hans": "Port Gellhorn",
-    "area:zh-Hant": "Port Gellhorn",
+    "area:zh-Hans": "格尔霍恩港",
+    "area:zh-Hant": "格爾霍恩港",
     "where:en": "Gellhorn Ave, in front of the La Cascara Motel.",
-    "where:zh-Hans": "Gellhorn Ave，La Cascara 汽车旅馆门口。",
-    "where:zh-Hant": "Gellhorn Ave，La Cascara 汽車旅館門口。",
+    "where:zh-Hans": "格尔霍恩 Ave，La Cascara 汽车旅馆门口。",
+    "where:zh-Hant": "格爾霍恩 Ave，La Cascara 汽車旅館門口。",
     "note:en": "Locked, with an alarm.",
     "note:zh-Hans": "锁着，有警报。",
     "note:zh-Hant": "鎖著，有警報。",
@@ -365,8 +365,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.025541,
-     0.022336
+     -0.0690675,
+     0.0350876
     ]
    }
   },
@@ -377,11 +377,11 @@
     "category": "vehicle",
     "name": "Vapid Red Hot Hustler",
     "area:en": "Capri",
-    "area:zh-Hans": "Capri",
-    "area:zh-Hant": "Capri",
+    "area:zh-Hans": "卡普里",
+    "area:zh-Hant": "卡普里",
     "where:en": "Capri beach, a corner of the La Costa Hotel parking lot.",
-    "where:zh-Hans": "Capri 海滩，La Costa 酒店停车场的角落。",
-    "where:zh-Hant": "Capri 海灘，La Costa 酒店停車場的角落。",
+    "where:zh-Hans": "卡普里 海滩，La Costa 酒店停车场的角落。",
+    "where:zh-Hant": "卡普里 海灘，La Costa 酒店停車場的角落。",
     "note:en": "Locked, with an alarm.",
     "note:zh-Hans": "锁着，有警报。",
     "note:zh-Hant": "鎖著，有警報。",
@@ -393,8 +393,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.032914,
-     -0.006457
+     -0.0778025,
+     0.0009539
     ]
    }
   },
@@ -405,8 +405,8 @@
     "category": "vehicle",
     "name": "Vapid Brimstone Golfer",
     "area:en": "Leaf Links",
-    "area:zh-Hans": "Leaf Links",
-    "area:zh-Hant": "Leaf Links",
+    "area:zh-Hans": "利夫林克斯",
+    "area:zh-Hant": "利夫林克斯",
     "where:en": "Delamore Dr, a mansion garage.",
     "where:zh-Hans": "Delamore Dr，豪宅的车库。",
     "where:zh-Hant": "Delamore Dr，豪宅的車庫。",
@@ -415,8 +415,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.038335,
-     0.014337
+     0.0066138,
+     0.0256482
     ]
    }
   },
@@ -451,11 +451,11 @@
     "category": "weapon",
     "name": "Assassin Nipper .38",
     "area:en": "Permit Keys",
-    "area:zh-Hans": "Permit Keys",
-    "area:zh-Hant": "Permit Keys",
+    "area:zh-Hans": "佩米特群礁",
+    "area:zh-Hant": "佩米特群礁",
     "where:en": "In a compartment of a beached wooden boat in the Permit Keys, west of Maroon Key. A suppressed pistol.",
-    "where:zh-Hans": "Maroon Key 西边，Permit Keys 一艘搁浅木船的暗格里。消音手枪。",
-    "where:zh-Hant": "Maroon Key 西邊，Permit Keys 一艘擱淺木船的暗格裡。消音手槍。",
+    "where:zh-Hans": "马隆礁岛 西边，佩米特群礁 一艘搁浅木船的暗格里。消音手枪。",
+    "where:zh-Hant": "馬隆礁島 西邊，佩米特群礁 一艘擱淺木船的暗格裡。消音手槍。",
     "note:en": "One guide puts it in a wreck near Mile Zero Air Station instead.",
     "note:zh-Hans": "也有攻略说在 Mile Zero 航空站附近的沉船里。",
     "note:zh-Hant": "也有攻略說在 Mile Zero 航空站附近的沉船裡。",
@@ -465,8 +465,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.017132,
-     -0.065225
+     -0.0591027,
+     -0.0686944
     ]
    }
   },
@@ -477,19 +477,19 @@
     "category": "weapon",
     "name": "Smuggler Gorse 425",
     "area:en": "Permit Keys",
-    "area:zh-Hans": "Permit Keys",
-    "area:zh-Hant": "Permit Keys",
+    "area:zh-Hans": "佩米特群礁",
+    "area:zh-Hant": "佩米特群礁",
     "where:en": "Beside an abandoned boat on the northernmost island of the Permit Keys. A shotgun.",
-    "where:zh-Hans": "Permit Keys 最北边的小岛，废弃船的旁边。霰弹枪。",
-    "where:zh-Hant": "Permit Keys 最北邊的小島，廢棄船的旁邊。霰彈槍。",
+    "where:zh-Hans": "佩米特群礁 最北边的小岛，废弃船的旁边。霰弹枪。",
+    "where:zh-Hant": "佩米特群礁 最北邊的小島，廢棄船的旁邊。霰彈槍。",
     "radius_m": 134,
     "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.019734,
-     -0.061153
+     -0.0621857,
+     -0.0638695
     ]
    }
   },
@@ -516,19 +516,19 @@
     "category": "weapon",
     "name": "Marabunta Grande Hobo",
     "area:en": "South of Hamlet",
-    "area:zh-Hans": "Hamlet 以南",
-    "area:zh-Hant": "Hamlet 以南",
+    "area:zh-Hans": "哈姆雷特 以南",
+    "area:zh-Hant": "哈姆雷特 以南",
     "where:en": "An industrial storage building south of Hamlet, by the highway. A shotgun.",
-    "where:zh-Hans": "Hamlet 以南、高速旁边的工业仓库。霰弹枪。",
-    "where:zh-Hant": "Hamlet 以南、高速旁邊的工業倉庫。霰彈槍。",
+    "where:zh-Hans": "哈姆雷特 以南、高速旁边的工业仓库。霰弹枪。",
+    "where:zh-Hant": "哈姆雷特 以南、高速旁邊的工業倉庫。霰彈槍。",
     "radius_m": 241,
     "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.010505,
-     -0.04154
+     -0.0263585,
+     -0.0406021
     ]
    }
   },
@@ -539,22 +539,22 @@
     "category": "weapon",
     "name": "Type 9",
     "area:en": "South Vice-Dale",
-    "area:zh-Hans": "South Vice-Dale",
-    "area:zh-Hant": "South Vice-Dale",
+    "area:zh-Hans": "南罪恶谷",
+    "area:zh-Hant": "南罪惡谷",
     "where:en": "A warehouse in South Vice-Dale. An SMG.",
-    "where:zh-Hans": "South Vice-Dale 的一个仓库。冲锋枪。",
-    "where:zh-Hant": "South Vice-Dale 的一個倉庫。衝鋒槍。",
+    "where:zh-Hans": "南罪恶谷 的一个仓库。冲锋枪。",
+    "where:zh-Hant": "南罪惡谷 的一個倉庫。衝鋒槍。",
     "note:en": "Another guide says a bunker in Balsero.",
-    "note:zh-Hans": "也有攻略说在 Balsero 的地堡里。",
-    "note:zh-Hant": "也有攻略說在 Balsero 的地堡裡。",
+    "note:zh-Hans": "也有攻略说在 巴尔塞罗 的地堡里。",
+    "note:zh-Hant": "也有攻略說在 巴爾塞羅 的地堡裡。",
     "radius_m": 376,
     "source": "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.016216,
-     -0.03501
+     -0.0195921,
+     -0.0328582
     ]
    }
   },
@@ -586,19 +586,19 @@
     "name:zh-Hans": "大脚怪",
     "name:zh-Hant": "大腳怪",
     "area:en": "Cottonmouth Lake",
-    "area:zh-Hans": "Cottonmouth Lake",
-    "area:zh-Hant": "Cottonmouth Lake",
+    "area:zh-Hans": "蝮蛇湖",
+    "area:zh-Hant": "蝮蛇湖",
     "where:en": "The swamps around Cottonmouth Lake.",
-    "where:zh-Hans": "Cottonmouth Lake 一带的沼泽。",
-    "where:zh-Hant": "Cottonmouth Lake 一帶的沼澤。",
+    "where:zh-Hans": "蝮蛇湖 一带的沼泽。",
+    "where:zh-Hant": "蝮蛇湖 一帶的沼澤。",
     "radius_m": 429,
     "source": "https://gta-zone.com/news/gta-6-easter-eggs/"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.00159,
-     -0.049997
+     -0.0369209,
+     -0.0506322
     ]
    }
   },
@@ -609,11 +609,11 @@
     "category": "easter-egg",
     "name": "UFO",
     "area:en": "Kelly County",
-    "area:zh-Hans": "Kelly County",
-    "area:zh-Hant": "Kelly County",
+    "area:zh-Hans": "凯利县",
+    "area:zh-Hant": "凱利縣",
     "where:en": "A dirt road in Kelly County. A big area: drive around.",
-    "where:zh-Hans": "Kelly County 的一条土路。范围很大，开着车慢慢找。",
-    "where:zh-Hant": "Kelly County 的一條土路。範圍很大，開著車慢慢找。",
+    "where:zh-Hans": "凯利县 的一条土路。范围很大，开着车慢慢找。",
+    "where:zh-Hant": "凱利縣 的一條土路。範圍很大，開著車慢慢找。",
     "note:en": "Worth a bronze trophy.",
     "note:zh-Hans": "有一个铜奖杯。",
     "note:zh-Hant": "有一個銅獎盃。",
@@ -623,8 +623,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -0.013638,
-     0.013059
+     -0.0549645,
+     0.0240992
     ]
    }
   },
@@ -637,19 +637,19 @@
     "name:zh-Hans": "塔顶的蛋",
     "name:zh-Hant": "塔頂的蛋",
     "area:en": "Vice-Dale County",
-    "area:zh-Hans": "Vice-Dale County",
-    "area:zh-Hant": "Vice-Dale County",
+    "area:zh-Hans": "罪恶谷县",
+    "area:zh-Hant": "罪惡谷縣",
     "where:en": "The tallest radio tower in Vice-Dale County has a nest on top. About a seven-minute climb; take an egg and throw it off.",
-    "where:zh-Hans": "Vice-Dale County 最高的电台塔，塔顶有个鸟窝。爬上去大约 7 分钟，拿一颗蛋往下扔。",
-    "where:zh-Hant": "Vice-Dale County 最高的電臺塔，塔頂有個鳥窩。爬上去大約 7 分鐘，拿一顆蛋往下扔。",
+    "where:zh-Hans": "罪恶谷县 最高的电台塔，塔顶有个鸟窝。爬上去大约 7 分钟，拿一颗蛋往下扔。",
+    "where:zh-Hant": "罪惡谷縣 最高的電臺塔，塔頂有個鳥窩。爬上去大約 7 分鐘，拿一顆蛋往下扔。",
     "radius_m": 1019,
     "source": "https://leonidaverse.com/en/codex/gta-6-easter-eggs"
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.029179,
-     -0.015493
+     -0.0042338,
+     -0.0097159
     ]
    }
   },
@@ -662,11 +662,11 @@
     "name:zh-Hans": "《嗜血法医》的公寓",
     "name:zh-Hant": "《嗜血法醫》的公寓",
     "area:en": "Washington Island",
-    "area:zh-Hans": "Washington Island",
-    "area:zh-Hant": "Washington Island",
+    "area:zh-Hans": "华盛顿岛",
+    "area:zh-Hant": "華盛頓島",
     "where:en": "Washington Island, near Top Fun Drones on Vice Beach: the waterfront apartment block.",
-    "where:zh-Hans": "Washington Island，Vice Beach 的 Top Fun Drones 附近，临水的那栋公寓。",
-    "where:zh-Hant": "Washington Island，Vice Beach 的 Top Fun Drones 附近，臨水的那棟公寓。",
+    "where:zh-Hans": "华盛顿岛，罪恶海滩 的 Top Fun Drones 附近，临水的那栋公寓。",
+    "where:zh-Hant": "華盛頓島，罪惡海灘 的 Top Fun Drones 附近，臨水的那棟公寓。",
     "note:en": "Outside only; you can't go in.",
     "note:zh-Hans": "只能看外观，进不去。",
     "note:zh-Hant": "只能看外觀，進不去。",
@@ -676,8 +676,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     0.045925,
-     0.012192
+     0.0156066,
+     0.0231106
     ]
    }
   },

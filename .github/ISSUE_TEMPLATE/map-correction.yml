@@ -1,4 +1,4 @@
-name: Map correction
+name: Map correction / 修正
 description: Something on the map is in the wrong place, the wrong shape, or wrongly named.
 labels: [data, correction]
 body:

@@ -1,0 +1,41 @@
+name: Translation / 翻译
+description: Add or correct a Chinese name or text. 新增或修正中文名称、文字。
+labels: [i18n]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Names follow `tools/i18n/zh-Hans.json`. Official names (Rockstar or the game's own Chinese text) win over community ones.
+        译名以 `tools/i18n/zh-Hans.json` 为准，官方译名（Rockstar 或游戏中文版本身的文字）优先于社区译名。
+  - type: input
+    id: english
+    attributes:
+      label: English name / 英文原名
+      placeholder: Port Gellhorn
+    validations:
+      required: true
+  - type: input
+    id: hans
+    attributes:
+      label: 简体中文
+    validations:
+      required: true
+  - type: input
+    id: hant
+    attributes:
+      label: 繁體中文 (optional / 可选)
+  - type: dropdown
+    id: status
+    attributes:
+      label: Kind of name / 译名类型
+      options:
+        - official — shown in the game or by Rockstar / 官方（游戏内或 Rockstar 发布）
+        - series — established in earlier GTA games / 系列既有译名
+        - community — our own suggestion / 社区建议
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source / 来源
+      description: For official names, a screenshot of the game's Chinese text or a Rockstar link. 官方译名请附游戏中文截图或 Rockstar 链接。

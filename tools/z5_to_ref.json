@@ -1,0 +1,15 @@
+{
+ "$comment": "Affine (2x3) from GTADB day-tile zoom-5 mosaic pixels (origin tile 17,17) to poster pixels of tools/geo.py; fitted by tools/align.py.",
+ "matrix": [
+  [
+   0.3758169629811381,
+   -6.044697951796473e-06,
+   -473.44806111854007
+  ],
+  [
+   0.00020810487962058354,
+   0.3756570241349564,
+   -467.51888883445133
+  ]
+ ]
+}

@@ -1,4 +1,4 @@
-name: New place or find
+name: New place or find / 新增地点或点位
 description: Add a place name, or a find (vehicle, weapon, easter egg, shop…) to the map.
 labels: [data, addition]
 body:

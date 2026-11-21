@@ -1,26 +1,23 @@
-// Leonida's coordinate frame, mirrored from tools/geo.py.
-// Data is lon/lat with the state placed on the equator around 0,0, where degrees are close to square.
-// One pixel of the official reference map is 1609.344 / 600 m (the poster's scale bar: 600 px = 1 mile).
+// Leonida's coordinate frame, mirrored from tools/geo.py: GTADB in-game map tiles, level L served as zoom L + 12.
+// Game metres (x east, y north) map to the map's lon/lat by gameToLngLat. The web-mercator scale differs from game
+// metres by a constant factor (GAME_SCALE), which the scale bar corrects for.
 
-export const M_PER_PX = 1609.344 / 600;
-export const M_PER_DEG = 111319.49;
-export const REF_W = 5378;
-export const REF_H = 7504;
+const WORLD_Z12 = 256 * 4096;
+const SHIFT = 2046 * 256;
 
-const K = M_PER_PX / M_PER_DEG;
-
-export function pxToLngLat(x: number, y: number): [number, number] {
-  return [(x - REF_W / 2) * K, -(y - REF_H / 2) * K];
+export function gameToLngLat(x: number, y: number): [number, number] {
+  const px = SHIFT + (x + 16384) / 32, py = SHIFT + (16384 - y) / 32;
+  return [px / WORLD_Z12 * 360 - 180, Math.atan(Math.sinh(Math.PI * (1 - 2 * py / WORLD_Z12))) * 180 / Math.PI];
 }
 
-export function lngLatToPx(lng: number, lat: number): [number, number] {
-  return [lng / K + REF_W / 2, -lat / K + REF_H / 2];
-}
+/** Map metres (web mercator at the equator) per game metre: 32 game m per pixel at zoom 12. */
+export const GAME_SCALE = (40075016.686 / WORLD_Z12) / 32;
+export const M_PER_DEG = 111319.49 / GAME_SCALE;
 
 export type BBox = [number, number, number, number];
 
-/** Rough extent of the state, used before land.geojson has loaded. */
-export const ROUGH_BOUNDS: BBox = [-0.065, -0.091, 0.065, 0.091];
+/** Extent of Leonida's land in the tile frame (see tools/geo.py). */
+export const ROUGH_BOUNDS: BBox = [-0.103, -0.0852, 0.0243, 0.1017];
 
 export function metresToDeg(m: number): number {
   return m / M_PER_DEG;

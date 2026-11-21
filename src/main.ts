@@ -9,7 +9,34 @@ import { detectLang, saveLang, setLang, lang, t, prop, LANGS, LANG_SHORT, LANG_N
 import { buildStyle, nameField, spacing, LABEL_LAYERS } from './style';
 import { prepareImages, addImages } from './images';
 import { fetchLayer, pinned, searchAreas, type FC, type Feature } from './data';
-import { ROUGH_BOUNDS, type BBox } from './geo';
+import { ROUGH_BOUNDS, GAME_SCALE, type BBox } from './geo';
+
+/** A scale bar in game metres (the map's web-mercator metres differ by GAME_SCALE). Updates once per frame. */
+class GameScale implements maplibregl.IControl {
+  private el = document.createElement('div');
+  private map?: MLMap;
+  private raf = 0;
+  onAdd(map: MLMap) {
+    this.map = map;
+    this.el.className = 'maplibregl-ctrl maplibregl-ctrl-scale';
+    map.on('move', this.schedule);
+    this.update();
+    return this.el;
+  }
+  onRemove() { this.map?.off('move', this.schedule); this.el.remove(); }
+  private schedule = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.update(); }); };
+  private update() {
+    const m = this.map!;
+    const lat = m.getCenter().lat * Math.PI / 180;
+    const mPerPx = 40075016.686 * Math.cos(lat) / (512 * 2 ** m.getZoom()) / GAME_SCALE;
+    const max = 110 * mPerPx;
+    const pow = 10 ** Math.floor(Math.log10(max));
+    const d = max / pow;
+    const nice = (d >= 5 ? 5 : d >= 2 ? 2 : 1) * pow;
+    this.el.style.width = `${Math.round(nice / mPerPx)}px`;
+    this.el.textContent = nice >= 1000 ? `${nice / 1000} km` : `${nice} m`;
+  }
+}
 import { CATEGORIES, category, badgeSVG, blipSVG, LANDMARK_GROUPS, landmarkGroup } from './categories';
 import { buildIndex, search, type Entry } from './search';
 import { readHash, writeHash } from './hash';
@@ -816,7 +843,7 @@ async function boot(): Promise<void> {
   if (import.meta.env.DEV) (window as unknown as { __map: MLMap }).__map = m;
   if (hash.view) m.jumpTo({ center: [hash.view.lng, hash.view.lat], zoom: hash.view.zoom, bearing: hash.view.bearing, pitch: hash.view.pitch });
 
-  m.addControl(new maplibregl.ScaleControl({ unit: 'metric', maxWidth: 110 }), 'bottom-left');
+  m.addControl(new GameScale(), 'bottom-left');
   m.keyboard.enable();
   addImages(map);
 

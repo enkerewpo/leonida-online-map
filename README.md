@@ -15,12 +15,13 @@ There are no ads, no analytics and no tracking. Story spoilers are not accepted.
 
 ## How the data is made
 
-Roads, buildings, land and water are traced from the in-game map tiles published by GTADB.ORG —
-"GTA VI Map Tiles (CC BY 4.0) — https://map.gtadb.org" — which show the map without labels, icons or grid.
-`tools/trace_ingame.py` turns them into vector features (every road, every building with whether it can be entered,
-land, beach, swamp), aligned to the map Rockstar Games published at
-[rockstargames.com/VI/media](https://www.rockstargames.com/VI/media); `tools/names.py` reads the place names off
-Rockstar's map. That cut is only a starting point: people then correct and extend it by hand, using what they see in the game.
+The base map is the in-game map itself: GTADB's tiles, "GTA VI Map Tiles (CC BY 4.0) — https://map.gtadb.org",
+served level by level like any map app (CI fetches them from [rolux/gtadb.org](https://github.com/rolux/gtadb.org)
+at build time; they are not stored in this repository). On top of it the site draws what lives in `data/`:
+region and place names (read off [Rockstar's official map](https://www.rockstargames.com/VI/media)), named
+landmarks ("GTA VI Landmarks Data (CC BY 4.0) — https://map.gtadb.org"), highway numbers and road names, and
+community finds, each shown from the zoom where it fits. All of it is plain GeoJSON that anyone can fix or extend
+with a pull request — see [CONTRIBUTING.md](CONTRIBUTING.md) · [社区手册（中文）](docs/handbook.zh-Hans.md).
 
 Coordinates are longitude/latitude with the state placed on the equator around 0, 0, where degrees are
 close to square. One pixel of the official map is 1609.344 / 600 m (the poster's scale bar is 600 px to a

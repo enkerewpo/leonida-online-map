@@ -1,4 +1,4 @@
-name: Bug in the app
+name: Bug in the app / 网站问题
 description: The site itself misbehaves (layout, search, controls, language…).
 labels: [bug]
 body:

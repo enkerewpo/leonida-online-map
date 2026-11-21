@@ -1,0 +1,22 @@
+name: Remove something / 删除
+description: Something on the map does not exist, is a duplicate, or breaks the rules (spoiler, leak). 地图上的内容不存在、重复，或违反规则（剧透、泄露）。
+labels: [data, removal]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Map link / 地图链接
+      description: Select the item on the map and copy the address bar. 在地图上选中后复制地址栏。
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should it go? / 删除原因
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source / 来源
+      description: How do you know? 你是怎么确认的？
