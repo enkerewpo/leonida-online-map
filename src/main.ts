@@ -71,6 +71,8 @@ const state = {
   query: '',
   hiddenCats: new Set<string>(),
   hiddenGroups: new Set<string>(),
+  /** Single landmark categories switched off in the legend. */
+  hiddenLmCats: new Set<string>(),
   showLabels: true,
   sheet: 'peek' as 'peek' | 'half' | 'full',
   tab: 'finds' as 'finds' | 'layers',
@@ -123,6 +125,7 @@ app.innerHTML = `
     ${hint('zoom-out', 'zoomOut', ICONS.minus)}
     ${hint('compass', 'resetNorth', `<span class="needle">${ICONS.compass}</span>`)}
     ${hint('tilt', 'tilt', ICONS.cube, 'aria-pressed="false"')}
+    ${hint('legend-btn', 'legend', ICONS.legend)}
     ${hint('fit', 'fit', ICONS.fit)}
   </div>
   <div class="map-credit" id="credit">
@@ -206,6 +209,10 @@ function homeHTML(): string {
   const row = (attr: string, on: boolean, lead: string, label: string, count = '') =>
     `<li><button type="button" class="row" ${attr} aria-pressed="${on}">${lead}<span class="row-label">${esc(label)}</span>${count}${check}</button></li>`;
   const layers = `
+    <div class="legend-actions">
+      <button type="button" class="btn btn-small" data-all="show">${esc(t('showAllCats'))}</button>
+      <button type="button" class="btn btn-small" data-all="hide">${esc(t('hideAllCats'))}</button>
+    </div>
     <section class="section" aria-labelledby="h-cats">
       <h2 class="section-title" id="h-cats">${esc(t('finds'))}</h2>
       <ul class="rows">${cats.map((id) => row(`data-cat="${esc(id)}"`, !state.hiddenCats.has(id),
@@ -214,8 +221,13 @@ function homeHTML(): string {
     <section class="section" aria-labelledby="h-places">
       <h2 class="section-title" id="h-places">${esc(t('placesTitle'))}</h2>
       <ul class="rows">
-        ${LANDMARK_GROUPS.map((g) => row(`data-group="${g.id}"`, !state.hiddenGroups.has(g.id), `<span class="badge">${blipSVG(g.icon, 22)}</span>`, g.label[lang()],
-          `<span class="row-count">${state.landmarks.filter((f) => landmarkGroup(String(f.properties?.category)) === g.id).length}</span>`)).join('')}
+        ${LANDMARK_GROUPS.map((g) => {
+          const inGroup = (c: string) => state.landmarks.filter((f) => String(f.properties?.category) === c).length;
+          const sub = g.cats.filter((c) => inGroup(c) > 0).map((c) => row(`data-lmcat="${esc(c)}" data-in="${g.id}"`, !state.hiddenGroups.has(g.id) && !state.hiddenLmCats.has(c),
+            `<span class="badge">${blipSVG(c, 18)}</span>`, category(c).label[lang()], `<span class="row-count">${inGroup(c)}</span>`).replace('<li>', '<li class="sub">')).join('');
+          return row(`data-group="${g.id}"`, !state.hiddenGroups.has(g.id), `<span class="badge">${blipSVG(g.icon, 22)}</span>`, g.label[lang()],
+            `<span class="row-count">${state.landmarks.filter((f) => landmarkGroup(String(f.properties?.category)) === g.id).length}</span>`) + sub;
+        }).join('')}
         ${row('data-toggle="labels"', state.showLabels, `<span class="swatch swatch-text">A</span>`, t('labels'))}
       </ul>
     </section>`;
@@ -530,7 +542,7 @@ function applyLayerVisibility(): void {
   const hidden = [...state.hiddenCats];
   const catFilter: maplibregl.FilterSpecification = ['!', ['in', ['get', 'category'], ['literal', hidden]]];
   for (const id of ['poi', 'poi-label', 'poi-area', 'poi-area-line', 'poi-dot']) if (m.getLayer(id)) m.setFilter(id, catFilter);
-  const hiddenLm = LANDMARK_GROUPS.filter((g) => state.hiddenGroups.has(g.id)).flatMap((g) => g.cats);
+  const hiddenLm = [...LANDMARK_GROUPS.filter((g) => state.hiddenGroups.has(g.id)).flatMap((g) => g.cats), ...state.hiddenLmCats];
   if (m.getLayer('landmark')) {
     m.setFilter('landmark', ['all', ['>=', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
   }
@@ -631,13 +643,42 @@ function bindUI(): void {
       applyLayerVisibility();
       return;
     }
+    const lmc = el.closest<HTMLButtonElement>('[data-lmcat]');
+    if (lmc) {
+      const c = lmc.dataset.lmcat!, g = lmc.dataset.in!;
+      // Turning one on inside a hidden group shows the group with only that category.
+      if (state.hiddenGroups.has(g)) {
+        state.hiddenGroups.delete(g);
+        for (const x of LANDMARK_GROUPS.find((y) => y.id === g)!.cats) if (x !== c) state.hiddenLmCats.add(x);
+        state.hiddenLmCats.delete(c);
+      } else if (state.hiddenLmCats.has(c)) state.hiddenLmCats.delete(c);
+      else state.hiddenLmCats.add(c);
+      renderBody();
+      applyLayerVisibility();
+      return;
+    }
+    const all = el.closest<HTMLButtonElement>('[data-all]');
+    if (all) {
+      const show = all.dataset.all === 'show';
+      state.hiddenCats.clear(); state.hiddenGroups.clear(); state.hiddenLmCats.clear();
+      if (!show) {
+        for (const c of presentCats()) state.hiddenCats.add(c);
+        for (const g of LANDMARK_GROUPS) state.hiddenGroups.add(g.id);
+      }
+      renderBody();
+      applyLayerVisibility();
+      return;
+    }
     const tabBtn = el.closest<HTMLButtonElement>('[data-tab]');
     if (tabBtn) { setTab(tabBtn.dataset.tab as typeof state.tab); return; }
     const grp = el.closest<HTMLButtonElement>('[data-group]');
     if (grp) {
       const g = grp.dataset.group!;
-      if (state.hiddenGroups.has(g)) state.hiddenGroups.delete(g); else state.hiddenGroups.add(g);
-      grp.setAttribute('aria-pressed', String(!state.hiddenGroups.has(g)));
+      if (state.hiddenGroups.has(g)) {
+        state.hiddenGroups.delete(g);
+        for (const x of LANDMARK_GROUPS.find((y) => y.id === g)!.cats) state.hiddenLmCats.delete(x);
+      } else state.hiddenGroups.add(g);
+      renderBody();
       applyLayerVisibility();
       return;
     }
@@ -691,6 +732,12 @@ function bindUI(): void {
 
   $('#zoom-in').addEventListener('click', () => map?.zoomIn());
   $('#zoom-out').addEventListener('click', () => map?.zoomOut());
+  $('#legend-btn').addEventListener('click', () => {
+    if (state.selected) selectPoi(null);
+    if (phoneQuery.matches && state.sheet === 'peek') setSheet('half');
+    if (state.tab !== 'layers') setTab('layers');
+    $<HTMLButtonElement>('#tab-layers')?.focus({ preventScroll: true });
+  });
   $('#compass').addEventListener('click', () => map?.easeTo({ bearing: 0, pitch: map.getPitch() > 8 ? map.getPitch() : 0 }));
   $('#tilt').addEventListener('click', () => map?.easeTo({ pitch: map.getPitch() > 8 ? 0 : 58, zoom: map.getPitch() > 8 ? map.getZoom() : Math.max(map.getZoom(), 14.5) }));
   $('#fit').addEventListener('click', () => fitLeonida());

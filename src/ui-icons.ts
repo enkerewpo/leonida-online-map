@@ -9,6 +9,7 @@ export const ICONS = {
   minus: I('<path d="M5 12h14"/>'),
   compass: `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3.2 15.2 12H8.8z" fill="#ff8fb1"/><path d="M12 20.8 8.8 12h6.4z" fill="currentColor" opacity=".55"/></svg>`,
   cube: I('<path d="M12 3.5 19.5 7.7v8.6L12 20.5l-7.5-4.2V7.7z"/><path d="M4.8 7.9 12 12l7.2-4.1M12 12v8.3"/>'),
+  legend: I('<path d="M9 6.5h10M9 12h10M9 17.5h10"/><circle cx="5" cy="6.5" r="1.4"/><circle cx="5" cy="12" r="1.4"/><circle cx="5" cy="17.5" r="1.4"/>'),
   fit: I('<path d="M4 9V5.5A1.5 1.5 0 0 1 5.5 4H9M15 4h3.5A1.5 1.5 0 0 1 20 5.5V9M20 15v3.5a1.5 1.5 0 0 1-1.5 1.5H15M9 20H5.5A1.5 1.5 0 0 1 4 18.5V15"/>'),
   chevron: I('<path d="m9.5 6 6 6-6 6"/>', 'width="16" height="16"'),
   back: I('<path d="M14.5 6l-6 6 6 6"/>', 'width="18" height="18"'),

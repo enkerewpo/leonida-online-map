@@ -693,3 +693,9 @@ body.ready .ring { animation: none; }
 .about-steps li { padding-left: 2px; }
 .about-steps a { color: var(--pink, #ffb2c6); }
 #fix-item { text-decoration: none; }
+
+/* Legend: categories inside each group, and show/hide all */
+.legend-actions { display: flex; gap: 8px; margin: 4px 0 10px; }
+.btn-small { padding: 6px 12px; font-size: 13px; min-height: 0; }
+.rows li.sub .row { padding-left: 34px; }
+.rows li.sub .row-label { font-size: 0.93em; }
