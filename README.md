@@ -5,6 +5,8 @@ An unofficial, community-maintained online map of the state of Leonida from Gran
 
 **Live map:** https://enkerewpo.github.io/leonida-online-map/
 
+![Leonida Online Map](docs/cover.png)
+
 ![The map at Vice City](docs/screenshot.jpg)
 
 - The in-game map as the base, zooming level by level like any map app, from the whole state down to single

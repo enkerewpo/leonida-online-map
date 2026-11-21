@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Leonida Online Map — cover</title>
+<style>
+  @font-face { font-family: Jost; font-weight: 500; src: url(../node_modules/@fontsource/jost/files/jost-latin-500-normal.woff2) format('woff2'); }
+  @font-face { font-family: Jost; font-weight: 700; src: url(../node_modules/@fontsource/jost/files/jost-latin-700-normal.woff2) format('woff2'); }
+  @font-face { font-family: Jost; font-weight: 800; src: url(../node_modules/@fontsource/jost/files/jost-latin-800-normal.woff2) format('woff2'); }
+  @font-face { font-family: Inter; font-weight: 400; src: url(../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2) format('woff2'); }
+  @font-face { font-family: Inter; font-weight: 600; src: url(../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format('woff2'); }
+  html, body { margin: 0; background: #0c0d1b; }
+  .card {
+    position: relative; width: 1600px; height: 900px; overflow: hidden;
+    background: url(map-vice.jpg) 70% 45% / 128% auto no-repeat;
+    font-family: Inter, sans-serif; color: #fdfbff;
+  }
+  /* Sunset wash from the left, map shows through on the right. */
+  .card::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, rgba(12, 13, 27, 0.97) 0%, rgba(22, 16, 44, 0.93) 30%, rgba(60, 24, 72, 0.55) 52%, rgba(255, 110, 120, 0.06) 78%, rgba(255, 150, 90, 0) 100%),
+      linear-gradient(0deg, rgba(12, 13, 27, 0.6) 0%, rgba(12, 13, 27, 0) 22%);
+  }
+  .sun {
+    position: absolute; left: 520px; top: 130px; width: 460px; height: 460px; border-radius: 50%;
+    background: linear-gradient(180deg, #ffd28a 0%, #ff8f8f 45%, #c75ad6 100%);
+    opacity: 0.16; filter: blur(2px);
+    -webkit-mask: repeating-linear-gradient(180deg, #000 0 26px, transparent 26px 34px);
+            mask: repeating-linear-gradient(180deg, #000 0 26px, transparent 26px 34px);
+  }
+  .copy { position: absolute; left: 84px; top: 92px; width: 640px; }
+  .kicker { font: 600 15px/1 Inter; letter-spacing: 0.32em; text-transform: uppercase; color: #ffb2c6; margin: 0 0 26px; }
+  h1 { margin: 0; font: 800 118px/0.92 Jost; letter-spacing: 0.06em; text-transform: uppercase;
+       background: linear-gradient(180deg, #fff9e6 0%, #ffd6a8 45%, #ff9bb3 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { margin: 14px 0 0; font: 700 34px/1 Jost; letter-spacing: 0.42em; text-transform: uppercase; color: #fdfbff; }
+  .lede { margin: 38px 0 0; font: 400 25px/1.45 Inter; color: #e6e0fa; max-width: 560px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; max-width: 600px; }
+  .chip { font: 600 18px/1 Inter; padding: 13px 18px; border-radius: 999px; background: rgba(253, 251, 255, 0.1); border: 1px solid rgba(253, 251, 255, 0.22); }
+  .chip b { color: #ffb2c6; font-weight: 600; }
+  .foot { position: absolute; left: 84px; right: 84px; bottom: 54px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .url { font: 700 27px/1 Jost; letter-spacing: 0.04em; color: #fff; }
+  .url span { display: block; margin-top: 10px; font: 400 17px/1 Inter; letter-spacing: 0; color: #cfc6ef; }
+  .legal { font: 400 14px/1.4 Inter; color: rgba(253, 251, 255, 0.62); text-align: right; max-width: 430px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="sun"></div>
+    <div class="copy">
+      <p class="kicker">GTA VI · Fan-made</p>
+      <h1>Leonida</h1>
+      <p class="sub">Online Map</p>
+      <p class="lede">The whole state, from Vice City to the Keys: an open map anyone can explore and improve.</p>
+      <div class="chips">
+        <span class="chip"><b>900+</b> landmarks</span>
+        <span class="chip">Every highway</span>
+        <span class="chip">Cars · weapons · easter eggs</span>
+        <span class="chip">EN · 简体 · 繁體</span>
+        <span class="chip">Open source</span>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="url">enkerewpo.github.io/leonida-online-map<span>Fix a spot or add one on GitHub — every PR welcome</span></div>
+      <div class="legal">Unofficial fan project, not affiliated with Rockstar Games. Map data: GTADB.ORG (CC BY 4.0).</div>
+    </div>
+  </div>
+</body>
+</html>

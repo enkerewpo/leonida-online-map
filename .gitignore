@@ -8,3 +8,5 @@ public/data/
 public/tiles/
 __pycache__/
 build/
+promo/frames/
+promo/*.mp4
