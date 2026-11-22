@@ -1,5 +1,5 @@
 import * as maplibregl from 'maplibre-gl';
-import { registerPmtiles, startPrefetch } from './prefetch';
+import { startPrefetch } from './prefetch';
 import type { Map as MLMap, LngLatBoundsLike } from 'maplibre-gl';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -7,7 +7,7 @@ import './fonts.css';
 import './styles.css';
 
 import { detectLang, saveLang, setLang, lang, t, prop, LANGS, LANG_SHORT, LANG_NAME, type Lang, type StringKey } from './i18n';
-import { buildStyle, nameField, spacing, LABEL_LAYERS } from './style';
+import { buildStyle, nameField, spacing, LABEL_LAYERS, TILE_SIZE } from './style';
 import { prepareImages, addImages } from './images';
 import { fetchLayer, pinned, searchAreas, type FC, type Feature } from './data';
 import { ROUGH_BOUNDS, GAME_SCALE, type BBox } from './geo';
@@ -544,10 +544,10 @@ function applyLayerVisibility(): void {
   for (const id of ['poi', 'poi-label', 'poi-area', 'poi-area-line', 'poi-dot']) if (m.getLayer(id)) m.setFilter(id, catFilter);
   const hiddenLm = [...LANDMARK_GROUPS.filter((g) => state.hiddenGroups.has(g.id)).flatMap((g) => g.cats), ...state.hiddenLmCats];
   if (m.getLayer('landmark')) {
-    m.setFilter('landmark', ['all', ['>=', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
+    m.setFilter('landmark', ['all', ['>=', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
   }
   if (m.getLayer('landmark-dot')) {
-    m.setFilter('landmark-dot', ['all', ['<', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
+    m.setFilter('landmark-dot', ['all', ['<', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
   }
 }
 
@@ -933,18 +933,17 @@ async function boot(): Promise<void> {
   const half = Math.max(e0 - w0, n0 - s0) * 1.2;
   const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2;
   const maxBounds: BBox = [cx - half, cy - half, cx + half, cy + half];
-  registerPmtiles(`${location.origin}${import.meta.env.BASE_URL}tiles/vector.pmtiles`);
   let m: MLMap;
   try {
     m = new maplibregl.Map({
       container: 'map',
       style: buildStyle(`${location.origin}${import.meta.env.BASE_URL}glyphs/{fontstack}/{range}.pbf`, lang(),
-        `pmtiles://${location.origin}${import.meta.env.BASE_URL}tiles/vector.pmtiles`),
+        `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`),
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
       maxBounds: maxBounds as LngLatBoundsLike,
       minZoom: 10,
-      maxZoom: 20,
+      maxZoom: 17.5,
       maxPitch: 70,
       attributionControl: false,
       localIdeographFontFamily: CJK_FONTS,
@@ -962,7 +961,7 @@ async function boot(): Promise<void> {
   if (hash.view) m.jumpTo({ center: [hash.view.lng, hash.view.lat], zoom: hash.view.zoom, bearing: hash.view.bearing, pitch: hash.view.pitch });
 
   m.addControl(new GameScale(), 'bottom-left');
-  startPrefetch(m);
+  startPrefetch(m, `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`, TILE_SIZE);
   m.keyboard.enable();
 
   m.on('load', async () => {

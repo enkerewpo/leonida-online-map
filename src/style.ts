@@ -64,7 +64,10 @@ const categoryColor: ExpressionSpecification = [
   category('').color,
 ] as unknown as ExpressionSpecification;
 
-export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): StyleSpecification {
+/** CSS px per in-game tile: half size on high-density screens, so each tile pixel lands on a device pixel. */
+export const TILE_SIZE = (globalThis.devicePixelRatio || 1) >= 1.5 ? 128 : 256;
+
+export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleSpecification {
   const name = nameField(lang);
   const sp = (n: number) => spacing(lang, n);
   const src = (id: string, promoteId?: string) => ({ [id]: { type: 'geojson' as const, data: EMPTY, ...(promoteId ? { promoteId } : {}) } });
@@ -74,20 +77,11 @@ export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): Style
       id: 'background', type: 'background',
       paint: { 'background-color': '#2f8eae' },
     },
-    // The in-game map itself (GTADB tiles, levels 0-6 as zooms 12-18), over the same deep sea.
-    // The in-game map as flat vector polygons, traced level by level from GTADB's tiles (tools/vectorize.py), so
-    // it is sharp at every zoom.
-    ...([
-      ['water_mid', '#4c9db8'], ['water_shallow', '#6aaec4'],
-      ['land', '#638f79'], ['land_dark', '#578167'], ['land_light', '#73a08c'],
-      ['beach', '#cdc29c'], ['urban', '#9fa5ad'], ['paved', '#e9eaee'],
-      ['road', '#d0d1da'], ['highway', '#ddd8bf'], ['rail', '#8299ab'],
-      ['building', '#adb9ca'], ['building_enterable', '#96a7be'],
-    ] as const).map(([c, color]): LayerSpecification => ({
-      id: `vec-${c}`, type: 'fill', source: 'vector', 'source-layer': 'base',
-      filter: ['==', ['get', 'class'], c],
-      paint: { 'fill-color': color, 'fill-antialias': true },
-    })),
+    // The in-game map itself (GTADB tiles, levels 0-6 as zooms 12-18, plus 9-11 scaled down), over the same deep sea.
+    {
+      id: 'ingame', type: 'raster', source: 'ingame',
+      paint: { 'raster-fade-duration': 120, 'raster-resampling': 'linear' },
+    },
     // Road names along the road (data/roads-named.geojson; empty until that file exists).
     {
       id: 'road-name', type: 'symbol', source: 'roads-named', minzoom: 15.5,
@@ -127,7 +121,7 @@ export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): Style
     // Before a marker's icon fits, a small dot in its category colour shows that something is there.
     {
       id: 'landmark-dot', type: 'circle', source: 'landmarks', minzoom: 12.5,
-      filter: ['<', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]],
+      filter: ['<', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]],
       paint: {
         'circle-color': categoryColor,
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 12.5, 1.8, 15, 3.2, 17, 3.8],
@@ -148,7 +142,7 @@ export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): Style
     },
     {
       id: 'landmark', type: 'symbol', source: 'landmarks',
-      filter: ['>=', ['zoom'], ['coalesce', ['get', 'minzoom'], 16]],
+      filter: ['>=', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]],
       layout: {
         'icon-image': ['concat', 'lm-', ['get', 'category']],
         'icon-size': ['interpolate', ['linear'], ['zoom'], 13, 0.85, 16, 1, 19, 1.12],
@@ -161,7 +155,7 @@ export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): Style
         'text-offset': [0, 1.05],
         'text-max-width': 8,
         'text-optional': true,
-        'symbol-sort-key': ['coalesce', ['get', 'minzoom'], 16],
+        'symbol-sort-key': ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8],
       },
       paint: {
         'icon-opacity': ['case', ['==', ['get', 'unconfirmed'], true], 0.72, 1],
@@ -345,7 +339,7 @@ export function buildStyle(glyphs: string, lang: Lang, vectorUrl: string): Style
     version: 8,
     name: 'Leonida',
     glyphs,
-    sources: { vector: { type: 'vector', url: vectorUrl, attribution: 'Map: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org, vectorised · Map art © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('landmarks', 'id'), ...src('roads-named'), ...src('poi-area', 'id'), ...src('selection') },
+    sources: { ingame: { type: 'raster', tiles: [tilesUrl], tileSize: TILE_SIZE, minzoom: 9, maxzoom: 18, bounds: [-0.1758, -0.1758, 0.1758, 0.1758], attribution: 'Map: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org · Map art © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('landmarks', 'id'), ...src('roads-named'), ...src('poi-area', 'id'), ...src('selection') },
     layers,
     light: { anchor: 'viewport', color: '#ffffff', intensity: 0.32, position: [1.3, 210, 35] },
   };

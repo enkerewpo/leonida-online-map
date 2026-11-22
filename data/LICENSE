@@ -16,16 +16,17 @@ work. It is not affiliated with or endorsed by Rockstar Games or Take-Two
 Interactive, and it will be taken down on request from the rights holder.
 Grand Theft Auto and related marks are trademarks of Take-Two Interactive.
 
-The CC BY-NC-SA licence applies only to what contributors added (the vector
-tracing and community notes). It grants no rights in Rockstar's map, names or
+The CC BY-NC-SA licence applies only to what contributors added (names,
+positions, translations and community notes). It grants no rights in Rockstar's map, names or
 other material, and no commercial use is allowed.
 
 Third-party data used, with thanks
 ----------------------------------
-Roads, buildings, land and water are traced (vectorised) from:
+The base map is shown unchanged from, and highway lines were traced from:
   "GTA VI Map Tiles (CC BY 4.0) — https://map.gtadb.org"
   GTADB.ORG and contributors, https://github.com/rolux/gtadb.org,
   licensed under Creative Commons Attribution 4.0 International
   (https://creativecommons.org/licenses/by/4.0/).
-  Changes: the raster tiles were traced into vector features, classified and aligned
-  to Rockstar's official Leonida map.
+  Changes: the tiles are re-laid out as standard XYZ tiles and zooms 9-11 are scaled
+  down from level 0; highway lines were traced and labelled with route numbers from
+  Rockstar's official Leonida map.
