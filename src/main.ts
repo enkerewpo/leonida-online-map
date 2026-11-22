@@ -943,7 +943,7 @@ async function boot(): Promise<void> {
       fitBoundsOptions: { padding: viewPadding() },
       maxBounds: maxBounds as LngLatBoundsLike,
       minZoom: 10,
-      maxZoom: 17.5,
+      maxZoom: 17,
       maxPitch: 70,
       attributionControl: false,
       localIdeographFontFamily: CJK_FONTS,

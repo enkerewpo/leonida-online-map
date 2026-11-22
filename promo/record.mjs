@@ -46,8 +46,8 @@ await js(`(() => {
   s.textContent = \`
     #promo-title { display: none; }
     #promo-cap { position: fixed; left: 50%; bottom: 58px; transform: translateX(-50%); z-index: 9999; width: 1100px;
-      color: #fff; text-align: center; font: 600 38px/1.25 Figtree, sans-serif;
-      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 0 0 #000, -2px 0 0 #000; }
+      color: #fff; text-align: center; font: 500 32px/1.3 Figtree, sans-serif;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 0.9); }
     #promo-cap:empty { opacity: 0; }\`;
   document.head.append(s);
   for (const id of ['promo-title', 'promo-cap']) { const d = document.createElement('div'); d.id = id; document.body.append(d); }

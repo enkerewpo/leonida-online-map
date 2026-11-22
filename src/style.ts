@@ -64,8 +64,10 @@ const categoryColor: ExpressionSpecification = [
   category('').color,
 ] as unknown as ExpressionSpecification;
 
-/** CSS px per in-game tile: half size on high-density screens, so each tile pixel lands on a device pixel. */
-export const TILE_SIZE = (globalThis.devicePixelRatio || 1) >= 1.5 ? 128 : 256;
+/** CSS px per in-game tile. Half size on high-density screens, so each tile pixel lands on a device pixel; and a
+ * further 1/sqrt(2), so the map rounds to the next finer level between whole zooms and only ever scales tiles down
+ * (never up, which is what made in-between zooms soft). */
+export const TILE_SIZE = ((globalThis.devicePixelRatio || 1) >= 1.5 ? 128 : 256) / Math.SQRT2;
 
 export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleSpecification {
   const name = nameField(lang);

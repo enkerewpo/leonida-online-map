@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Voice-over for the promo: two radio hosts reading promo/script.json (edge-tts neural voices), joined per scene
+"""Voice-over for the promo: one radio host reading promo/script.json (edge-tts neural voices), joined per scene
 with a short gap and given a radio sound (band-limited, compressed, a little room). Writes promo/vo/<scene>.wav."""
 import json, subprocess, tempfile, time
 from pathlib import Path
 
 DIR = Path(__file__).parent
-VOICES = {'A': ('en-US-GuyNeural', '+12%', '+0Hz'), 'B': ('en-US-AvaNeural', '+8%', '+0Hz')}
+VOICES = {'A': ('en-US-GuyNeural', '+10%', '+0Hz')}
 RADIO = 'highpass=f=160,lowpass=f=7000,equalizer=f=2800:t=q:w=1:g=3,acompressor=threshold=-22dB:ratio=4:attack=5:release=90:makeup=5,aecho=0.8:0.4:35:0.08'
 (DIR / 'vo').mkdir(exist_ok=True)
 with tempfile.TemporaryDirectory() as tmp:
