@@ -1,0 +1,10 @@
+[
+ {"id": "intro",  "title": "", "lines": [["A", "Good morning, Leonida! You're locked in to Map FM."], ["B", "The only station that knows where you parked."]]},
+ {"id": "zoom",   "title": "", "lines": [["A", "From the Keys all the way up to Vice City."], ["B", "Zoom in close enough to see your ex's driveway. Not that we would."]]},
+ {"id": "marks",  "title": "", "lines": [["A", "Nine hundred landmarks, baby."], ["B", "Gas, guns, clubs, burgers. Everything a growing family needs."]]},
+ {"id": "legend", "title": "", "lines": [["A", "Only looking for gas?"], ["B", "Hit the legend, hide the rest. We don't judge."]]},
+ {"id": "search", "title": "", "lines": [["A", "Lost again?"], ["B", "Just type it in. The map takes you right there. Unlike your cousin."]]},
+ {"id": "lang",   "title": "", "lines": [["A", "English. Simplified Chinese. Traditional Chinese."], ["B", "Leonida speaks your language. Mostly the bad words."]]},
+ {"id": "fix",    "title": "", "lines": [["A", "Found a hidden ride? An easter egg?"], ["B", "Right click, add it. It's open source, honey. Free, like the samples at the mall."]]},
+ {"id": "outro",  "title": "", "lines": [["A", "Leonida Online Map."], ["B", "Link's in the post. Drive safe. Or don't."]]}
+]
