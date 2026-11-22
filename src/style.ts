@@ -64,10 +64,10 @@ const categoryColor: ExpressionSpecification = [
   category('').color,
 ] as unknown as ExpressionSpecification;
 
-/** CSS px per in-game tile. Half size on high-density screens, so each tile pixel lands on a device pixel; and a
+/** CSS px per 512 px in-game tile. Half size on high-density screens, so each tile pixel lands on a device pixel; and a
  * further 1/sqrt(2), so the map rounds to the next finer level between whole zooms and only ever scales tiles down
  * (never up, which is what made in-between zooms soft). */
-export const TILE_SIZE = ((globalThis.devicePixelRatio || 1) >= 1.5 ? 128 : 256) / Math.SQRT2;
+export const TILE_SIZE = ((globalThis.devicePixelRatio || 1) >= 1.5 ? 256 : 512) / Math.SQRT2;
 
 export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleSpecification {
   const name = nameField(lang);
@@ -348,7 +348,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleS
     version: 8,
     name: 'Leonida',
     glyphs,
-    sources: { ingame: { type: 'raster', tiles: [tilesUrl], tileSize: TILE_SIZE, minzoom: 9, maxzoom: 18, bounds: [-0.1758, -0.1758, 0.1758, 0.1758], attribution: 'Map: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org · Map art © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('landmarks', 'id'), ...src('roads-named'), ...src('poi-area', 'id'), ...src('selection') },
+    sources: { ingame: { type: 'raster', tiles: [tilesUrl], tileSize: TILE_SIZE, minzoom: 9, maxzoom: 17, bounds: [-0.1758, -0.1758, 0.1758, 0.1758], attribution: 'Map: GTA VI Map Tiles (CC BY 4.0) — map.gtadb.org · Map art © Rockstar Games' }, ...src('places'), ...src('poi'), ...src('landmarks', 'id'), ...src('roads-named'), ...src('poi-area', 'id'), ...src('selection') },
     layers,
     light: { anchor: 'viewport', color: '#ffffff', intensity: 0.32, position: [1.3, 210, 35] },
   };

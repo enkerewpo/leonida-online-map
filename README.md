@@ -51,7 +51,7 @@ Needs Node.js 22+.
 npm ci
 git clone --depth 1 --filter=blob:none --sparse https://github.com/rolux/gtadb.org /tmp/gtadb
 git -C /tmp/gtadb sparse-checkout set maps/tiles/6/day
-npm run tiles -- /tmp/gtadb/maps/tiles/6/day   # in-game tiles -> public/tiles/day
+npm run tiles -- /tmp/gtadb/maps/tiles/6/day   # in-game tiles -> public/tiles/day (512 px)
 npm run validate                                # check data/*.geojson
 npm run dev                                     # http://localhost:5173/leonida-online-map/
 npm run build                                   # static site in dist/

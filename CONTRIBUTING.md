@@ -33,10 +33,10 @@ request; CI checks the files and the site redeploys when a change is merged.
 The site serves the in-game map as standard XYZ tiles:
 
 ```
-https://enkerewpo.github.io/leonida-online-map/tiles/day/{z}/{x}/{y}.jpg     (zoom 12–18)
+https://enkerewpo.github.io/leonida-online-map/tiles/day/{z}/{x}/{y}.jpg     (512 px tiles, zoom 9–17)
 ```
 
-- **QGIS**: *Browser → XYZ Tiles → New Connection*, paste the URL, max zoom 18. Add it, then open a file from
+- **QGIS**: *Browser → XYZ Tiles → New Connection*, paste the URL, max zoom 17, tile resolution 512. Add it, then open a file from
   `data/` (drag it in), *Toggle Editing*, draw, *Save Layer Edits*. Keep the layer in EPSG:4326 when saving.
 - **geojson.io**: *Meta → Add map layer* with the URL above; draw; *Save → GeoJSON*; paste the features into the
   right file.

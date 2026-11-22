@@ -3,7 +3,7 @@
 // browser's HTTP cache, so the map's own requests for them are instant.
 import type { Map as MLMap } from 'maplibre-gl';
 
-const MIN_Z = 9, MAX_Z = 18;
+const MIN_Z = 9, MAX_Z = 17;
 const done = new Set<string>();
 const pending = new Set<string>();
 

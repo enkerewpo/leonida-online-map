@@ -936,6 +936,9 @@ async function boot(): Promise<void> {
   const half = Math.max(e0 - w0, n0 - s0) * 1.2;
   const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2;
   const maxBounds: BBox = [cx - half, cy - half, cx + half, cy + half];
+  // GitHub Pages speaks HTTP/2, so more tiles can be in flight at once than MapLibre's default 16.
+  maplibregl.setMaxParallelImageRequests(32);
+  if ('serviceWorker' in navigator && !import.meta.env.DEV) navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
   let m: MLMap;
   try {
     m = new maplibregl.Map({
@@ -952,7 +955,6 @@ async function boot(): Promise<void> {
       localIdeographFontFamily: CJK_FONTS,
       fadeDuration: reducedMotion.matches ? 0 : 150,
       pixelRatio: window.devicePixelRatio || 1,
-      cancelPendingTileRequestsWhileZooming: false,
     });
   } catch (e) {
     console.error(e);
