@@ -753,8 +753,15 @@ function bindUI(): void {
     }
   });
 
-  $('#zoom-in').addEventListener('click', () => map?.zoomIn());
-  $('#zoom-out').addEventListener('click', () => map?.zoomOut());
+  // Zoom about the middle of the map area you can see, not of the window behind the panel.
+  const around = () => {
+    if (!map) return undefined;
+    const { width: W, height: H } = map.getContainer().getBoundingClientRect();
+    const v = { top: 0, bottom: 0, left: 0, right: 0, ...viewPadding() };
+    return map.unproject([(v.left + W - v.right) / 2, (v.top + H - v.bottom) / 2]);
+  };
+  $('#zoom-in').addEventListener('click', () => map && map.zoomTo(map.getZoom() + 1, { around: around() }));
+  $('#zoom-out').addEventListener('click', () => map && map.zoomTo(map.getZoom() - 1, { around: around() }));
   $('#legend-btn').addEventListener('click', () => {
     if (state.selected) selectPoi(null);
     if (phoneQuery.matches && state.sheet === 'peek') setSheet('half');

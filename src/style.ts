@@ -151,6 +151,8 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleS
         'icon-image': ['concat', 'lm-', ['get', 'category']],
         'icon-size': ['interpolate', ['linear'], ['zoom'], 13, 0.85, 16, 1, 19, 1.12],
         'icon-padding': 3,
+        // Every place keeps its icon; only names that would collide are left out.
+        'icon-allow-overlap': true,
         'text-field': name,
         'text-font': ['Barlow Condensed Bold'],
         'text-transform': 'uppercase',
