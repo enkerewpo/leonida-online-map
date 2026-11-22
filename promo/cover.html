@@ -22,8 +22,8 @@
       <h1>Leonida<br>Online Map</h1>
       <div class="url">enkerewpo.github.io/leonida-online-map</div>
     </div>
-    <div class="credit">Fan-made, not affiliated with Rockstar Games · Map tiles: GTADB.ORG (CC BY 4.0)<span id="music"><br>Music: “Neon Night” by Fatal Exit (CC BY 4.0)</span></div>
-    <script>if (location.search !== '?video') document.getElementById('music').remove();</script>
+    <div class="credit">Fan-made, not affiliated with Rockstar Games · Map tiles: GTADB.ORG (CC BY 4.0)<span id="music"></span></div>
+    <script>const c = decodeURIComponent(location.search.slice(1)); if (c) { const m = document.getElementById('music'); m.append(document.createElement('br'), c); }</script>
   </div>
 </body>
 </html>

@@ -5,10 +5,12 @@
 // (drawn in the page itself). Every scene lasts as long as its line plus a breath.
 // Needs the dev server (npx vite --port 4390), ffmpeg and python3 with numpy + scipy. Usage: node promo/record.mjs
 import { spawn, execFileSync } from 'node:child_process';
-import { mkdirSync, rmSync, writeFileSync, copyFileSync, readFileSync } from 'node:fs';
+import { mkdirSync, rmSync, writeFileSync, copyFileSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
 const DIR = import.meta.dirname;
+// Music: BGM=<file> (default promo/bgm/track.*); BGM_CREDIT="..." adds a credit line to the end card.
+const BGM = process.env.BGM || join(DIR, 'bgm', readdirSync(join(DIR, 'bgm')).find((f) => f.startsWith('track.')) ?? 'neon-night.wav');
 const OUT = resolve(DIR, 'frames');
 const W = 1920, H = 1080, FPS = 30;
 const BASE = 'http://localhost:4390/leonida-online-map/';
@@ -160,7 +162,7 @@ await scene('outro', async () => {
   // The cover with the music credit added.
   execFileSync(CHROME, ['--headless=new', '--hide-scrollbars', '--user-data-dir=/tmp/leonida-end', '--allow-file-access-from-files',
     '--window-size=1600,900', `--force-device-scale-factor=${W / 1600}`, '--virtual-time-budget=3000', `--screenshot=${join(OUT, 'end.png')}`,
-    `file://${resolve(DIR, 'cover.html')}?video`], { stdio: 'ignore' });
+    `file://${resolve(DIR, 'cover.html')}?${encodeURIComponent(process.env.BGM_CREDIT ?? '')}`], { stdio: 'ignore' });
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', join(OUT, 'end.png'), join(OUT, 'end.jpg')]);
   rmSync(join(OUT, 'end.png'));
   const left = Math.round((starts.outro + sceneLen('outro') + 1.2) * FPS) - frame;
@@ -173,7 +175,7 @@ chrome.kill();
 // Sound: music bed, ducked under the voice; each line placed at its scene's start (+0.25 s).
 const total = frame / FPS;
 const music = join(DIR, 'music.wav');
-execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', join(DIR, 'bgm', 'neon-night.wav'), '-t', String(total),
+execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', BGM, '-t', String(total),
   '-af', `afade=t=in:d=0.6,afade=t=out:st=${Math.max(0, total - 2.5)}:d=2.5`, music]);
 const lines = script.map((s) => s.id);
 const inputs = ['-i', music, ...lines.flatMap((l) => ['-i', join(DIR, 'vo', `${l}.wav`)])];
