@@ -79,6 +79,8 @@ const state = {
 };
 
 let map: MLMap | null = null;
+/** Bump when the tiles change: the browser may keep old ones for ten minutes under the same address. */
+const TILES_VERSION = 2;
 let mapReady = false;
 
 // ---------------------------------------------------------------------------------------------
@@ -464,8 +466,8 @@ function viewPadding(): maplibregl.PaddingOptions {
 /** Keeps the state on screen, measured against the part of the map not covered by the side panel or sheet: when
  * the whole state fits, it sits in the middle of that part instead of the middle of the window. */
 function constrainToLeonida(b: BBox, center: maplibregl.LngLat, zoom: number): { center: maplibregl.LngLat; zoom: number } {
-  zoom = Math.min(17, Math.max(10, zoom));
-  if (!map) return { center, zoom };
+  if (!map) return { center, zoom: Math.min(17, Math.max(10, zoom)) };
+  zoom = Math.min(map.getMaxZoom(), Math.max(map.getMinZoom(), zoom));
   const ws = 512 * 2 ** zoom;
   const { width: W, height: H } = map.getContainer().getBoundingClientRect();
   const z0 = { top: 0, bottom: 0, left: 0, right: 0 };
@@ -951,9 +953,9 @@ async function boot(): Promise<void> {
   const hash = readHash();
   // Generous and square, so a wide desktop window can still see the whole state at once.
   const [w0, s0, e0, n0] = state.landBBox;
-  const half = Math.max(e0 - w0, n0 - s0) * 1.2;
-  const cx = (w0 + e0) / 2, cy = (s0 + n0) / 2;
-  const maxBounds: BBox = [cx - half, cy - half, cx + half, cy + half];
+  // The state plus a margin of sea: enough to pan a coast to the middle, not enough to lose the state.
+  const mx = (e0 - w0) * 0.3, my = (n0 - s0) * 0.3;
+  const maxBounds: BBox = [w0 - mx, s0 - my, e0 + mx, n0 + my];
   // GitHub Pages speaks HTTP/2, so more tiles can be in flight at once than MapLibre's default 16.
   maplibregl.setMaxParallelImageRequests(32);
   if ('serviceWorker' in navigator && !import.meta.env.DEV) navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
@@ -962,7 +964,7 @@ async function boot(): Promise<void> {
     m = new maplibregl.Map({
       container: 'map',
       style: buildStyle(`${location.origin}${import.meta.env.BASE_URL}glyphs/{fontstack}/{range}.pbf`, lang(),
-        `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`),
+        `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg?v=${TILES_VERSION}`),
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
       transformConstrain: (center, zoom) => constrainToLeonida(maxBounds, center, zoom),
@@ -984,9 +986,16 @@ async function boot(): Promise<void> {
   if (hash.view) m.jumpTo({ center: [hash.view.lng, hash.view.lat], zoom: hash.view.zoom, bearing: hash.view.bearing, pitch: hash.view.pitch });
 
   m.addControl(new GameScale(), 'bottom-left');
-  startPrefetch(m, `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`, TILE_SIZE);
+  startPrefetch(m, `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg?v=${TILES_VERSION}`, TILE_SIZE);
   m.keyboard.enable();
 
+  // Zooming out stops where the whole state just fits beside the panel.
+  const fitMinZoom = () => {
+    const cam = m.cameraForBounds(state.landBBox as LngLatBoundsLike, { padding: viewPadding() });
+    if (cam?.zoom != null) m.setMinZoom(Math.max(9, cam.zoom - 0.3));
+  };
+  fitMinZoom();
+  m.on('resize', fitMinZoom);
   m.on('load', async () => {
     const { places, pois, landmarks } = await dataReady;
     if (map !== m) return;
