@@ -462,6 +462,9 @@ function viewPadding(): maplibregl.PaddingOptions {
 }
 
 function fitLeonida(animate = true): void {
+  // flyTo leaves its padding on the map, and fitBounds adds its own on top: clear it first, or the state ends up
+  // squeezed into a corner.
+  map?.setPadding({ top: 0, bottom: 0, left: 0, right: 0 });
   map?.fitBounds(state.landBBox as LngLatBoundsLike, { padding: viewPadding(), bearing: 0, pitch: 0, animate: animate && !reducedMotion.matches, duration: 900, easing: settle });
 }
 

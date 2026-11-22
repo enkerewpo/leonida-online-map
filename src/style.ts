@@ -337,7 +337,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleS
         'text-font': ['Barlow Condensed Bold'],
         'text-transform': 'uppercase',
         'text-size': ['interpolate', ['linear'], ['zoom'], 10, 20.1, 12, 35.4, 13, 47.2],
-        'text-letter-spacing': sp(0.3),
+        'text-letter-spacing': sp(0.08),
         'text-allow-overlap': true,
       },
       paint: { 'text-color': '#fdfbff', 'text-halo-color': HALO, 'text-halo-width': 1.8, 'text-halo-blur': 0, 'text-opacity': fadeOut(12.4, 13) },
