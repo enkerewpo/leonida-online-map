@@ -461,6 +461,24 @@ function viewPadding(): maplibregl.PaddingOptions {
   return { top: 40, bottom: 40, left: left + 24, right: 72 };
 }
 
+/** Keeps the state on screen, measured against the part of the map not covered by the side panel or sheet: when
+ * the whole state fits, it sits in the middle of that part instead of the middle of the window. */
+function constrainToLeonida(b: BBox, center: maplibregl.LngLat, zoom: number): { center: maplibregl.LngLat; zoom: number } {
+  zoom = Math.min(17, Math.max(10, zoom));
+  if (!map) return { center, zoom };
+  const ws = 512 * 2 ** zoom;
+  const { width: W, height: H } = map.getContainer().getBoundingClientRect();
+  const z0 = { top: 0, bottom: 0, left: 0, right: 0 };
+  const p = { ...z0, ...map.getPadding() }, v = { ...z0, ...viewPadding() };
+  const c = maplibregl.MercatorCoordinate.fromLngLat(center);
+  const nw = maplibregl.MercatorCoordinate.fromLngLat([b[0], b[3]]), se = maplibregl.MercatorCoordinate.fromLngLat([b[2], b[1]]);
+  const axis = (pos: number, lo: number, hi: number, anchor: number, b0: number, b1: number) =>
+    hi - lo >= b1 - b0 ? (b0 + b1) / 2 - ((lo + hi) / 2 - anchor) : Math.min(b1 - (hi - anchor), Math.max(b0 + (anchor - lo), pos));
+  const x = axis(c.x * ws, v.left, W - v.right, p.left + (W - p.left - p.right) / 2, nw.x * ws, se.x * ws);
+  const y = axis(c.y * ws, v.top, H - v.bottom, p.top + (H - p.top - p.bottom) / 2, nw.y * ws, se.y * ws);
+  return { center: new maplibregl.MercatorCoordinate(x / ws, y / ws).toLngLat(), zoom };
+}
+
 function fitLeonida(animate = true): void {
   // flyTo leaves its padding on the map, and fitBounds adds its own on top: clear it first, or the state ends up
   // squeezed into a corner.
@@ -947,7 +965,7 @@ async function boot(): Promise<void> {
         `${location.origin}${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`),
       bounds: state.landBBox as LngLatBoundsLike,
       fitBoundsOptions: { padding: viewPadding() },
-      maxBounds: maxBounds as LngLatBoundsLike,
+      transformConstrain: (center, zoom) => constrainToLeonida(maxBounds, center, zoom),
       minZoom: 10,
       maxZoom: 17,
       maxPitch: 70,

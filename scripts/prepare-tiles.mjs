@@ -16,7 +16,8 @@ if (!src || !existsSync(src)) {
   process.exit(1);
 }
 const out = resolve(import.meta.dirname, '../public/tiles/day');
-const SEA = { r: 47, g: 142, b: 174 };
+// GTADB's own open-sea colour, so filled-in gaps and the background around the tiles do not show as a frame.
+const SEA = { r: 47, g: 144, b: 176 };
 const MIN_Z = 9, MAX_Z = 17;
 
 // 256 px source tiles by XYZ key.
