@@ -96,7 +96,7 @@ Street names along a road: draw one line along the street (a few points are enou
 | Property | Required | Values |
 | --- | --- | --- |
 | `id` | yes | unique lowercase slug, e.g. `turbo-ruiner` (used in share links) |
-| `category` | yes | `vehicle`, `weapon`, `easter-egg`, `hideout`, `freebie`, `hidden-item`, `nightclub`, `shop`, `gas`, … (see `src/schema.json`) |
+| `category` | yes | `vehicle`, `weapon`, `easter-egg`, `hideout`, `freebie`, `hidden-item`, `nightclub`, `shop`, `gas`, `stunt-jump`, `race`, `robbery`, `atm`, `fishing`, `arcade`, … (see `src/schema.json`) |
 | `name` | yes | English name |
 | `area:en`, `where:en`, `note:en` (+ `:zh-Hans`, `:zh-Hant`) | `where` required when unpinned | short texts |
 | `flags` | no | any of `day`, `night`, `alarm`, `tracker`, `random`, `later` |

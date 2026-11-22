@@ -74,9 +74,18 @@ const state = {
   /** Single landmark categories switched off in the legend. */
   hiddenLmCats: new Set<string>(),
   showLabels: true,
+  hideFound: false,
   sheet: 'peek' as 'peek' | 'half' | 'full',
   tab: 'finds' as 'finds' | 'layers',
 };
+
+/** Finds the reader has ticked off. Kept in this browser only; nothing is sent anywhere. */
+const FOUND_KEY = 'leonida-found';
+const found = new Set<string>((() => { try { return JSON.parse(localStorage.getItem(FOUND_KEY) ?? '[]') as string[]; } catch { return []; } })());
+function toggleFound(id: string): void {
+  if (found.has(id)) found.delete(id); else found.add(id);
+  try { localStorage.setItem(FOUND_KEY, JSON.stringify([...found])); } catch { /* storage blocked */ }
+}
 
 let map: MLMap | null = null;
 /** Bump when the tiles change: the browser may keep old ones for ten minutes under the same address. */
@@ -179,6 +188,11 @@ function applyStaticText(): void {
 }
 
 const poiName = (f: Feature) => prop(f.properties, 'name');
+/** "12" for a list, or "3 / 12" once some of it is found. */
+const foundOf = (items: Feature[]) => {
+  const n = items.filter((f) => found.has(String(f.properties?.id))).length;
+  return n ? `${n} / ${items.length}` : String(items.length);
+};
 const catCount = (id: string) => state.pois.filter((f) => f.properties?.category === id).length;
 const presentCats = () => {
   const seen = new Set(state.pois.map((f) => String(f.properties?.category)));
@@ -231,12 +245,13 @@ function homeHTML(): string {
             `<span class="row-count">${state.landmarks.filter((f) => landmarkGroup(String(f.properties?.category)) === g.id).length}</span>`) + sub;
         }).join('')}
         ${row('data-toggle="labels"', state.showLabels, `<span class="swatch swatch-text">A</span>`, t('labels'))}
+        ${found.size ? row('data-toggle="found"', state.hideFound, `<span class="swatch swatch-text">${ICONS.check}</span>`, t('hideFound')) : ''}
       </ul>
     </section>`;
   const groups = cats.map((id) => {
     const items = state.pois.filter((f) => f.properties?.category === id);
     return `<div class="group">
-      <h3 class="group-title"><span class="badge">${badgeSVG(id, 18)}</span><span>${esc(category(id).label[lang()])}</span><span class="row-count">${items.length}</span></h3>
+      <h3 class="group-title"><span class="badge">${badgeSVG(id, 18)}</span><span>${esc(category(id).label[lang()])}</span><span class="row-count">${foundOf(items)}</span></h3>
       <ul class="list">${items.map(poiItemHTML).join('')}</ul></div>`;
   }).join('');
   const finds = groups || `<p class="empty">…</p>`;
@@ -253,7 +268,7 @@ function poiItemHTML(f: Feature): string {
   const status = f.geometry ? '' : `<span class="item-status">${esc(t('notPinned'))}</span>`;
   return `<li><button type="button" class="item" data-poi="${esc(p.id)}">
     <span class="item-text"><span class="item-name">${esc(poiName(f))}</span>${area ? `<span class="item-sub">${esc(area)}</span>` : ''}${status}</span>
-    <span class="item-go">${ICONS.chevron}</span></button></li>`;
+    ${found.has(String(p.id)) ? `<span class="item-found" title="${esc(t('foundDone'))}">${ICONS.check}</span>` : ''}<span class="item-go">${ICONS.chevron}</span></button></li>`;
 }
 
 function resultsHTML(): string {
@@ -321,6 +336,7 @@ function detailHTML(id: string): string {
       ${note ? `<h3 class="field-title">${esc(t('note'))}</h3><p class="field">${esc(note)}</p>` : ''}
       <div class="actions">
         ${f.geometry ? `<button type="button" class="btn btn-primary" id="show-on-map">${ICONS.target}<span>${esc(t('showOnMap'))}</span></button>` : ''}
+        ${state.pois.includes(f) ? `<button type="button" class="btn" id="found-btn" aria-pressed="${found.has(id)}">${ICONS.check}<span>${esc(t(found.has(id) ? 'foundDone' : 'markFound'))}</span></button>` : ''}
         <button type="button" class="btn" id="copy-link">${ICONS.link}<span>${esc(t('copyLink'))}</span></button>
         <a class="btn" id="fix-item" href="${esc(fixUrl(id, f))}" target="_blank" rel="noopener noreferrer">${ICONS.github}<span>${esc(t('fixThis'))}</span></a>
       </div>
@@ -358,6 +374,12 @@ function renderAbout(): void {
       <p>${esc(t('sourcesMap'))}</p>
       <p>${esc(t('sourcesFinds'))}</p>
       <p class="about-credit"><a href="${TILES_URL}" target="_blank" rel="noopener noreferrer">${esc(t('credit'))}</a></p>
+      <h3>${esc(t('openDataTitle'))}</h3>
+      <p>${esc(t('openData'))}</p>
+      <ul class="about-list">
+        ${['poi', 'landmarks', 'places', 'roads-named'].map((n) => `<li><a href="${import.meta.env.BASE_URL}data/${n}.geojson" download>${n}.geojson</a></li>`).join('')}
+        <li>${esc(t('openDataTiles'))}: <code>${esc(new URL(`${import.meta.env.BASE_URL}tiles/day/{z}/{x}/{y}.jpg`, location.origin).href.replace(/%7B/g, '{').replace(/%7D/g, '}'))}</code></li>
+      </ul>
       <h3>${esc(t('licencesTitle'))}</h3>
       <ul class="about-list">
         <li>${esc(t('licenceCode'))}</li>
@@ -563,8 +585,13 @@ function applyLayerVisibility(): void {
   for (const id of Object.keys(LABEL_LAYERS).filter((x) => x.startsWith('label-') || x === 'road-name' || x === 'poi-label')) set(id, state.showLabels);
   set('road-shield', state.showLabels);
   const hidden = [...state.hiddenCats];
-  const catFilter: maplibregl.FilterSpecification = ['!', ['in', ['get', 'category'], ['literal', hidden]]];
+  const isFound: maplibregl.ExpressionSpecification = ['in', ['get', 'id'], ['literal', [...found]]];
+  const catFilter: maplibregl.FilterSpecification = ['all', ['!=', ['get', 'hidden'], true], ['!', ['in', ['get', 'category'], ['literal', hidden]]],
+    ...(state.hideFound ? [['!', isFound] as maplibregl.ExpressionSpecification] : [])];
   for (const id of ['poi', 'poi-label', 'poi-area', 'poi-area-line', 'poi-dot']) if (m.getLayer(id)) m.setFilter(id, catFilter);
+  // Found finds stay on the map, dimmed.
+  if (m.getLayer('poi')) m.setPaintProperty('poi', 'icon-opacity', ['interpolate', ['linear'], ['zoom'], 12.9, 0, 13.3, ['case', isFound, 0.45, 1]]);
+  if (m.getLayer('poi-dot')) m.setPaintProperty('poi-dot', 'circle-opacity', ['case', isFound, 0.45, 1]);
   const hiddenLm = [...LANDMARK_GROUPS.filter((g) => state.hiddenGroups.has(g.id)).flatMap((g) => g.cats), ...state.hiddenLmCats];
   if (m.getLayer('landmark')) {
     m.setFilter('landmark', ['all', ['>=', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
@@ -707,8 +734,9 @@ function bindUI(): void {
     }
     const tog = el.closest<HTMLButtonElement>('[data-toggle]');
     if (tog) {
-      state.showLabels = !state.showLabels;
-      tog.setAttribute('aria-pressed', String(state.showLabels));
+      if (tog.dataset.toggle === 'found') state.hideFound = !state.hideFound;
+      else state.showLabels = !state.showLabels;
+      tog.setAttribute('aria-pressed', String(tog.dataset.toggle === 'found' ? state.hideFound : state.showLabels));
       applyLayerVisibility();
       return;
     }
@@ -743,6 +771,13 @@ function bindUI(): void {
     if (el.closest('#show-on-map')) {
       const f = byId(state.selected);
       if (f) { if (phoneQuery.matches) setSheet('peek'); focusPoi(f); }
+      return;
+    }
+    if (el.closest('#found-btn') && state.selected) {
+      toggleFound(state.selected);
+      renderBody();
+      applyLayerVisibility();
+      $('#found-btn')?.focus();
       return;
     }
     if (el.closest('#copy-link')) {

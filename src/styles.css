@@ -394,6 +394,9 @@ svg { flex: none; }
 .btn-primary { background: var(--pink); border-color: var(--pink); color: var(--night); }
 .btn-primary:hover { background: var(--pink-2); border-color: var(--pink-2); }
 .btn-wide { width: 100%; height: 46px; margin-top: 10px; }
+/* A finished toggle ("Found") reads as done: filled light, like the selected rows. */
+.btn[aria-pressed='true'] { background: var(--white); border-color: var(--white); color: var(--night); }
+.item-found { display: inline-flex; color: var(--pink); }
 
 .panel-foot {
   flex: none;

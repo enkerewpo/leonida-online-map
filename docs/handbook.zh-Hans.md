@@ -81,7 +81,7 @@ https://enkerewpo.github.io/leonida-online-map/tiles/day/{z}/{x}/{y}.jpg     （
 | 字段 | 必填 | 说明 |
 | --- | --- | --- |
 | `id` | 是 | 唯一的小写短横线编号，如 `turbo-ruiner`（分享链接要用，别随便改） |
-| `category` | 是 | `vehicle` 载具、`weapon` 武器、`easter-egg` 彩蛋、`hideout` 据点、`freebie` 福利、`hidden-item` 隐藏物、`nightclub` 夜店、`shop` 商店、`gas` 加油站等，完整列表见 `src/schema.json` |
+| `category` | 是 | `vehicle` 载具、`weapon` 武器、`easter-egg` 彩蛋、`hideout` 据点、`freebie` 福利、`hidden-item` 隐藏物、`nightclub` 夜店、`shop` 商店、`gas` 加油站、`stunt-jump` 特技跳跃、`race` 竞速、`robbery` 抢劫目标、`atm` 取款机、`fishing` 钓鱼点、`arcade` 街机等，完整列表见 `src/schema.json` |
 | `name` | 是 | 英文名 |
 | `area:en`、`where:en`、`note:en`（以及 `:zh-Hans`、`:zh-Hant`） | 未定位时 `where` 必填 | 所在区域、怎么找到、补充说明 |
 | `flags` | 否 | 可选 `day` 白天、`night` 夜晚、`alarm` 有警报、`tracker` 有追踪器、`random` 随机遭遇、`later` 需推进剧情 |

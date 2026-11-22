@@ -84,6 +84,36 @@ export const CATEGORIES: Record<string, Category> = {
     glyph: `<path fill="#fff" d="M7.5 4.5h9l3.5 4.6L12 20 4 9.1z"/><path fill="none" stroke="C" stroke-width="1.3" stroke-linejoin="round" d="M4.3 9.1h15.4M9.5 4.7 12 9.1l2.5-4.4M12 9.1V19.5"/>`,
     label: { en: 'Collectibles', 'zh-Hans': '收集品', 'zh-Hant': '收集品' },
   },
+  'stunt-jump': {
+    color: '#e2672f',
+    glyph: `<path fill="#fff" d="M3.5 20h10.5L3.5 14z"/><path ${S(2.2)} d="M8.5 11c2.6-4.6 7.4-6.4 11.5-4.2"/><path ${S(2.2)} d="m17.2 4.8 2.8 2-1.6 3"/>`,
+    label: { en: 'Stunt jumps', 'zh-Hans': '特技跳跃', 'zh-Hant': '特技跳躍' },
+  },
+  race: {
+    color: '#3a64c8',
+    glyph: `<path ${S()} d="M6 20.5V4"/><path fill="#fff" d="M7 4.5h11.5v8H7z"/><path fill="C" d="M9.9 4.5h2.9v2.7H9.9zM15.6 4.5h2.9v2.7h-2.9zM7 7.2h2.9v2.6H7zM12.8 7.2h2.8v2.6h-2.8zM9.9 9.8h2.9v2.7H9.9zM15.6 9.8h2.9v2.7h-2.9z"/>`,
+    label: { en: 'Races', 'zh-Hans': '竞速', 'zh-Hant': '競速' },
+  },
+  robbery: {
+    color: '#a8492f',
+    glyph: `<path fill="#fff" d="M9 3.8h6l-1.6 3.2h-2.8zM10.4 7.8h3.2c3.6 2 6 5.4 6 8.4 0 2.4-1.8 4-4.6 4H9c-2.8 0-4.6-1.6-4.6-4 0-3 2.4-6.4 6-8.4z"/><path fill="none" stroke="C" stroke-width="1.6" stroke-linecap="round" d="M13.6 11.6c-.4-.6-1-.9-1.7-.9-1 0-1.7.5-1.7 1.3 0 1.8 3.6 1 3.6 2.9 0 .8-.8 1.3-1.8 1.3-.8 0-1.5-.4-1.9-1M12 9.6v1.1M12 16.2v1.1"/>`,
+    label: { en: 'Robbery targets', 'zh-Hans': '抢劫目标', 'zh-Hant': '搶劫目標' },
+  },
+  atm: {
+    color: '#3f8f6a',
+    glyph: `<rect fill="#fff" x="3.5" y="6" width="17" height="12" rx="1.8"/><path fill="C" d="M3.5 9h17v2.2h-17zM6 14h4.5v1.6H6z"/>`,
+    label: { en: 'ATMs', 'zh-Hans': '取款机', 'zh-Hant': '提款機' },
+  },
+  fishing: {
+    color: '#2a86a8',
+    glyph: `<circle cx="14.5" cy="4.6" r="1.4" ${S(1.8)}/><path ${S(2.4)} d="M14.5 6v9a4.2 4.2 0 0 1-8.4 0v-2.2l2.6 2.2"/>`,
+    label: { en: 'Fishing spots', 'zh-Hans': '钓鱼点', 'zh-Hant': '釣魚點' },
+  },
+  arcade: {
+    color: '#7a4fd0',
+    glyph: `<rect fill="#fff" x="4" y="14" width="16" height="6" rx="1.6"/><path ${S(2.4)} d="M12 14V9.5"/><circle fill="#fff" cx="12" cy="7" r="3"/><circle fill="C" cx="16.5" cy="17" r="1.1"/>`,
+    label: { en: 'Arcade machines', 'zh-Hans': '街机', 'zh-Hant': '街機' },
+  },
   // Finds still to come.
   hideout: {
     color: '#3c8f5a',
