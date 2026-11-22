@@ -124,7 +124,8 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleS
     // Before a marker's icon fits, a small dot in its category colour shows that something is there.
     {
       id: 'landmark-dot', type: 'circle', source: 'landmarks', minzoom: 12.5,
-      filter: ['<', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]],
+      // Only shortly before the icon itself fits; further out the dots would carpet the map.
+      filter: ['all', ['<', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['>=', ['zoom'], ['-', ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8], 1.5]]],
       paint: {
         'circle-color': categoryColor,
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 12.5, 1.8, 15, 3.2, 17, 3.8],
@@ -174,7 +175,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleS
       id: 'poi-area', type: 'fill', source: 'poi-area', minzoom: 12.5,
       paint: {
         'fill-color': categoryColor,
-        'fill-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 0.2, 0.06],
+        'fill-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 0.1, 0],
       },
     },
     {
@@ -183,7 +184,7 @@ export function buildStyle(glyphs: string, lang: Lang, tilesUrl: string): StyleS
         'line-color': categoryColor,
         'line-width': ['case', ['boolean', ['feature-state', 'selected'], false], 2, 1.2],
         'line-dasharray': [2, 1.5],
-        'line-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 0.95, 0.4],
+        'line-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 0.95, 0],
       },
     },
     // Selected find: a blip ring like the game's map, with a pulse the app animates (src/main.ts).

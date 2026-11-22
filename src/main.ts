@@ -547,7 +547,7 @@ function applyLayerVisibility(): void {
     m.setFilter('landmark', ['all', ['>=', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
   }
   if (m.getLayer('landmark-dot')) {
-    m.setFilter('landmark-dot', ['all', ['<', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
+    m.setFilter('landmark-dot', ['all', ['<', ['zoom'], ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8]], ['>=', ['zoom'], ['-', ['min', ['coalesce', ['get', 'minzoom'], 16], 16.8], 1.5]], ['!', ['in', ['get', 'category'], ['literal', hiddenLm]]]]);
   }
 }
 
