@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds MapLibre glyph files (signed-distance-field PBFs) from fonts/Jost.ttf.
+"""Builds MapLibre glyph files (signed-distance-field PBFs) from the fonts in fonts/.
 
 Writes public/glyphs/<font name>/<start>-<end>.pbf for Latin ranges. Chinese labels are drawn by the browser with
 Noto Sans SC/TC (MapLibre's localIdeographFontFamily), so no CJK ranges are built here.
@@ -13,7 +13,12 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 SIZE, BUFFER, RADIUS, CUTOFF = 24, 3, 8, 0.25
-WEIGHTS = {'Jost Medium': 500, 'Jost SemiBold': 600, 'Jost Bold': 700}
+# Font stack name -> (file, variable-font weight or None)
+FONTS = {
+    'Jost Medium': ('Jost.ttf', 500), 'Jost SemiBold': ('Jost.ttf', 600), 'Jost Bold': ('Jost.ttf', 700),
+    'Barlow Condensed SemiBold': ('BarlowCondensed-SemiBold.ttf', None),
+    'Barlow Condensed Bold': ('BarlowCondensed-Bold.ttf', None),
+}
 RANGES = [0, 256, 8192]  # Basic Latin + Latin-1, Latin Extended-A/B, General Punctuation
 
 
@@ -56,11 +61,12 @@ def sdf(hi, hi_left, hi_top, left, top, w, h, scale=4):
     return np.clip(np.round(255 - 255 * (d / RADIUS + CUTOFF)), 0, 255).astype(np.uint8)
 
 
-def build(name, weight):
-    face = freetype.Face(str(ROOT / 'fonts/Jost.ttf'))
-    face.set_var_design_coords((weight,))
-    big = freetype.Face(str(ROOT / 'fonts/Jost.ttf'))
-    big.set_var_design_coords((weight,))
+def build(name, file, weight):
+    face = freetype.Face(str(ROOT / 'fonts' / file))
+    big = freetype.Face(str(ROOT / 'fonts' / file))
+    if weight:
+        face.set_var_design_coords((weight,))
+        big.set_var_design_coords((weight,))
     face.set_pixel_sizes(0, SIZE)
     big.set_pixel_sizes(0, SIZE * 4)
     for start in RANGES:
@@ -90,5 +96,5 @@ def build(name, weight):
 
 
 if __name__ == '__main__':
-    for n, w in WEIGHTS.items():
-        build(n, w)
+    for n, (f, w) in FONTS.items():
+        build(n, f, w)

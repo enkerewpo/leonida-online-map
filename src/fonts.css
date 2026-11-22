@@ -1,9 +1,8 @@
-/* Self-hosted OFL fonts (licences in fonts/). Latin faces load with the page; the Chinese faces are in
-   fonts-sc.css / fonts-tc.css and load only when a Chinese UI language is picked. */
-@import '@fontsource/jost/latin-400.css';
-@import '@fontsource/jost/latin-500.css';
-@import '@fontsource/jost/latin-600.css';
-@import '@fontsource/jost/latin-700.css';
-@import '@fontsource/inter/latin-400.css';
-@import '@fontsource/inter/latin-500.css';
-@import '@fontsource/inter/latin-600.css';
+/* Interface fonts, close to the game's own: condensed bold capitals for titles, tabs and buttons (Barlow
+   Condensed), a geometric sans for text (Figtree). Both SIL OFL 1.1. */
+@import '@fontsource/barlow-condensed/latin-600.css';
+@import '@fontsource/barlow-condensed/latin-700.css';
+@import '@fontsource/figtree/latin-400.css';
+@import '@fontsource/figtree/latin-500.css';
+@import '@fontsource/figtree/latin-600.css';
+@import '@fontsource/figtree/latin-700.css';

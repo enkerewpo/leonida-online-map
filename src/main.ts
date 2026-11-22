@@ -49,7 +49,7 @@ const REPO = 'https://github.com/enkerewpo/leonida-online-map';
 const X_URL = 'https://x.com/wheat_fox';
 const TILES_URL = 'https://map.gtadb.org';
 // System CJK fonts first (no download, available at once on Apple and Windows), then the webfonts.
-const CJK_FONTS = '"PingFang SC","PingFang TC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans TC",sans-serif';
+const CJK_FONTS = '"Black","PingFang SC","PingFang TC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans TC",sans-serif';
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const phoneQuery = matchMedia('(max-width: 760px)');
 
