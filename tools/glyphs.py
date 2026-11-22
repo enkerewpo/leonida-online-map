@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parent.parent
 SIZE, BUFFER, RADIUS, CUTOFF = 24, 3, 8, 0.25
 # Font stack name -> (file, variable-font weight or None)
 FONTS = {
-    'Jost Medium': ('Jost.ttf', 500), 'Jost SemiBold': ('Jost.ttf', 600), 'Jost Bold': ('Jost.ttf', 700),
     'Barlow Condensed SemiBold': ('BarlowCondensed-SemiBold.ttf', None),
     'Barlow Condensed Bold': ('BarlowCondensed-Bold.ttf', None),
 }

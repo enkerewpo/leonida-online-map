@@ -14,6 +14,7 @@ An unofficial, community-maintained online map of the state of Leonida from Gran
 - On top of it: region and district names, 900+ named landmarks (gas stations, gun shops, clubs, restaurants,
   hotels, police, hospitals…), highway numbers along the roads, and community finds (vehicles, weapons, easter
   eggs, hideouts, freebies, hidden items). Each appears from the zoom where it fits.
+- Search any place, filter by legend down to a single category (only gas stations, only clubs…).
 - English, 简体中文 and 繁體中文; desktop and phone.
 - Right-click (long-press on a phone) anywhere → **Add or fix here** opens a GitHub issue with the spot filled in.
 
@@ -68,7 +69,7 @@ icons are our own drawings and fonts are open-source.
 - Code: MIT, see [LICENSE](LICENSE).
 - Data in `data/`: CC BY-NC-SA 4.0 for contributors' work, see [data/LICENSE](data/LICENSE); third-party data keeps
   its own licence (GTADB: CC BY 4.0). Grants no rights in Rockstar's material.
-- Fonts (Jost, Inter, Noto Sans SC, Noto Sans TC): SIL Open Font License 1.1, see [fonts/](fonts/).
+- Fonts (Barlow Condensed, Figtree, Noto Sans SC, Noto Sans TC): SIL Open Font License 1.1, see [fonts/](fonts/).
 - MapLibre GL JS: BSD-3-Clause.
 
 Made by [wheatfox](https://x.com/wheat_fox) and contributors.

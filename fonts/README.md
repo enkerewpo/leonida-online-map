@@ -6,8 +6,8 @@ build under `licenses/`.
 
 | Font | Used for | Licence |
 | --- | --- | --- |
-| Jost | headings, map labels (glyph PBFs in `public/glyphs/`, made by `tools/glyphs.py` from `Jost.ttf`) | [OFL-Jost.txt](OFL-Jost.txt) |
-| Inter | interface body text | [OFL-Inter.txt](OFL-Inter.txt) |
+| Barlow Condensed | titles, tabs, buttons, map labels (glyph PBFs in `public/glyphs/`, made by `tools/glyphs.py` from the `.ttf` files here) | [OFL-BarlowCondensed.txt](OFL-BarlowCondensed.txt) |
+| Figtree | interface text | [OFL-Figtree.txt](OFL-Figtree.txt) |
 | Noto Sans SC | Simplified Chinese interface and map labels | [OFL-NotoSansSC.txt](OFL-NotoSansSC.txt) |
 | Noto Sans TC | Traditional Chinese interface and map labels | [OFL-NotoSansTC.txt](OFL-NotoSansTC.txt) |
 
