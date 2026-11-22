@@ -1,7 +1,7 @@
 // Keeps every map tile the reader has seen, so coming back to a place draws it at once instead of asking GitHub Pages
 // again (which only lets the browser keep files for ten minutes). Tiles older than a week are still shown, then
 // refreshed in the background. Nothing else is cached.
-const CACHE = 'tiles-512-v1';
+const CACHE = 'tiles-512-v2';
 const WEEK = 7 * 24 * 3600 * 1000;
 
 self.addEventListener('install', () => self.skipWaiting());
