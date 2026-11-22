@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Records the promo video frame by frame with headless Chrome over the DevTools protocol, then adds the radio-style
-// voice-over (promo/vo/*.wav, from promo/script.json via `say`), the music bed (promo/music.py) and burnt-in captions
+// voice-over (promo/vo/*.wav, from promo/script.json via `say`), the music (promo/bgm/neon-night.wav: "Neon Night" by Fatal Exit, CC BY 4.0,
+// https://fatalexit.itch.io/neon-night-free-cca-synthwave-music-for-games, not committed) and burnt-in captions
 // (drawn in the page itself). Every scene lasts as long as its line plus a breath.
 // Needs the dev server (npx vite --port 4390), ffmpeg and python3 with numpy + scipy. Usage: node promo/record.mjs
 import { spawn, execFileSync } from 'node:child_process';
@@ -156,8 +157,12 @@ await scene('outro', async () => {
   const from = await js(`(() => { const m = window.__map, c = m.getCenter(); return { lng: c.lng, lat: c.lat, zoom: m.getZoom() }; })()`);
   await camera(from, state, 2.6);
   // End card: the cover, with the line still captioned underneath.
-  const cover = resolve(DIR, 'cover.png');
-  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', cover, '-vf', `scale=${W}:${H}`, join(OUT, 'end.jpg')]);
+  // The cover with the music credit added.
+  execFileSync(CHROME, ['--headless=new', '--hide-scrollbars', '--user-data-dir=/tmp/leonida-end', '--allow-file-access-from-files',
+    '--window-size=1600,900', `--force-device-scale-factor=${W / 1600}`, '--virtual-time-budget=3000', `--screenshot=${join(OUT, 'end.png')}`,
+    `file://${resolve(DIR, 'cover.html')}?video`], { stdio: 'ignore' });
+  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', join(OUT, 'end.png'), join(OUT, 'end.jpg')]);
+  rmSync(join(OUT, 'end.png'));
   const left = Math.round((starts.outro + sceneLen('outro') + 1.2) * FPS) - frame;
   for (let i = 0; i < left; i++) copyFileSync(join(OUT, 'end.jpg'), join(OUT, `${String(frame++).padStart(5, '0')}.jpg`));
   rmSync(join(OUT, 'end.jpg'));
@@ -168,7 +173,8 @@ chrome.kill();
 // Sound: music bed, ducked under the voice; each line placed at its scene's start (+0.25 s).
 const total = frame / FPS;
 const music = join(DIR, 'music.wav');
-execFileSync('python3', [join(DIR, 'music.py'), String(total), music]);
+execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', join(DIR, 'bgm', 'neon-night.wav'), '-t', String(total),
+  '-af', `afade=t=in:d=0.6,afade=t=out:st=${Math.max(0, total - 2.5)}:d=2.5`, music]);
 const lines = script.map((s) => s.id);
 const inputs = ['-i', music, ...lines.flatMap((l) => ['-i', join(DIR, 'vo', `${l}.wav`)])];
 const delays = lines.map((l, i) => `[${i + 1}]adelay=${Math.round((starts[l] + 0.25) * 1000)}:all=1[v${i}]`).join(';');
